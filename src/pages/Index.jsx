@@ -1,0 +1,32 @@
+import React from "react";
+import HeaderMain from "../components/header/headerMain";
+import HeroMain from "../components/heroSection/HeroMain";
+import Helper from "../components/helper";
+import CursorDot from "../components/CursorDot";
+import DifferenceMain from "../components/differenceSec/DifferenceMain";
+import GuidanceMain from "../components/guidance/GuidanceMain";
+import ExpertiseMain from "../components/expertise/ExpertiseMain";
+import NumbersMain from "../components/numbers/NumbersMain";
+import ServicesMain from "../components/services/ServicesMain";
+import ContactMain from "../components/contact/contactMain";
+import FooterMain from "../components/footer/FooterMain";
+
+const Index = () => {
+  return (
+    <div className="flex flex-col">
+      <CursorDot></CursorDot>
+      <HeaderMain></HeaderMain>
+      <HeroMain></HeroMain>
+      <DifferenceMain></DifferenceMain>
+      <GuidanceMain></GuidanceMain>
+      <ExpertiseMain></ExpertiseMain>
+      <NumbersMain></NumbersMain>
+      <ServicesMain></ServicesMain>
+      <ContactMain></ContactMain>
+      <FooterMain></FooterMain>
+      {/* <Helper></Helper> */}
+    </div>
+  );
+};
+
+export default Index;
