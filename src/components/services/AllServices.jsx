@@ -3,28 +3,50 @@ import ServicesComponent from "./ServicesComponent";
 import AI from "../../assets/ai_service.webp";
 import mobile from "../../assets/mobileDevService.webp";
 import web from "../../assets/webDevService.webp";
+import it_consulting from "../../assets/it_consulting.webp"
+import software_development from "../../assets/software_development.webp";
+import ioT from "../../assets/ioT.webp";
+import data_analytics from "../../assets/data_analytics.webp";
 
 const services = [
   {
     title: "Artificial Intelligence and ML",
-    desc: "Leverage the power of AI & ML to drive innovation and efficiency in your business. Our machine learning and AI development services experts build solutions with advanced insights and automation for making data-driven decisions.",
+
     icon: AI,
   },
   {
     title: "App Development",
-    desc: "Our cloud managed services support your migration journey, enhancing your existing infrastructure, optimizing costs, or initiating new cloud-based strategies.",
+
     icon: mobile,
   },
   {
     title: "Web Development",
-    desc: "CodeClub provides global IT staff augmentation services with several tech staffing solutions on demand. From UI/UX designers to developers, software architects to QA test engineers, we offer the top 3% of IT talent within 48 hours.",
+
     icon: web,
   },
+  {
+    title: "IT Consulting",
+
+
+    icon: it_consulting,
+  },
+  {
+    title: "Software Development",
+    icon: software_development,
+  },
+  {
+    title: "IoT Solutions",
+    icon: ioT,
+  },
+  {
+    title: "Data Analytics",
+    icon: data_analytics,
+  }
 ];
 
 const AllServices = () => {
   return (
-    <section className="bg-[#f9f9f9] py-20 px-4">
+    <section className="bg-[#f9f9f9] py-20 px-4 cursor-pointer">
       <h1 align="center" className="mb-20 text-5xl font-bold text-gray-700">
         Fuel Your Growth with Our Services
       </h1>
