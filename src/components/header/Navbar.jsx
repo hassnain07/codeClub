@@ -37,6 +37,8 @@ const Navbar = () => {
     const timeoutRef = useRef(null);
     const prevScrollY = useRef(0);
     const navigate = useNavigate();
+    const location = useLocation();
+    const isHome = location.pathname === "/";
 
     useEffect(() => {
         document.body.style.overflow = mobileOpen ? "hidden" : "auto";
@@ -94,7 +96,11 @@ const Navbar = () => {
         setHasOpenMenu(!isSame);
     };
 
-    const bgClass = isHovered || isScrolled || showHeader ? "bg-white text-black" : "bg-transparent text-white";
+    const bgClass =
+        isHome && !(isHovered || isScrolled || !showHeader)
+            ? "bg-transparent text-white"
+            : "bg-white text-black";
+
     const buttonClass = isHovered || showHeader
         ? "bg-blue-600 hover:bg-blue-800 text-white"
         : "bg-white/10 hover:bg-blue-600 text-white border border-white";
