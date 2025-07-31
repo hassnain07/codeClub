@@ -32,20 +32,76 @@ const teamMembers = [
         image: profile_pic,
         bio: "Deploying secure and scalable systems.",
     },
+
 ];
 
 export default function TeamSection() {
     return (
-        <section className=" py-20 px-4 mt-24">
-            <div className="max-w-7xl mx-auto text-center">
+        <section className="py-20 px-4 mt-24">
+
+
+
+            {/* core team*/}
+            <div >
+                <h1 className="text-4xl font-bold text-center text-black">
+                    The <span className="inline-block bg-gradient-to-r from-blue-600 to-yellow-400 text-transparent bg-clip-text" >Brains Behind </span>  the Build
+                </h1>
+                <p className="text-base text-gray-600 text-center mt-2 max-w-xl mx-auto">
+                    Meet the engineers, designers, and problem-solvers driving our ideas from concept to code. Smart minds, real impact.
+                </p>
+
+
+                <div className="flex items-center gap-6 h-[400px] w-full max-w-5xl mt-10 mx-auto">
+                    {[
+                        {
+                            title: "Prompt engineers",
+                            description:
+                                "Bridging the gap between human intent and machine understanding through expert prompt design.",
+                            img: "https://images.unsplash.com/photo-1543269865-0a740d43b90c?q=80&w=800&h=400&auto=format&fit=crop",
+                        },
+                        {
+                            title: "Data scientists",
+                            description:
+                                "Bridging the gap between human intent and machine understanding through expert prompt design.",
+                            img: "https://images.unsplash.com/photo-1714976326351-0ecf0244f0fc?q=80&w=800&h=400&auto=format&fit=crop",
+                        },
+                        {
+                            title: "Software engineers",
+                            description:
+                                "Bridging the gap between human intent and machine understanding through expert prompt design.",
+                            img: "https://images.unsplash.com/photo-1736220690062-79e12ca75262?q=80&w=800&h=400&auto=format&fit=crop",
+                        },
+                    ].map((item, idx) => (
+                        <div
+                            key={idx}
+                            className="relative group flex-grow transition-all w-56 h-[400px] duration-500 hover:w-full"
+                        >
+                            <img
+                                className="h-full w-full object-cover object-center"
+                                src={item.img}
+                                alt={item.title}
+                            />
+                            <div className="absolute inset-0 flex flex-col justify-end p-10 text-white bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                <h1 className="text-3xl">{item.title}</h1>
+                                <p className="text-sm">{item.description}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+
+
+            {/* team members*/}
+            <div className="max-w-7xl mt-24 mx-auto text-center">
                 <h2 className="text-5xl font-bold text-gray-700 mb-16">
-                    Meet the Team Driving Innovation
+                    <span className="inline-block bg-gradient-to-r from-blue-600 to-yellow-400 text-transparent bg-clip-text">Meet the Team</span> Driving Innovation
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+                <div className="flex flex-wrap justify-center gap-10">
                     {teamMembers.map((member, idx) => (
                         <div
                             key={idx}
-                            className="relative group overflow-hidden rounded-xl shadow-md hover:shadow-lg bg-white"
+                            className="relative group overflow-hidden rounded-xl shadow-md hover:shadow-lg bg-white w-72"
                         >
                             <img
                                 src={member.image}
@@ -60,11 +116,12 @@ export default function TeamSection() {
                                 </div>
                             </div>
                         </div>
-
-
                     ))}
                 </div>
             </div>
+
+
+
         </section>
     );
 }

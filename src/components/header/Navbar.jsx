@@ -2,15 +2,13 @@ import React, { useEffect, useRef, useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import { IoMdMail } from "react-icons/io";
 import { MdArrowDropDown } from "react-icons/md";
-import { Link, useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const menuData = {
     "What we do": ["Web Development", "Mobile Apps", "AI Solutions", "Cloud Services"],
     "Who we are": ["Our Team", "Our Vision", "Careers"],
     "How we work": ["Approach", "Technologies", "Partnerships"],
-    "Case studies": ["Healthcare", "Fintech", "E-commerce"],
+    "Case studies": [], // no dropdown
 };
 
 const getPath = (item) => {
@@ -22,6 +20,10 @@ const getPath = (item) => {
         case "Mobile Apps": return "/mobile-apps";
         case "AI Solutions": return "/ai";
         case "Cloud Services": return "/cloud";
+        case "Approach": return "/approach";
+        case "Technologies": return "/technologies";
+        case "Partnerships": return "/partnerships";
+        case "Case studies": return "/caseStudies";
         default: return "#";
     }
 };
@@ -32,8 +34,6 @@ const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
     const [activeMenu, setActiveMenu] = useState(null);
-    const [hasOpenMenu, setHasOpenMenu] = useState(false);
-
     const timeoutRef = useRef(null);
     const prevScrollY = useRef(0);
     const navigate = useNavigate();
@@ -45,25 +45,16 @@ const Navbar = () => {
     }, [mobileOpen]);
 
     useEffect(() => {
-        prevScrollY.current = window.scrollY; // Initialize with current value
-
+        prevScrollY.current = window.scrollY;
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
-
-            if (currentScrollY > prevScrollY.current && currentScrollY > 50) {
-                setShowHeader(false);
-            } else {
-                setShowHeader(true);
-            }
-
+            setShowHeader(currentScrollY < prevScrollY.current || currentScrollY < 50);
             setIsScrolled(currentScrollY > 10);
             prevScrollY.current = currentScrollY;
         };
-
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-
 
     const handleMouseEnter = () => {
         clearTimeout(timeoutRef.current);
@@ -77,7 +68,7 @@ const Navbar = () => {
     };
 
     const handleMenuEnter = (label) => {
-        if (label === "Case studies") return;
+        if (menuData[label].length === 0) return;
         handleMouseEnter();
         clearTimeout(timeoutRef.current);
         setActiveMenu(label);
@@ -93,7 +84,6 @@ const Navbar = () => {
     const toggleMobileMenu = (label) => {
         const isSame = activeMenu === label;
         setActiveMenu(isSame ? null : label);
-        setHasOpenMenu(!isSame);
     };
 
     const bgClass =
@@ -113,10 +103,10 @@ const Navbar = () => {
                 {/* LEFT */}
                 <div className="flex items-center gap-2">
                     <span
+                        onClick={() => navigate("/")}
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                         className="text-xl sm:text-2xl md:text-3xl font-bold cursor-pointer"
-                        onClick={() => navigate("/")}
                     >
                         CodeClub
                     </span>
@@ -132,11 +122,15 @@ const Navbar = () => {
                                 onMouseEnter={() => handleMenuEnter(label)}
                                 onMouseLeave={handleMenuLeave}
                             >
-                                <div className="flex items-center cursor-pointer hover:text-blue-600 transition-all">
+                                <Link
+                                    to={submenu.length === 0 ? getPath(label) : "#"}
+                                    className="flex items-center cursor-pointer hover:text-blue-600 transition-all"
+                                >
                                     {label}
-                                    {label !== "Case studies" && <MdArrowDropDown />}
-                                </div>
-                                {activeMenu === label && label !== "Case studies" && (
+                                    {submenu.length > 0 && <MdArrowDropDown />}
+                                </Link>
+
+                                {activeMenu === label && submenu.length > 0 && (
                                     <ul className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden">
                                         {submenu.map((item, idx) => (
                                             <li key={idx}>
@@ -158,19 +152,14 @@ const Navbar = () => {
                 {/* RIGHT */}
                 <div className="flex items-center gap-3">
                     <button
-
-                        onMouseEnter={handleMouseEnter
-
-                        }
+                        onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
-                        className={`${buttonClass} cursor-pointer px-8 py-4 text-sm  hidden md:block`}
+                        className={`${buttonClass} cursor-pointer px-8 py-4 text-sm hidden md:block`}
                     >
                         Send request
                     </button>
 
-                    <button
-                        className={`${buttonClass} text-2xl px-2 py-2 rounded-md md:hidden hidden`}
-                    >
+                    <button className={`${buttonClass} text-2xl px-2 py-2 rounded-md md:hidden hidden`}>
                         <IoMdMail />
                     </button>
 
@@ -185,18 +174,20 @@ const Navbar = () => {
 
             {/* MOBILE MENU */}
             {mobileOpen && (
-                <div className="md:hidden  bg-white text-black px-4 pt-2 pb-4">
+                <div className="md:hidden bg-white text-black px-4 pt-2 pb-4">
                     <ul className="flex flex-col gap-3">
                         {Object.entries(menuData).map(([label, submenu]) => (
                             <li key={label} className="border-b pb-2">
                                 <div
                                     className="flex items-center justify-between cursor-pointer text-base font-semibold"
-                                    onClick={() => toggleMobileMenu(label)}
+                                    onClick={() =>
+                                        submenu.length === 0 ? navigate(getPath(label)) : toggleMobileMenu(label)
+                                    }
                                 >
                                     {label}
-                                    {label !== "Case studies" && <MdArrowDropDown />}
+                                    {submenu.length > 0 && <MdArrowDropDown />}
                                 </div>
-                                {activeMenu === label && label !== "Case studies" && (
+                                {activeMenu === label && submenu.length > 0 && (
                                     <ul className="pl-4 pt-2 flex flex-col gap-1">
                                         {submenu.map((item, idx) => (
                                             <li key={idx} onClick={() => setMobileOpen(false)}>

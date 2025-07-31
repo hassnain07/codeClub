@@ -8,6 +8,7 @@ import OurVision from "./pages/OurVision";
 import CareerPage from "./pages/Careers";
 import FooterMain from "./components/footer/FooterMain";
 import Navbar from "./components/header/Navbar";
+import CaseStudies from "./pages/CaseStudies";
 
 function App() {
   const lastScroll = useRef(0);
@@ -47,6 +48,7 @@ function App() {
             <Route path="/our-team" element={<OurTeam />} />
             <Route path="/vision" element={<OurVision />} />
             <Route path="/careers" element={<CareerPage />} />
+            <Route path="/caseStudies" element={<CaseStudies />} />
           </Routes>
         </main>
         <FooterMain />
