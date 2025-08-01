@@ -4,37 +4,42 @@ import TeamCard from "../components/ourteam/TeamCard";
 
 const teamMembers = [
     {
-        name: "Ali Raza",
+        name: "Mazhar Ahmad",
         role: "Full Stack Developer",
         image: profile_pic,
         bio: "Expert in React, Node.js and MongoDB.",
+        linkedin: "https://www.linkedin.com/in/mazhar-ahmad78", // update this link
     },
     {
         name: "Sana Ahmed",
         role: "UI/UX Designer",
         image: profile_pic,
         bio: "Crafting intuitive and beautiful user experiences.",
+        linkedin: "https://www.linkedin.com/in/sana-ahmed", // update this link
     },
     {
         name: "Zain Khan",
         role: "AI Engineer",
         image: profile_pic,
         bio: "Passionate about ML and intelligent automation.",
+        linkedin: "https://www.linkedin.com/in/zain-khan", // update this link
     },
     {
         name: "Hira Sheikh",
         role: "Mobile Developer",
         image: profile_pic,
         bio: "Flutter and React Native specialist.",
+        linkedin: "https://www.linkedin.com/in/hira-sheikh", // update this link
     },
     {
         name: "Omar Siddiqui",
         role: "DevOps Engineer",
         image: profile_pic,
         bio: "Deploying secure and scalable systems.",
+        linkedin: "https://www.linkedin.com/in/omar-siddiqui", // update this link
     },
-
 ];
+
 
 export default function TeamSection() {
     return (
