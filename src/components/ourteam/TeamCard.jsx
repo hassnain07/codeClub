@@ -2,17 +2,17 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const getGradientColor = (index) => {
-    const blue = "#2a7de3";
-    const yellow = "rgb(250, 204, 21)";
-    const black = "rgb(30, 30, 30)";
+    const blueDark = "#2563eb";   // Tailwind blue-500
+    const grayDark = "#111827";   // Tailwind gray-900
 
     const gradients = [
-        [blue, black],
-        [black, yellow],
+        [blueDark, grayDark],
+        [grayDark, blueDark], // Optional: alternates for variety
     ];
 
     return gradients[index % gradients.length];
 };
+
 
 const TeamCard = ({ member, index = 0 }) => {
     const [startColor, endColor] = getGradientColor(index);
