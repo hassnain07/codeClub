@@ -230,7 +230,7 @@ const Navbar = () => {
                 key={label}
                 className="relative"
                 onMouseEnter={() => handleMenuEnter(label)}
-                onMouseLeave={handleMenuLeave}
+                onMouseLeave={() => handleMenuLeave}
               >
                 {label === "Case Studies" ? (
                   <Link
@@ -247,7 +247,11 @@ const Navbar = () => {
                 )}
 
                 {activeMenu === label && label !== "Case Studies" && (
-                  <div className="fixed left-0 top-full w-full bg-white shadow-lg border-t border-gray-400 z-40">
+                  <div
+                    className="fixed left-0 top-full w-full bg-white shadow-lg border-t border-gray-400 z-40"
+                    onMouseEnter={() => handleMenuEnter(label)}
+                    onMouseLeave={handleMenuLeave}
+                  >
                     <div className="max-w-7xl mx-auto px-8 py-10 grid grid-cols-4 gap-8">
                       <div className="col-span-3 grid grid-cols-3 gap-6">
                         {submenu.map((section, idx) => (
