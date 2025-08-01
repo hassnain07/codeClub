@@ -1,5 +1,6 @@
 import React from "react";
 import profile_pic from "../assets/profile_pic.png";
+import TeamCard from "../components/ourteam/TeamCard";
 
 const teamMembers = [
     {
@@ -38,18 +39,19 @@ const teamMembers = [
 export default function TeamSection() {
     return (
         <section className="py-20 px-4 mt-24">
-
-
-
-            {/* core team*/}
-            <div >
+            {/* Core Team */}
+            <div>
                 <h1 className="text-4xl font-bold text-center text-black">
-                    The <span className="inline-block bg-gradient-to-r from-blue-600 to-yellow-400 text-transparent bg-clip-text" >Brains Behind </span>  the Build
+                    The{" "}
+                    <span className="inline-block bg-gradient-to-r from-blue-600 to-yellow-400 text-transparent bg-clip-text">
+                        Brains Behind{" "}
+                    </span>{" "}
+                    the Build
                 </h1>
                 <p className="text-base text-gray-600 text-center mt-2 max-w-xl mx-auto">
-                    Meet the engineers, designers, and problem-solvers driving our ideas from concept to code. Smart minds, real impact.
+                    Meet the engineers, designers, and problem-solvers driving our ideas
+                    from concept to code. Smart minds, real impact.
                 </p>
-
 
                 <div className="flex items-center gap-6 h-[400px] w-full max-w-5xl mt-10 mx-auto">
                     {[
@@ -90,38 +92,23 @@ export default function TeamSection() {
                 </div>
             </div>
 
-
-
-            {/* team members*/}
-            <div className="max-w-7xl mt-24 mx-auto text-center">
+            {/* Team Members */}
+            <div className="mt-24 text-center max-w-7xl mx-auto">
                 <h2 className="text-5xl font-bold text-gray-700 mb-16">
-                    <span className="inline-block bg-gradient-to-r from-blue-600 to-yellow-400 text-transparent bg-clip-text">Meet the Team</span> Driving Innovation
+                    <span className="inline-block bg-gradient-to-r from-blue-600 to-yellow-400 text-transparent bg-clip-text">
+                        Meet the Team
+                    </span>{" "}
+                    Driving Innovation
                 </h2>
                 <div className="flex flex-wrap justify-center gap-10">
-                    {teamMembers.map((member, idx) => (
-                        <div
-                            key={idx}
-                            className="relative group overflow-hidden rounded-xl shadow-md hover:shadow-lg bg-white w-72"
-                        >
-                            <img
-                                src={member.image}
-                                alt={member.name}
-                                className="w-full h-72 object-cover group-hover:brightness-50 transition duration-300"
-                            />
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                                <div className="text-white text-center px-4">
-                                    <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
-                                    <p className="text-sm text-blue-300">{member.role}</p>
-                                    <p className="text-sm mt-2 max-w-xs mx-auto">{member.bio}</p>
-                                </div>
-                            </div>
-                        </div>
+                    {teamMembers.map((member, index) => (
+                        <TeamCard key={index} member={member} index={index} />
                     ))}
+
                 </div>
             </div>
-
-
-
         </section>
     );
 }
+
+
