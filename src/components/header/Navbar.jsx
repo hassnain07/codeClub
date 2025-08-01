@@ -82,11 +82,6 @@ const menuData = {
       icon: <FaUsers />,
     },
     {
-      label: "Inside CodeClub",
-      description: "How our teams work.",
-      icon: <FaUserTie />,
-    },
-    {
       label: "Careers",
       description: "Our job opportunities, benefits, and company culture.",
       icon: <FaBriefcase />,
@@ -119,8 +114,6 @@ const getPath = (item) => {
       return "/about";
     case "Experts":
       return "/experts";
-    case "Inside CodeClub":
-      return "/inside";
     case "Careers":
       return "/careers";
     case "Case Studies":
@@ -310,7 +303,12 @@ const Navbar = () => {
         <div className="md:hidden bg-white text-black px-4 pt-2 pb-4">
           <ul className="flex flex-col gap-3">
             {Object.entries(menuData).map(([label, submenu]) => (
-              <li key={label} className="border-b pb-2">
+              <li
+                key={label}
+                onMouseEnter={() => handleMenuEnter(label)}
+                onMouseLeave={handleMenuLeave}
+                className="border-b pb-2"
+              >
                 <div
                   className="flex items-center justify-between cursor-pointer text-base font-semibold"
                   onClick={() => toggleMobileMenu(label)}
@@ -337,12 +335,13 @@ const Navbar = () => {
           </ul>
 
           <div className="mt-4">
-            <button
-              className="w-full py-2 bg-blue-600 hover:bg-blue-800 text-white font-semibold rounded-md"
+            <Link
+              to="/contact"
+              className="w-full bg-blue-600 hover:bg-blue-800 text-white font-semibold rounded-md cursor-pointer px-8 py-2"
               onClick={() => setMobileOpen(false)}
             >
               Send Request
-            </button>
+            </Link>
           </div>
         </div>
       )}
