@@ -15,28 +15,28 @@ const teamMembers = [
         role: "UI/UX Designer",
         image: profile_pic,
         bio: "Crafting intuitive and beautiful user experiences.",
-        linkedin: "https://www.linkedin.com/in/sana-ahmed", // update this link
+        linkedin: "https://www.linkedin.com/in/sana-ahmed",
     },
     {
         name: "Zain Khan",
         role: "AI Engineer",
         image: profile_pic,
         bio: "Passionate about ML and intelligent automation.",
-        linkedin: "https://www.linkedin.com/in/zain-khan", // update this link
+        linkedin: "https://www.linkedin.com/in/zain-khan",
     },
     {
         name: "Hira Sheikh",
         role: "Mobile Developer",
         image: profile_pic,
         bio: "Flutter and React Native specialist.",
-        linkedin: "https://www.linkedin.com/in/hira-sheikh", // update this link
+        linkedin: "https://www.linkedin.com/in/hira-sheikh",
     },
     {
         name: "Omar Siddiqui",
         role: "DevOps Engineer",
         image: profile_pic,
         bio: "Deploying secure and scalable systems.",
-        linkedin: "https://www.linkedin.com/in/omar-siddiqui", // update this link
+        linkedin: "https://www.linkedin.com/in/omar-siddiqui",
     },
 ];
 
