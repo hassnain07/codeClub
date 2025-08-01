@@ -25,7 +25,10 @@ function App() {
       const scrollDir = scrollTop > lastScroll.current ? "down" : "up";
 
       // If user is scrolling down and footer is about to go out of view
-      if (scrollDir === "down" && window.innerHeight + scrollTop >= footerTop + footer.offsetHeight) {
+      if (
+        scrollDir === "down" &&
+        window.innerHeight + scrollTop >= footerTop + footer.offsetHeight
+      ) {
         window.scrollTo({ top: lastScroll.current, behavior: "auto" });
         return;
       }
@@ -49,6 +52,7 @@ function App() {
             <Route path="/vision" element={<OurVision />} />
             <Route path="/careers" element={<CareerPage />} />
             <Route path="/caseStudies" element={<CaseStudies />} />
+            <Route path="/experts" element={<OurTeam />} />
           </Routes>
         </main>
         <FooterMain />
