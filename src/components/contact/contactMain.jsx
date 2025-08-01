@@ -1,7 +1,48 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Paperclip, Mic, Info } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 const ContactMain = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [number, setNumber] = useState("");
+  const [message, setMessage] = useState("");
+  const [success, setSuccess] = useState("");
+  const [company, setCompany] = useState("");
+  const handleName = (e) => {
+    setName(e.target.value);
+  };
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const handleMessage = (e) => {
+    setMessage(e.target.value);
+  };
+  const handleNumber = (e) => {
+    setNumber(e.target.value);
+  };
+  const handleCompany = (e) => {
+    setNumber(e.target.value);
+  };
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm("service_21bqogc", "template_t9ij70h", form.current, {
+        publicKey: "1H0sSJeDtiiGBFbaW",
+      })
+      .then(
+        () => {
+          setEmail("");
+          setName("");
+          setMessage("");
+          setSuccess("Message Sent Succesfully");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
   return (
     <div className="flex flex-col lg:flex-row w-full min-h-screen">
       {/* Left Panel */}
@@ -35,11 +76,13 @@ const ContactMain = () => {
           Our team would love to hear from you.
         </p>
 
-        <form className="space-y-6">
+        <form className="space-y-6" ref={form}>
           <div>
             <label className="block text-sm mb-1">Your challenge/goal*</label>
             <input
               type="text"
+              value={message}
+              onChange={handleMessage}
               className="w-full bg-transparent border-b border-gray-500 focus:outline-none focus:border-blue-500"
             />
           </div>
@@ -49,6 +92,8 @@ const ContactMain = () => {
               <label className="block text-sm mb-1">Name*</label>
               <input
                 type="text"
+                value={name}
+                onChange={handleName}
                 className="w-full bg-transparent border-b border-gray-500 focus:outline-none focus:border-blue-500"
               />
             </div>
@@ -56,6 +101,8 @@ const ContactMain = () => {
               <label className="block text-sm mb-1">Corporate email*</label>
               <input
                 type="email"
+                value={email}
+                onChange={handleEmail}
                 className="w-full bg-transparent border-b border-gray-500 focus:outline-none focus:border-blue-500"
               />
             </div>
@@ -63,6 +110,8 @@ const ContactMain = () => {
               <label className="block text-sm mb-1">Phone number</label>
               <input
                 type="text"
+                value={number}
+                onChange={handleNumber}
                 className="w-full bg-transparent border-b border-gray-500 focus:outline-none focus:border-blue-500"
               />
             </div>
@@ -70,6 +119,8 @@ const ContactMain = () => {
               <label className="block text-sm mb-1">Company</label>
               <input
                 type="text"
+                value={company}
+                onChange={handleCompany}
                 className="w-full bg-transparent border-b border-gray-500 focus:outline-none focus:border-blue-500"
               />
             </div>

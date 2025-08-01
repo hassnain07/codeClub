@@ -22,7 +22,7 @@ const Index = () => {
       <ExpertiseMain></ExpertiseMain>
       <NumbersMain></NumbersMain>
       <ServicesMain></ServicesMain>
-      <ContactMain></ContactMain>
+      {/* <ContactMain></ContactMain> */}
       {/* <FooterMain></FooterMain> */}
       {/* <Helper></Helper> */}
     </div>
