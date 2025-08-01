@@ -12,6 +12,7 @@ import ai_project from '../../assets/ai_project.png'
 
 import app_project from '../../assets/app_project.png'
 import app_project2 from '../../assets/app_project2.png'
+import app_project3 from '../../assets/app_project3.png'
 
 
 import cyber_project1 from '../../assets/cyber_project1.png';
@@ -83,6 +84,13 @@ const projects = [
         description:
             "A smart dual-mode financial app designed for everyday users and small business owners. The Personal account helps users split bulls, track expenses, and manage shared payments with ease- just like Splitwise. The Business Account empowers small businesses to record sales, manage inventory, and handle finances- just like QuickBooks. Simple efficient, and tailored or both personal and professional use in one powerful platform",
         image: app_project2
+
+    },
+    {
+        title: "Khyber Pakhtunkhwa",
+        description:
+            "A smart dual-mode financial app designed for everyday users and small business owners. The Personal account helps users split bulls, track expenses, and manage shared payments with ease- just like Splitwise. The Business Account empowers small businesses to record sales, manage inventory, and handle finances- just like QuickBooks. Simple efficient, and tailored or both personal and professional use in one powerful platform",
+        image: app_project3
 
     },
 
