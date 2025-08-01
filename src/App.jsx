@@ -9,6 +9,7 @@ import CareerPage from "./pages/Careers";
 import FooterMain from "./components/footer/FooterMain";
 import Navbar from "./components/header/Navbar";
 import CaseStudies from "./pages/CaseStudies";
+import Contact from "./pages/Contact";
 
 function App() {
   const lastScroll = useRef(0);
@@ -53,6 +54,7 @@ function App() {
             <Route path="/careers" element={<CareerPage />} />
             <Route path="/caseStudies" element={<CaseStudies />} />
             <Route path="/experts" element={<OurTeam />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
         <FooterMain />

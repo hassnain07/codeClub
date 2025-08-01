@@ -277,13 +277,14 @@ const Navbar = () => {
 
         {/* RIGHT */}
         <div className="flex items-center gap-3">
-          <button
+          <Link
+            to="/contact"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             className={`${buttonClass} cursor-pointer px-8 py-4 text-sm hidden md:block`}
           >
             Send request
-          </button>
+          </Link>
 
           <button
             className={`${buttonClass} text-2xl px-2 py-2 rounded-md md:hidden hidden`}
