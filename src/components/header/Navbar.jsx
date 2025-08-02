@@ -89,37 +89,40 @@ const menuData = {
 };
 
 const getPath = (item) => {
+    
+
     switch (item) {
-        case "Web Development":
+        case "web development":
             return "/web-development";
-        case "App Development":
+        case "app development":
             return "/mobile-apps";
-        case "Artificial Intelligence":
+        case "artificial intelligence":
             return "/ai";
-        case "CyberSecurity":
+        case "cybersecurity":
             return "/cybersecurity";
-        case "UI/UX Design":
+        case "ui/ux design":
             return "/ui-ux";
-        case "IOT":
+        case "iot":
             return "/iot";
-        case "Our Methodology":
+        case "our methodology":
             return "/methodology";
-        case "Development Approach":
+        case "development approach":
             return "/development";
-        case "Idea to launch":
+        case "idea to launch":
             return "/launch";
-        case "About us":
+        case "about us":
             return "/about";
-        case "Experts":
+        case "experts":
             return "/experts";
-        case "Careers":
+        case "careers":
             return "/careers";
-        case "Case Studies":
+        case "case studies":
             return "/caseStudies";
         default:
             return "#";
     }
 };
+  
 
 const Navbar = () => {
     const [isHovered, setIsHovered] = useState(false);
