@@ -86,6 +86,55 @@ const Service = () => {
           <FeatureCard title={FeatureData.title} items={FeatureData.items} />
         </div>
       </div>
+
+      <div className="flex flex-col gap-15 w-full h-full bg-blue-600 text-white p-20">
+        <h1 className="uppercase font-bold text-5xl">our tech stack</h1>
+        <div className="flex space-x-2 bg-white p-1 border border-gray-500/50 rounded-full text-sm">
+          <div className="flex items-center">
+            <input
+              type="radio"
+              name="options"
+              id="html"
+              className="hidden peer"
+              checked
+            />
+            <label
+              htmlFor="html"
+              className="cursor-pointer rounded-full py-2 px-9 text-gray-500 transition-colors duration-200 peer-checked:bg-indigo-600 peer-checked:text-white"
+            >
+              HTML
+            </label>
+          </div>
+          <div className="flex items-center">
+            <input
+              type="radio"
+              name="options"
+              id="css"
+              className="hidden peer"
+            />
+            <label
+              htmlFor="css"
+              className="cursor-pointer rounded-full py-2 px-9 text-gray-500 transition-colors duration-200 peer-checked:bg-indigo-600 peer-checked:text-white"
+            >
+              CSS
+            </label>
+          </div>
+          <div className="flex items-center">
+            <input
+              type="radio"
+              name="options"
+              id="react"
+              className="hidden peer"
+            />
+            <label
+              htmlFor="react"
+              className="cursor-pointer rounded-full py-2 px-9 text-gray-500 transition-colors duration-200 peer-checked:bg-indigo-600 peer-checked:text-white"
+            >
+              React
+            </label>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
