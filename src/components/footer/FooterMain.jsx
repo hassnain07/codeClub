@@ -175,12 +175,11 @@
 
 // export default FooterMain;
 
-
 import React from "react";
 
 const FooterMain = () => {
   return (
-    <footer className="bg-white text-gray-500/80 pt-8 px-6 md:px-16 lg:px-24 xl:px-32">
+    <footer className="bg-white text-gray-500/80 pt-8 px-6 md:px-16 lg:px-24 xl:px-32 border-t border-gray-200">
       <div className="flex flex-wrap justify-between gap-12 md:gap-6">
         <div className="max-w-80">
           {/* <img
@@ -190,7 +189,8 @@ const FooterMain = () => {
           /> */}
           <h1 className="text-black font-bold text-2xl">Code Club</h1>
           <p className="text-sm">
-            We build modern, scalable, and intelligent solutions that drive real value.
+            We build modern, scalable, and intelligent solutions that drive real
+            value.
           </p>
           <div className="flex items-center gap-3 mt-4 text-gray-700">
             {/* Instagram */}
@@ -216,7 +216,9 @@ const FooterMain = () => {
           <p className="text-lg text-gray-800">COMPANY</p>
           <ul className="mt-3 flex flex-col gap-2 text-sm">
             {["About", "Careers", "Press", "Blog", "Partners"].map((item) => (
-              <li key={item}><a href="#">{item}</a></li>
+              <li key={item}>
+                <a href="#">{item}</a>
+              </li>
             ))}
           </ul>
         </div>
@@ -231,7 +233,9 @@ const FooterMain = () => {
               "Contact Us",
               "Accessibility",
             ].map((item) => (
-              <li key={item}><a href="#">{item}</a></li>
+              <li key={item}>
+                <a href="#">{item}</a>
+              </li>
             ))}
           </ul>
         </div>
@@ -270,12 +274,19 @@ const FooterMain = () => {
       <hr className="border-gray-300 mt-8" />
       <div className="flex flex-col md:flex-row gap-2 items-center justify-between py-5 text-xs">
         <p>
-          © {new Date().getFullYear()} <a href="https://prebuiltui.com">CodeClub</a>. All rights reserved.
+          © {new Date().getFullYear()}{" "}
+          <a href="https://prebuiltui.com">CodeClub</a>. All rights reserved.
         </p>
         <ul className="flex items-center gap-4">
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Terms</a></li>
-          <li><a href="#">Sitemap</a></li>
+          <li>
+            <a href="#">Privacy</a>
+          </li>
+          <li>
+            <a href="#">Terms</a>
+          </li>
+          <li>
+            <a href="#">Sitemap</a>
+          </li>
         </ul>
       </div>
     </footer>
