@@ -4,40 +4,41 @@ import TeamCard from "../components/ourteam/TeamCard";
 
 const teamMembers = [
     {
-        name: "Mazhar Ahmad",
+        name: "Hasnain",
         role: "Full Stack Developer",
         image: profile_pic,
         bio: "Expert in React, Node.js and MongoDB.",
         linkedin: "https://www.linkedin.com/in/mazhar-ahmad78", // update this link
     },
     {
-        name: "Sana Ahmed",
+        name: "Mazhar Ahmad",
         role: "UI/UX Designer",
         image: profile_pic,
         bio: "Crafting intuitive and beautiful user experiences.",
         linkedin: "https://www.linkedin.com/in/sana-ahmed",
     },
     {
-        name: "Zain Khan",
+        name: "Ihtesham",
         role: "AI Engineer",
         image: profile_pic,
         bio: "Passionate about ML and intelligent automation.",
         linkedin: "https://www.linkedin.com/in/zain-khan",
     },
     {
-        name: "Hira Sheikh",
+        name: "Abdullah",
         role: "Mobile Developer",
         image: profile_pic,
         bio: "Flutter and React Native specialist.",
         linkedin: "https://www.linkedin.com/in/hira-sheikh",
     },
     {
-        name: "Omar Siddiqui",
+        name: "Shaheer",
         role: "DevOps Engineer",
         image: profile_pic,
         bio: "Deploying secure and scalable systems.",
         linkedin: "https://www.linkedin.com/in/omar-siddiqui",
     },
+
 ];
 
 
@@ -61,19 +62,19 @@ export default function TeamSection() {
                 <div className="flex items-center gap-6 h-[400px] w-full max-w-5xl mt-10 mx-auto">
                     {[
                         {
-                            title: "Prompt engineers",
+                            title: "Afaan",
                             description:
                                 "Bridging the gap between human intent and machine understanding through expert prompt design.",
                             img: "https://images.unsplash.com/photo-1543269865-0a740d43b90c?q=80&w=800&h=400&auto=format&fit=crop",
                         },
                         {
-                            title: "Data scientists",
+                            title: "Abdullah",
                             description:
                                 "Bridging the gap between human intent and machine understanding through expert prompt design.",
                             img: "https://images.unsplash.com/photo-1714976326351-0ecf0244f0fc?q=80&w=800&h=400&auto=format&fit=crop",
                         },
                         {
-                            title: "Software engineers",
+                            title: "Zubair",
                             description:
                                 "Bridging the gap between human intent and machine understanding through expert prompt design.",
                             img: "https://images.unsplash.com/photo-1736220690062-79e12ca75262?q=80&w=800&h=400&auto=format&fit=crop",
