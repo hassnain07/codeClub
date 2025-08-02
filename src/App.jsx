@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Helper from "./components/helper";
+
 import CursorDot from "./components/CursorDot";
 import Index from "./pages/Index";
 import OurTeam from "./pages/OurTeam";
@@ -11,10 +11,11 @@ import Navbar from "./components/header/Navbar";
 import CaseStudies from "./pages/CaseStudies";
 import Contact from "./pages/Contact";
 
-import About from "./pages/About";
+
+
 import Service from "./pages/Service";
 
-import AboutUsSection from "./pages/About";
+import AboutUsSection from "./pages/AboutUsSection";
 import OurMethodology from "./pages/OurMethodology";
 import DevelopmentApproach from "./pages/Development";
 import IdeaToLaunch from "./pages/Idea";
