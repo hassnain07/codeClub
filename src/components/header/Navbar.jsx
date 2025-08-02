@@ -1,3 +1,5 @@
+// Navbar.jsx
+
 import React, { useEffect, useRef, useState } from "react";
 import {
     FaCode,
@@ -14,7 +16,6 @@ import {
     FaBuilding,
 } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
-import { IoMdMail } from "react-icons/io";
 import { MdArrowDropDown } from "react-icons/md";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
@@ -89,9 +90,7 @@ const menuData = {
 };
 
 const getPath = (item) => {
-    
-
-    switch (item) {
+    switch (item.toLowerCase()) {
         case "web development":
             return "/web-development";
         case "app development":
@@ -122,7 +121,6 @@ const getPath = (item) => {
             return "#";
     }
 };
-  
 
 const Navbar = () => {
     const [isHovered, setIsHovered] = useState(false);
@@ -147,7 +145,6 @@ const Navbar = () => {
             setIsScrolled(currentScrollY > 10);
             prevScrollY.current = currentScrollY;
         };
-
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
@@ -182,22 +179,17 @@ const Navbar = () => {
         setActiveMenu(isSame ? null : label);
     };
 
-    const bgClass =
-        isHome && !(activeMenu || isHovered || isScrolled || !showHeader)
-            ? "bg-transparent text-white"
-            : "bg-white text-black";
+    const bgClass = isHome && !(activeMenu || isHovered || isScrolled || !showHeader)
+        ? "bg-transparent text-white"
+        : "bg-white text-black";
 
     const buttonClass = isHovered || showHeader
         ? "bg-blue-600 hover:bg-blue-800 text-white"
         : "bg-white/10 hover:bg-blue-600 text-white border border-white";
 
     return (
-        <header
-            className={`w-full fixed top-0 z-40 px-4 sm:px-6 py-4 transition-all duration-300 ${showHeader ? "translate-y-0" : "-translate-y-full"
-                } ${bgClass}`}
-        >
+        <header className={`w-full fixed top-0 z-40 px-4 sm:px-6 py-4 transition-all duration-300 ${showHeader ? "translate-y-0" : "-translate-y-full"} ${bgClass}`}>
             <div className="max-w-[1300px] mx-auto flex items-center justify-between h-16 sm:h-[70px]">
-                {/* Logo */}
                 <div className="flex items-center gap-2">
                     <span
                         onMouseEnter={handleMouseEnter}
@@ -209,7 +201,6 @@ const Navbar = () => {
                     </span>
                 </div>
 
-                {/* Desktop Nav */}
                 <nav className="hidden md:block z-50 relative">
                     <ul className="flex items-center gap-8 text-base font-medium">
                         {Object.entries(menuData).map(([label, submenu]) => (
@@ -220,10 +211,7 @@ const Navbar = () => {
                                 onMouseLeave={handleMenuLeave}
                             >
                                 {label === "Case Studies" ? (
-                                    <Link
-                                        to={getPath(label)}
-                                        className="flex items-center cursor-pointer hover:text-blue-600 transition-all"
-                                    >
+                                    <Link to={getPath(label)} className="flex items-center cursor-pointer hover:text-blue-600 transition-all">
                                         {label}
                                     </Link>
                                 ) : (
@@ -234,8 +222,7 @@ const Navbar = () => {
                                 )}
 
                                 {activeMenu === label && label !== "Case Studies" && (
-                                    <div
-                                        className="fixed left-0 top-full w-full bg-white shadow-lg border-t border-gray-400 z-40"
+                                    <div className="fixed left-0 top-full w-full bg-white shadow-lg border-t border-gray-400 z-40"
                                         onMouseEnter={() => handleMenuEnter(label)}
                                         onMouseLeave={handleMenuLeave}
                                     >
@@ -264,7 +251,6 @@ const Navbar = () => {
                     </ul>
                 </nav>
 
-                {/* Right Side */}
                 <div className="flex items-center gap-3">
                     <Link
                         to="/contact"
@@ -284,7 +270,6 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {/* Mobile Menu */}
             {mobileOpen && (
                 <div className="md:hidden bg-white text-black px-4 pt-2 pb-4">
                     <ul className="flex flex-col gap-3">
