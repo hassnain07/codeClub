@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import teamImage from "../assets/hero.jpg"; 
+import teamImage from "../assets/hero.jpg";
 
 
 
@@ -81,42 +81,51 @@ export default function AboutUsSection() {
             </section>
 
             {/* Mission & Vision */}
-            <section className="bg-[#111827] py-20 px-6">
-                <div className="max-w-5xl mx-auto text-center space-y-12">
+            <section className="bg-[#111827] py-20 px-6 text-white">
+                <div className="max-w-5xl mx-auto text-center space-y-16">
+                    {/* Mission */}
                     <div>
-                        <h3 className="text-2xl font-semibold mb-4">Our Mission</h3>
-                        <p className="text-gray-400">
-                            To create digital solutions that are fast, reliable, and genuinely useful — built with care, for real users.
+                        <h3 className="text-3xl font-bold mb-4 text-yellow-400">Our Mission</h3>
+                        <p className="text-gray-400 text-lg leading-relaxed">
+                            To create digital solutions that are fast, reliable, and genuinely useful —
+                            built with care, for real users. We aim to empower businesses by crafting
+                            technology that solves real problems and delivers meaningful impact.
                         </p>
                     </div>
-                    <div>
-                        <h3 className="text-2xl font-semibold mb-4">Our Vision</h3>
-                        <p className="text-gray-400">
-                            We envision a world where software feels intuitive, beautiful, and empowering.
-                            We're building that — one project at a time.
-                        </p>
+
+
+                </div>
+            </section>
+
+
+            {/* Milestones / Stats */}
+            <section className="py-20 px-6 bg-[#1b2d54] text-white">
+                <div className="max-w-6xl mx-auto text-center">
+                    <h2 className="text-4xl sm:text-5xl font-extrabold mb-6 text-yellow-400 tracking-tight">
+                        Our Milestones
+                    </h2>
+                    <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-12">
+                        A quick snapshot of what we've achieved so far.
+                    </p>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+                        {stats.map((stat, i) => (
+                            <div
+                                key={i}
+                                className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:shadow-xl hover:border-yellow-400 transition duration-300"
+                            >
+                                <div className="text-4xl font-bold text-blue-400">{stat.value}</div>
+                                <div className="text-md mt-3 text-gray-300">{stat.label}</div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
-            {/* Milestones / Stats */}
-            <section className="py-20 px-6">
-                <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-                    {stats.map((stat, i) => (
-                        <div
-                            key={i}
-                            className="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-yellow-400 transition duration-300"
-                        >
-                            <div className="text-3xl font-bold text-blue-400">{stat.value}</div>
-                            <div className="text-sm mt-2 text-gray-300">{stat.label}</div>
-                        </div>
-                    ))}
-                </div>
-            </section>
 
             {/* Testimonials */}
 
-            <section className="bg-[#0f172a] py-20 px-6">
+            {/* <section className="bg-[#0f172a] py-20 px-6">
                 <div className="max-w-6xl mx-auto">
                     <h3 className="text-3xl font-semibold text-center mb-14">
                         What Our Clients Say
@@ -154,7 +163,7 @@ export default function AboutUsSection() {
                         })}
                     </div>
                 </div>
-            </section>
+            </section> */}
 
         </div>
     );
