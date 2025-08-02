@@ -18,7 +18,7 @@ import {
 import { HiMenu, HiX } from "react-icons/hi";
 import { IoMdMail } from "react-icons/io";
 import { MdArrowDropDown } from "react-icons/md";
-<<<<<<< HEAD
+
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const menuData = {
@@ -56,7 +56,7 @@ const Navbar = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const isHome = location.pathname === "/";
-=======
+
 import { Link, useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
@@ -170,13 +170,13 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const isHome = location.pathname === "/";
->>>>>>> e070de0cb56ac6f1a1195bfbf39368702425989a
+
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "auto";
   }, [mobileOpen]);
 
-<<<<<<< HEAD
+
     useEffect(() => {
         prevScrollY.current = window.scrollY;
         const handleScroll = () => {
@@ -192,7 +192,7 @@ const Navbar = () => {
     const handleMouseEnter = () => {
         clearTimeout(timeoutRef.current);
         setIsHovered(true);
-=======
+
   useEffect(() => {
     prevScrollY.current = window.scrollY; // Initialize with current value
 
@@ -207,26 +207,26 @@ const Navbar = () => {
 
       setIsScrolled(currentScrollY > 10);
       prevScrollY.current = currentScrollY;
->>>>>>> e070de0cb56ac6f1a1195bfbf39368702425989a
+
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-<<<<<<< HEAD
+
     const handleMenuEnter = (label) => {
         if (menuData[label].length === 0) return;
         handleMouseEnter();
         clearTimeout(timeoutRef.current);
         setActiveMenu(label);
     };
-=======
+
   const handleMouseEnter = () => {
     clearTimeout(timeoutRef.current);
     setIsHovered(true);
   };
->>>>>>> e070de0cb56ac6f1a1195bfbf39368702425989a
+
 
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
@@ -234,19 +234,19 @@ const Navbar = () => {
     }, 300);
   };
 
-<<<<<<< HEAD
+
     const toggleMobileMenu = (label) => {
         const isSame = activeMenu === label;
         setActiveMenu(isSame ? null : label);
     };
-=======
+
   const handleMenuEnter = (label) => {
     if (label === "Case studies") return;
     handleMouseEnter();
     clearTimeout(timeoutRef.current);
     setActiveMenu(label);
   };
->>>>>>> e070de0cb56ac6f1a1195bfbf39368702425989a
+
 
   const handleMenuLeave = () => {
     handleMouseLeave();
@@ -261,7 +261,7 @@ const Navbar = () => {
     setHasOpenMenu(!isSame);
   };
 
-<<<<<<< HEAD
+
     return (
         <header
             className={`w-full fixed top-0 z-40 px-4 sm:px-6 py-4 transition-all duration-300 ${bgClass} ${showHeader ? "translate-y-0" : "-translate-y-full"}`}
@@ -379,7 +379,7 @@ const Navbar = () => {
                         >
                             Send Request
                         </button>
-=======
+
   const bgClass =
     isHome && !(isHovered || isScrolled || !showHeader)
       ? "bg-transparent text-white"
@@ -446,7 +446,7 @@ const Navbar = () => {
                           </div>
                         ))}
                       </div>
->>>>>>> e070de0cb56ac6f1a1195bfbf39368702425989a
+
                     </div>
                   </div>
                 )}
