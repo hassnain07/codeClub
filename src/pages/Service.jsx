@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import mobImg from "../assets/mobileService.webp";
 import StatsMain from "../components/statsCard/statsMain";
 import FeatureCard from "../components/expertiseCard/FeatureCard";
+import TechComp from "../components/techComp/TechComp";
+import {
+  TbBrandReactNative,
+  TbBrandNextjs,
+  TbBrandFirebase,
+} from "react-icons/tb";
+import {
+  SiPostgresql,
+  SiDocker,
+  SiJavascript,
+  SiFlutter,
+} from "react-icons/si";
+import IndComp from "../components/industryComp/IndComp";
 
 const FeatureData = {
   title: "Native App Development",
@@ -9,6 +22,23 @@ const FeatureData = {
 };
 
 const Service = () => {
+  const [selected, setSelected] = useState("frameworks");
+
+  const tabOptions = [
+    { id: "frameworks", label: "Development Frameworks" },
+    { id: "langs", label: "Languages" },
+    { id: "mobDev", label: "Mobile Development" },
+    { id: "database", label: "Database" },
+    { id: "devops", label: "DevOps & Cloud" },
+  ];
+
+  const iconsByTab = {
+    frameworks: [TbBrandReactNative, TbBrandNextjs],
+    langs: [SiJavascript],
+    mobDev: [SiFlutter, TbBrandReactNative],
+    database: [SiPostgresql],
+    devops: [TbBrandFirebase, SiDocker],
+  };
   return (
     <div className="mt-15 py-10">
       <section
@@ -87,52 +117,52 @@ const Service = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-15 w-full h-full bg-blue-600 text-white p-20">
-        <h1 className="uppercase font-bold text-5xl">our tech stack</h1>
-        <div className="flex space-x-2 bg-white p-1 border border-gray-500/50 rounded-full text-sm">
-          <div className="flex items-center">
-            <input
-              type="radio"
-              name="options"
-              id="html"
-              className="hidden peer"
-              checked
-            />
-            <label
-              htmlFor="html"
-              className="cursor-pointer rounded-full py-2 px-9 text-gray-500 transition-colors duration-200 peer-checked:bg-indigo-600 peer-checked:text-white"
-            >
-              HTML
-            </label>
-          </div>
-          <div className="flex items-center">
-            <input
-              type="radio"
-              name="options"
-              id="css"
-              className="hidden peer"
-            />
-            <label
-              htmlFor="css"
-              className="cursor-pointer rounded-full py-2 px-9 text-gray-500 transition-colors duration-200 peer-checked:bg-indigo-600 peer-checked:text-white"
-            >
-              CSS
-            </label>
-          </div>
-          <div className="flex items-center">
-            <input
-              type="radio"
-              name="options"
-              id="react"
-              className="hidden peer"
-            />
-            <label
-              htmlFor="react"
-              className="cursor-pointer rounded-full py-2 px-9 text-gray-500 transition-colors duration-200 peer-checked:bg-indigo-600 peer-checked:text-white"
-            >
-              React
-            </label>
-          </div>
+      <div className="flex flex-col gap-10 w-full h-full bg-indigo-900 text-white p-10">
+        <h1 className="uppercase font-bold text-5xl">Our Tech Stack</h1>
+
+        {/* Tabs */}
+        <div className="flex flex-wrap justify-start rounded-full text-sm gap-2">
+          {tabOptions.map(({ id, label }) => (
+            <div className="flex items-center" key={id}>
+              <input
+                type="radio"
+                name="options"
+                id={id}
+                className="hidden peer"
+                checked={selected === id}
+                onChange={() => setSelected(id)}
+              />
+              <label
+                htmlFor={id}
+                className="cursor-pointer rounded-full py-2 px-6 text-lg text-white transition-colors duration-200 peer-checked:bg-indigo-600 peer-checked:text-white"
+              >
+                {label}
+              </label>
+            </div>
+          ))}
+        </div>
+
+        <div className="flex flex-wrap gap-6 mt-10">
+          {iconsByTab[selected].map((IconComponent, index) => (
+            <TechComp key={index} Icon={IconComponent} />
+          ))}
+        </div>
+      </div>
+
+      <div className="w-full h-full p-20">
+        <h1 className="text-5xl font-bold text-gray-800 leading-tight  uppercase">
+          our expertise extends across <br />{" "}
+          <span className="text-blue-600">industries</span>
+        </h1>
+        <p className="w-2/3 mt-5 text-gray-800 text-xl tracking-wider">
+          Our IT solutions company has extensive experience across a wide range
+          of industries. No matter your niche, partnering with us ensures you
+          receive high-quality, innovative solutions that set you apart from the
+          competition.
+        </p>
+
+        <div className="flex flex-row">
+          <IndComp></IndComp>
         </div>
       </div>
     </div>
