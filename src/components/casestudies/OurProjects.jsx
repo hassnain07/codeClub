@@ -35,40 +35,40 @@ const projects = [
         image: web_project1,
     },
     {
-        title: "Media buying system for a leading US-based advertising agency",
+        title: "Inventory Management System for a Multilocation Retail Chain",
         description:
-            "A custom web-based system that replaced an outdated platform, delivering 50x faster performance, intuitive workflows, and advanced analytics.",
+            "A powerful system designed to track stock in real time, reduce overstocking and shortages, and streamline supply chain operations across all outlets. Delivered with barcode integration, role-based access, and advanced reporting.",
         image: web_project2,
-
     },
+
     {
-        title: "Media buying system for a leading US-based advertising agency",
+        title: "Custom LMS for an  Education Platform",
         description:
-            "A custom web-based system that replaced an outdated platform, delivering 50x faster performance, intuitive workflows, and advanced analytics.",
+            "An interactive learning management system built to support live classes, course tracking, quizzes, and certification. Enhanced with role-based dashboards for students, instructors, and admins—scalable to support thousands of users.",
         image: web_project3,
-
     },
+
     {
-        title: "Media buying system for a leading US-based advertising agency",
+        title: "Essence — Scalable E-commerce Platform",
         description:
-            "A custom web-based system that replaced an outdated platform, delivering 50x faster performance, intuitive workflows, and advanced analytics.",
+            "A modern e-commerce web app featuring real-time inventory, smart search, secure checkout, and mobile-first design. Built for performance, flexibility, and seamless shopping across devices.",
         image: web_project4,
-
     },
     {
-        title: "Media buying system for a leading US-based advertising agency",
+        title: "Shopify — Full-featured E-commerce & Admin Panel",
         description:
-            "A custom web-based system that replaced an outdated platform, delivering 50x faster performance, intuitive workflows, and advanced analytics.",
+            "A complete e-commerce solution with product management, order tracking, customer insights, and a powerful admin dashboard. Built for scalability, speed, and intuitive control.",
         image: web_project5,
-
     },
+
     {
-        title: "Smart Dual Finance",
+        title: "VibeHive — Real-time Chat & Collaboration App",
         description:
-            "A smart dual-mode financial app designed for everyday users and small business owners. The Personal account helps users split bulls, track expenses, and manage shared payments with ease- just like Splitwise. The Business Account empowers small businesses to record sales, manage inventory, and handle finances- just like QuickBooks. Simple efficient, and tailored or both personal and professional use in one powerful platform",
-        image: web_project6
-
+            "A modern chat platform featuring group conversations, real-time messaging, presence indicators, media sharing, and user-friendly UI. Designed for seamless team and community communication.",
+        image: web_project5,
     },
+
+
 
     // app projects
 
@@ -80,19 +80,19 @@ const projects = [
 
     },
     {
-        title: "Smart Dual Finance",
+        title: "Halatick — Restaurant Ordering & Management App",
         description:
-            "A smart dual-mode financial app designed for everyday users and small business owners. The Personal account helps users split bulls, track expenses, and manage shared payments with ease- just like Splitwise. The Business Account empowers small businesses to record sales, manage inventory, and handle finances- just like QuickBooks. Simple efficient, and tailored or both personal and professional use in one powerful platform",
+            "A sleek and user-friendly restaurant app built for dine-in, takeaway, and delivery experiences. Features include digital menus, real-time order tracking, table reservations, and staff-side order management. Designed to streamline operations and enhance customer engagement.",
         image: app_project2
-
     },
+
     {
-        title: "Khyber Pakhtunkhwa",
+        title: "Khyber Pakhtunkhwa — Tourism Discovery App",
         description:
-            "A smart dual-mode financial app designed for everyday users and small business owners. The Personal account helps users split bulls, track expenses, and manage shared payments with ease- just like Splitwise. The Business Account empowers small businesses to record sales, manage inventory, and handle finances- just like QuickBooks. Simple efficient, and tailored or both personal and professional use in one powerful platform",
+            "A beautifully crafted mobile app that helps users explore the cultural, historical, and natural treasures of KP. Features include destination guides, maps, trip planners, local events, and offline access for remote areas. Designed to promote regional tourism and make travel planning effortless.",
         image: app_project3
-
     },
+
 
 
 

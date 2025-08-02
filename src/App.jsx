@@ -10,8 +10,15 @@ import FooterMain from "./components/footer/FooterMain";
 import Navbar from "./components/header/Navbar";
 import CaseStudies from "./pages/CaseStudies";
 import Contact from "./pages/Contact";
+
 import About from "./pages/About";
 import Service from "./pages/Service";
+
+import AboutUsSection from "./pages/About";
+import OurMethodology from "./pages/OurMethodology";
+import DevelopmentApproach from "./pages/Development";
+import IdeaToLaunch from "./pages/Idea";
+
 
 function App() {
   const lastScroll = useRef(0);
@@ -57,8 +64,16 @@ function App() {
             <Route path="/caseStudies" element={<CaseStudies />} />
             <Route path="/experts" element={<OurTeam />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/about" element={<About />} />
+
+
             <Route path="/mobile-apps" element={<Service />} />
+
+            <Route path="/about" element={<AboutUsSection />} />
+            <Route path="/methodology" element={<OurMethodology />} />
+            <Route path="/development" element={<DevelopmentApproach />} />
+            <Route path="/launch" element={<IdeaToLaunch />} />
+
+
           </Routes>
         </main>
         <FooterMain />

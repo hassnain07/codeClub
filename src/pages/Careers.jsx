@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import hero from "../assets/hero.jpg";
 
@@ -15,19 +15,45 @@ const getGradientColor = (index) => {
     const blue = "#3b82f6";
     const yellow = "rgb(250, 204, 21)";
     const black = "#1f1f1f";
-
     const patterns = [
         [blue, black],
         [black, yellow],
         [blue, black],
     ];
-
     return patterns[index % patterns.length];
 };
 
 export default function CareerPage() {
+    const [showModal, setShowModal] = useState(false);
+    const [selectedJob, setSelectedJob] = useState(null);
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+    });
+
+    const handleApplyClick = (job) => {
+        setSelectedJob(job);
+        setShowModal(true);
+    };
+
+    const handleChange = (e) => {
+        setFormData((prev) => ({
+            ...prev,
+            [e.target.name]: e.target.value,
+        }));
+    };
+
+    const handleSubmit = () => {
+        const message = `*Job Application for:* ${selectedJob.title}%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Phone:* ${formData.phone}`;
+        const phoneNumber = "923169557176";
+        window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
+        setShowModal(false);
+        setFormData({ name: "", email: "", phone: "" });
+    };
+
     return (
-        <div className="min-h-screen font-body  bg-[#1b2d54] text-white">
+        <div className="min-h-screen font-body bg-[#1b2d54] text-white relative">
             {/* Hero */}
             <section
                 className="relative w-full h-[70vh] flex items-center justify-center text-center bg-cover bg-center"
@@ -40,7 +66,9 @@ export default function CareerPage() {
             >
                 <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
                 <div className="relative z-10 px-6 text-white">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">Join Our Team & Innovate</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                        Join Our Team & Innovate
+                    </h1>
                     <p className="text-lg mb-6">
                         We're building software that transforms businesses.
                     </p>
@@ -69,7 +97,6 @@ export default function CareerPage() {
                                 }}
                                 whileHover={{
                                     background: `linear-gradient(to right, ${endColor}, ${startColor})`,
-                                    // scale: 1.03,
                                 }}
                                 transition={{ duration: 0.4 }}
                                 className="rounded-xl overflow-hidden shadow-xl text-white"
@@ -81,7 +108,10 @@ export default function CareerPage() {
                                             {job.dept} · {job.location}
                                         </p>
                                     </div>
-                                    <button className="mt-6 cursor-pointer text-yellow-300 hover:underline">
+                                    <button
+                                        className="mt-6 cursor-pointer text-yellow-300 hover:underline"
+                                        onClick={() => handleApplyClick(job)}
+                                    >
                                         Apply Now
                                     </button>
                                 </div>
@@ -131,6 +161,53 @@ export default function CareerPage() {
                     Explore All Roles
                 </button>
             </section>
+
+            {/* Modal */}
+            {showModal && (
+                <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex justify-center items-center z-50">
+                    <div className="bg-white text-black p-8 rounded-xl w-[90%] max-w-md relative">
+                        <button
+                            className="absolute top-2 right-4 text-xl font-bold text-gray-700"
+                            onClick={() => setShowModal(false)}
+                        >
+                            ×
+                        </button>
+                        <h3 className="text-2xl font-semibold mb-4">
+                            Apply for {selectedJob?.title}
+                        </h3>
+                        <input
+                            type="text"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            placeholder="Your Name"
+                            className="w-full mb-3 p-2 border rounded"
+                        />
+                        <input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            placeholder="Your Email"
+                            className="w-full mb-3 p-2 border rounded"
+                        />
+                        <input
+                            type="tel"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            placeholder="Phone Number"
+                            className="w-full mb-4 p-2 border rounded"
+                        />
+                        <button
+                            onClick={handleSubmit}
+                            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded"
+                        >
+                            Send Application via WhatsApp
+                        </button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
