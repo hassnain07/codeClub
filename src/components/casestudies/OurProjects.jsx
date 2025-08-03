@@ -65,7 +65,7 @@ const projects = [
         title: "VibeHive — Real-time Chat & Collaboration App",
         description:
             "A modern chat platform featuring group conversations, real-time messaging, presence indicators, media sharing, and user-friendly UI. Designed for seamless team and community communication.",
-        image: web_project5,
+        image: web_project6,
     },
 
 
