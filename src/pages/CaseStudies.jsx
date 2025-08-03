@@ -1,15 +1,16 @@
 import React from "react";
-import PageBanner from "../components/casestudies/PageBanner"; // Adjust path if needed
-import OurProjects from "../components/casestudies/OurProjects"; // Import the component
+import PageBanner from "../components/casestudies/PageBanner";
+import OurProjects from "../components/casestudies/OurProjects";
 
 const CaseStudies = () => {
     return (
         <div className="mt-24 bg-gradient-to-b from-[#0f172a] to-[#1b2d54] text-white">
+            {/* Optional: Enable this if you want the banner */}
             {/* <PageBanner title="Our Projects" subtitle="One look is worth a thousand words." /> */}
 
-            <section className="max-w-6xl mx-auto px-4 py-16">
-                <div className="text-center mb-4 mt-3">
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 tracking-tight">
+            <section className="max-w-7xl mx-auto px-4 py-20">
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
                         <span className="inline-block bg-gradient-to-r from-blue-400 via-yellow-400 to-blue-600 text-transparent bg-clip-text">
                             ✨ Featured Work
                         </span>
@@ -21,7 +22,6 @@ const CaseStudies = () => {
 
                 <OurProjects />
             </section>
-
         </div>
     );
 };
