@@ -2,19 +2,55 @@ import {
   TbBrandReactNative,
   TbBrandNextjs,
   TbBrandFirebase,
+  TbBrandKotlin,
+  TbBrandCss3,
+  TbBrandHtml5,
 } from "react-icons/tb";
 import {
   SiPostgresql,
   SiDocker,
   SiJavascript,
   SiFlutter,
+  SiTypescript,
+  SiSwift,
+  SiMysql,
+  SiMongodb,
+  SiKubernetes,
+  SiTensorflow,
+  SiPytorch,
+  SiScikitlearn,
+  SiR,
+  SiFastapi,
+  SiFlask,
+  SiApachecassandra,
+  SiApache,
+  SiNginx,
+  SiPython,
+  SiCplusplus,
+  SiRust,
+  SiElastic,
+  SiFigma,
+  SiSketch,
+  SiAdobe,
+  SiInvision,
+  SiJira,
+  SiMiro,
+  SiArduino,
+  SiRaspberrypi,
+  SiGooglecloud,
+  SiInfluxdb,
 } from "react-icons/si";
+
+import { SiDotnet, SiElixir, SiNestjs } from "react-icons/si";
+import { FaNodeJs, FaAngular, FaPython, FaJava, FaLinux } from "react-icons/fa";
+import { TbBrandReact } from "react-icons/tb";
 import mobImg from "../assets/mobileService.webp";
 import webImg from "../assets/webService.jpg";
 import cyberImg from "../assets/cyberService.jpg";
 import aiImg from "../assets/aiService.jpg";
 import uiImg from "../assets/uiuxService.jpg";
 import iotImg from "../assets/iotService.jpg";
+import { RiFirebaseFill } from "react-icons/ri";
 
 export const serviceMap = {
   "mobile-apps": {
@@ -24,36 +60,55 @@ export const serviceMap = {
     bgImage: mobImg,
     features: [
       {
-        title: "Cross-Platform Expertise",
-        items: [
-          "React Native & Flutter-based development",
-          "Seamless performance across devices",
-          "Unified codebase with native feel",
-        ],
+        title: "Cross-Platform App Development",
+        items: ["Messaging apps", "Social media apps", "Productivity tools"],
+      },
+      {
+        title: "Native App Development",
+        items: ["Mobile banking apps", "Fitness tracking apps", "Gaming apps"],
+      },
+      {
+        title: "Hybrid App Development",
+        items: ["E-commerce apps", "Educational apps", "Event management apps"],
       },
     ],
     techStack: {
-      frameworks: [TbBrandReactNative, TbBrandNextjs],
-      langs: [SiJavascript],
-      mobDev: [SiFlutter, TbBrandReactNative],
-      database: [SiPostgresql],
-      devops: [TbBrandFirebase, SiDocker],
+      frameworks: [
+        SiDotnet, // .NET
+        FaNodeJs, // Node.js
+        FaAngular, // Angular
+        TbBrandReact, // React
+        SiElixir, // Elixir
+        SiNestjs, // NestJS
+      ],
+      langs: [SiJavascript, SiTypescript, FaPython],
+      mobDev: [TbBrandReactNative, SiSwift, TbBrandKotlin],
+      database: [SiPostgresql, SiMysql, SiMongodb, RiFirebaseFill],
+      devops: [TbBrandFirebase, SiDocker, SiKubernetes],
     },
     industries: [
       {
         title: "FinTech",
         items: [
-          "Secure mobile banking",
-          "Instant payments & wallets",
-          "Multi-factor authentication",
+          "Billing & Payment Solutions",
+          "Financial Analytics",
+          "Personal Finance Management Apps",
         ],
       },
       {
-        title: "Healthcare",
+        title: "HealthTech",
         items: [
-          "Appointment booking apps",
-          "Remote patient monitoring",
-          "HIPAA-compliant data handling",
+          "EHR, EMR, Patient Portal",
+          "Telemedicine Platforms",
+          "Patient Monitoring",
+        ],
+      },
+      {
+        title: "  E-commerce",
+        items: [
+          "B2B, B2C, C2C Platforms",
+          "Shopping Cart Solutions",
+          "Customer Relationship Management",
         ],
       },
     ],
@@ -66,36 +121,67 @@ export const serviceMap = {
     bgImage: webImg,
     features: [
       {
-        title: "Full-Stack Excellence",
+        title: "E-commerce Development",
         items: [
-          "Scalable architecture design",
-          "Responsive design implementation",
-          "Progressive Web Apps (PWA)",
+          "Online retail stores",
+          "Subscription services",
+          "Multi-vendor marketplaces",
+        ],
+      },
+      {
+        title: "Content Management Systems (CMS)",
+        items: [
+          "Blogging platforms",
+          "Corporate websites",
+          "Online publications",
+        ],
+      },
+      {
+        title: "Customer Portals",
+        items: [
+          "Customer service portals",
+          "Account management systems",
+          "Self-service dashboards",
         ],
       },
     ],
     techStack: {
-      frameworks: [TbBrandNextjs],
-      langs: [SiJavascript],
-      mobDev: [],
-      database: [SiPostgresql],
-      devops: [SiDocker],
+      frameworks: [
+        SiDotnet, // .NET
+        FaNodeJs, // Node.js
+        FaAngular, // Angular
+        TbBrandReact, // React
+        SiElixir, // Elixir
+        SiNestjs, // NestJS
+      ],
+      langs: [SiJavascript, SiTypescript, FaPython],
+      webDev: [TbBrandNextjs, TbBrandHtml5, TbBrandCss3],
+      database: [SiPostgresql, SiMysql, SiMongodb, RiFirebaseFill],
+      devops: [TbBrandFirebase, SiDocker, SiKubernetes],
     },
     industries: [
       {
-        title: "Retail & E-Commerce",
+        title: "FinTech",
         items: [
-          "Custom storefronts",
-          "Inventory & logistics dashboards",
-          "Payment gateway integrations",
+          "Billing & Payment Solutions",
+          "Financial Analytics",
+          "Personal Finance Management",
         ],
       },
       {
-        title: "EdTech",
+        title: "HealthTech",
         items: [
-          "Course platforms",
-          "Real-time quiz systems",
-          "Student progress tracking",
+          "EHR, EMR, Patient Portal",
+          "Telemedicine Platforms",
+          "Patient Monitoring",
+        ],
+      },
+      {
+        title: "  E-commerce",
+        items: [
+          "B2B, B2C, C2C Platforms",
+          "Shopping Cart Solutions",
+          "Customer Relationship Management",
         ],
       },
     ],
@@ -115,13 +201,29 @@ export const serviceMap = {
           "Predictive analytics",
         ],
       },
+      {
+        title: "Data-Driven Insights",
+        items: [
+          "Natural Language Processing (NLP)",
+          "Deep learning models",
+          "Computer vision",
+        ],
+      },
+      {
+        title: "Scalable & Adaptive Systems",
+        items: [
+          "Machine learning pipelines",
+          "Model deployment & management",
+          "AI-powered recommendation engines",
+        ],
+      },
     ],
     techStack: {
-      frameworks: [TbBrandNextjs],
-      langs: [SiJavascript],
-      mobDev: [],
-      database: [SiPostgresql],
-      devops: [SiDocker],
+      frameworks: [SiTensorflow, SiPytorch, SiScikitlearn],
+      langs: [FaPython, SiR, SiJavascript],
+      ai: [TbBrandNextjs, SiFastapi, SiFlask],
+      database: [SiPostgresql, SiMongodb, SiApachecassandra],
+      devops: [SiDocker, SiKubernetes],
     },
     industries: [
       {
@@ -138,6 +240,14 @@ export const serviceMap = {
           "Risk assessment engines",
           "Smart fraud detection",
           "Automated credit scoring",
+        ],
+      },
+      {
+        title: "Retail",
+        items: [
+          "Personalized product recommendations",
+          "Supply chain optimization",
+          "Demand forecasting",
         ],
       },
     ],
@@ -157,13 +267,29 @@ export const serviceMap = {
           "Incident response & forensics",
         ],
       },
+      {
+        title: "Vulnerability Management",
+        items: [
+          "Penetration testing",
+          "Security audits & assessments",
+          "Compliance & governance",
+        ],
+      },
+      {
+        title: "24/7 Security Operations",
+        items: [
+          "Real-time threat monitoring",
+          "Intrusion detection systems",
+          "Security Information and Event Management (SIEM)",
+        ],
+      },
     ],
     techStack: {
-      frameworks: [TbBrandNextjs],
-      langs: [SiJavascript],
-      mobDev: [],
-      database: [SiPostgresql],
-      devops: [SiDocker],
+      frameworks: [SiNginx, SiApache, TbBrandNextjs],
+      langs: [SiPython, FaJava, SiCplusplus, SiRust],
+      cybersecurity: [FaLinux],
+      database: [SiElastic],
+      devops: [SiDocker, SiKubernetes],
     },
     industries: [
       {
@@ -182,10 +308,18 @@ export const serviceMap = {
           "HIPAA readiness assessments",
         ],
       },
+      {
+        title: "E-commerce",
+        items: [
+          "Payment gateway security",
+          "DDoS protection",
+          "Customer data protection",
+        ],
+      },
     ],
   },
 
-  "ui-ux": {
+  ui_ux: {
     title: "UI/UX Design",
     description:
       "Create human-centered, intuitive, and beautiful digital experiences that drive engagement and retention through strategic design.",
@@ -199,13 +333,26 @@ export const serviceMap = {
           "Interactive prototypes & testing",
         ],
       },
+      {
+        title: "User Research & Strategy",
+        items: [
+          "User persona creation",
+          "Competitive analysis",
+          "Usability testing & interviews",
+        ],
+      },
+      {
+        title: "Visual & Interaction Design",
+        items: [
+          "High-fidelity mockups",
+          "Micro-interactions & animations",
+          "Accessibility & inclusive design",
+        ],
+      },
     ],
     techStack: {
-      frameworks: [TbBrandNextjs],
-      langs: [SiJavascript],
-      mobDev: [],
-      database: [SiPostgresql],
-      devops: [SiDocker],
+      frameworks: [SiFigma, SiSketch, SiAdobe, SiInvision],
+      devops: [SiMiro, SiJira],
     },
     industries: [
       {
@@ -224,6 +371,14 @@ export const serviceMap = {
           "Custom UI component libraries",
         ],
       },
+      {
+        title: "E-commerce & Retail",
+        items: [
+          "Optimized checkout flows",
+          "Product catalog design",
+          "Conversion rate optimization",
+        ],
+      },
     ],
   },
   iot: {
@@ -240,13 +395,28 @@ export const serviceMap = {
           "Edge computing optimization",
         ],
       },
+      {
+        title: "Data Management & Analytics",
+        items: [
+          "Cloud integration & data lakes",
+          "Real-time stream processing",
+          "Machine learning for IoT data",
+        ],
+      },
+      {
+        title: "Security & Scalability",
+        items: [
+          "Device authentication & encryption",
+          "Over-the-air (OTA) updates",
+          "Scalable cloud infrastructure",
+        ],
+      },
     ],
     techStack: {
-      frameworks: [TbBrandNextjs],
-      langs: [SiJavascript],
-      mobDev: [],
-      database: [SiPostgresql],
-      devops: [SiDocker],
+      frameworks: [SiArduino, SiRaspberrypi, SiGooglecloud],
+      langs: [SiCplusplus, SiPython, FaJava],
+      database: [SiInfluxdb, SiMongodb],
+      devops: [SiDocker, SiKubernetes],
     },
     industries: [
       {
@@ -263,6 +433,14 @@ export const serviceMap = {
           "Predictive maintenance",
           "Remote equipment control",
           "Production analytics",
+        ],
+      },
+      {
+        title: "Healthcare & Wellness",
+        items: [
+          "Remote patient monitoring",
+          "Smart medical device management",
+          "Personalized health tracking",
         ],
       },
     ],

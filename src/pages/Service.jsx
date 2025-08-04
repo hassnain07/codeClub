@@ -48,21 +48,21 @@ const Service = () => {
 
       {/* Stats Section (example: static or you may also want to update dynamically) */}
       <div className="bg-blue-100 p-10">
-        <div className="flex flex-row flex-wrap gap-5 w-full h-full px-10 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 w-full h-full px-10 py-10">
           <StatsMain
-            number="100+"
+            number="20+"
             label="DELIVERED PROJECTS"
             title="Successfully Delivered Projects"
             description="We've helped numerous startups and established businesses to launch their products or revise existing solutions."
           />
           <StatsMain
-            number="100+"
+            number="100%"
             label="CLIENT SATISFACTION"
             title="Happy Clients"
             description="Our commitment to excellence is proven by the satisfaction of our diverse client base."
           />
           <StatsMain
-            number="50+"
+            number="20+"
             label="EXPERTS"
             title="Industry Experts"
             description="Our team consists of skilled professionals with years of experience in the industry."
@@ -76,7 +76,7 @@ const Service = () => {
           {currentService.title} Expertise
         </h1>
         {/* Map over dynamic features array */}
-        <div className="flex flex-wrap gap-10 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
           {currentService.features.map((feature, idx) => (
             <FeatureCard
               key={idx}
@@ -123,7 +123,7 @@ const Service = () => {
       {currentService.industries && currentService.industries.length > 0 && (
         <div className="w-full h-full p-20">
           <h1 className="text-5xl font-bold text-gray-800 leading-tight uppercase">
-            Our Expertise Extends Across{" "}
+            Our Expertise Extends Across <br />
             <span className="text-blue-600">Industries</span>
           </h1>
           <p className="w-2/3 mt-5 text-gray-800 text-xl tracking-wider">
@@ -131,7 +131,7 @@ const Service = () => {
             matter your niche, partnering with us ensures high-quality,
             innovative solutions.
           </p>
-          <div className="flex flex-wrap gap-6 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
             {currentService.industries.map((section, index) => (
               <IndComp
                 key={index}
