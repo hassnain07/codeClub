@@ -93,17 +93,17 @@ const menuData = {
 const getPath = (item) => {
   switch (item) {
     case "Web Development":
-      return "/web-development";
+      return "/service/web-development";
     case "App Development":
-      return "/mobile-apps";
+      return "/service/mobile-apps";
     case "Artificial Intelligence":
-      return "/ai";
+      return "/service/ai-ml";
     case "CyberSecurity":
-      return "/cybersecurity";
-    case "UI/UX Design":
-      return "/ui-ux";
+      return "/service/cybersecurity";
+    case "/serviceUI/UX Design":
+      return "/service/ui-ux";
     case "IOT":
-      return "/iot";
+      return "/service/iot";
     case "Our Methodology":
       return "/methodology";
     case "Development Approach":

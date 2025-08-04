@@ -58,7 +58,7 @@ function App() {
             <Route path="/experts" element={<OurTeam />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
-            <Route path="/mobile-apps" element={<Service />} />
+            <Route path="/service/:slug" element={<Service />} />
           </Routes>
         </main>
         <FooterMain />
