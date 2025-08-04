@@ -28,7 +28,7 @@ const projects = [
         image: web_project1,
     },
     {
-        title: "Inventory Management System for a Multilocation Retail Chain",
+        title: "Inventory Management System for a Multi location Retail Chain",
         description:
             "Tracks real-time stock, reduces overstocking, and streamlines supply operations. Includes barcode integration, role-based access, and reporting.",
         image: web_project2,
