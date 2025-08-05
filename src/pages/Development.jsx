@@ -84,7 +84,7 @@ const DevelopmentApproach = () => (
       </p>
     </section>
 
-    <UnlockComponent />
+   
   </div>
 );
 
