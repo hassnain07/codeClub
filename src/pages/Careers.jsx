@@ -46,7 +46,7 @@ export default function CareerPage() {
 
     const handleSubmit = () => {
         const message = `*Job Application for:* ${selectedJob.title}%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Phone:* ${formData.phone}`;
-        const phoneNumber = "923169557176";
+        const phoneNumber = "923003404342";
         window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
         setShowModal(false);
         setFormData({ name: "", email: "", phone: "" });
