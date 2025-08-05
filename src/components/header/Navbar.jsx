@@ -93,17 +93,17 @@ const menuData = {
 const getPath = (item) => {
   switch (item.toLowerCase()) {
     case "web development":
-      return "/web-development";
+      return "/service/web-development";
     case "app development":
-      return "/mobile-apps";
+      return "/service/mobile-apps";
     case "artificial intelligence":
-      return "/ai";
+      return "/service/ai";
     case "cybersecurity":
-      return "/cybersecurity";
+      return "/service/cybersecurity";
     case "ui/ux design":
-      return "/ui-ux";
+      return "/service/ui-ux";
     case "iot":
-      return "/iot";
+      return "/service/iot";
     case "our methodology":
       return "/methodology";
     case "development approach":
@@ -134,6 +134,13 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const isHome = location.pathname === "/";
+
+  useEffect(() => {
+    // Close any open dropdown when the route changes
+    setActiveMenu(null);
+    setIsHovered(false);
+    setMobileOpen(false); // optional: also close mobile menu
+  }, [location.pathname]);
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "auto";
@@ -286,24 +293,28 @@ const Navbar = () => {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden bg-white text-black px-4 pt-2 pb-4">
-          <ul className="flex flex-col gap-3">
+        <div className="md:hidden bg-white text-black px-4 py-6 shadow-lg border-t border-gray-200">
+          <ul className="flex flex-col gap-4">
             {Object.entries(menuData).map(([label, submenu]) => (
-              <li key={label} className="border-b pb-2">
+              <li key={label} className="border-b border-gray-200 pb-3">
                 <div
-                  className="flex items-center justify-between cursor-pointer text-base font-semibold"
+                  className="flex items-center justify-between cursor-pointer text-base font-semibold text-gray-800 hover:text-blue-600 transition-colors"
                   onClick={() => toggleMobileMenu(label)}
                 >
                   {label}
-                  {label !== "Case Studies" && <MdArrowDropDown />}
+                  {label !== "Case Studies" && (
+                    <MdArrowDropDown className="text-xl" />
+                  )}
                 </div>
+
                 {activeMenu === label && label !== "Case Studies" && (
-                  <ul className="pl-4 pt-2 flex flex-col gap-1">
+                  <ul className="mt-3 pl-4 flex flex-col gap-2">
                     {submenu.map((item, idx) => (
-                      <li key={idx} onClick={() => setMobileOpen(false)}>
+                      <li key={idx}>
                         <Link
                           to={getPath(item.label)}
-                          className="block text-sm text-gray-700 py-2 hover:text-blue-600"
+                          onClick={() => setMobileOpen(false)}
+                          className="block text-sm text-gray-600 hover:text-blue-600 transition-colors"
                         >
                           {item.label}
                         </Link>
@@ -314,11 +325,12 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className="mt-4">
+
+          <div className="mt-6">
             <Link
               to="/contact"
-              className="w-full bg-blue-600 hover:bg-blue-800 text-white font-semibold rounded-md cursor-pointer px-8 py-2 block text-center"
               onClick={() => setMobileOpen(false)}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md px-6 py-3 block text-center transition-colors"
             >
               Send Request
             </Link>
