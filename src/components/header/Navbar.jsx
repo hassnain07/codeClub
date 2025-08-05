@@ -93,17 +93,17 @@ const menuData = {
 const getPath = (item) => {
   switch (item.toLowerCase()) {
     case "web development":
-      return "/service/web-development";
+      return "/web-development";
     case "app development":
-      return "/service/mobile-apps";
+      return "/mobile-apps";
     case "artificial intelligence":
-      return "/service/ai";
+      return "/ai";
     case "cybersecurity":
-      return "/service/cybersecurity";
+      return "/cybersecurity";
     case "ui/ux design":
-      return "/service/ui-ux";
+      return "/ui-ux";
     case "iot":
-      return "/service/iot";
+      return "/iot";
     case "our methodology":
       return "/methodology";
     case "development approach":
@@ -135,11 +135,6 @@ const Navbar = () => {
   const location = useLocation();
   const isHome = location.pathname === "/";
 
-  useEffect(() => {
-    setActiveMenu(null);
-    setIsHovered(false);
-    setMobileOpen(false);
-  }, [location.pathname]);
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "auto";
   }, [mobileOpen]);

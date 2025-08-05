@@ -3,7 +3,7 @@ import ServicesComponent from "./ServicesComponent";
 import AI from "../../assets/ai_service.webp";
 import mobile from "../../assets/mobileDevService.webp";
 import web from "../../assets/webDevService.webp";
-import it_consulting from "../../assets/it_consulting.webp"
+import it_consulting from "../../assets/it_consulting.webp";
 import software_development from "../../assets/software_development.webp";
 import ioT from "../../assets/ioT.webp";
 import data_analytics from "../../assets/data_analytics.webp";
@@ -11,37 +11,34 @@ import data_analytics from "../../assets/data_analytics.webp";
 const services = [
   {
     title: "Artificial Intelligence and ML",
-
     icon: AI,
+    link: "/service/ai",
   },
   {
     title: "App Development",
-
     icon: mobile,
+    link: "/service/mobile-apps",
   },
   {
     title: "Web Development",
-
     icon: web,
+    link: "/service/web-development",
   },
   {
-    title: "IT Consulting",
-
-
+    title: "Cyber Security",
     icon: it_consulting,
+    link: "/service/cybersecurity",
   },
   {
-    title: "Software Development",
+    title: "UI/UX Design",
     icon: software_development,
+    link: "/service/ui-ux",
   },
   {
     title: "IoT Solutions",
     icon: ioT,
+    link: "/service/iot",
   },
-  {
-    title: "Data Analytics",
-    icon: data_analytics,
-  }
 ];
 
 const AllServices = () => {
@@ -54,6 +51,7 @@ const AllServices = () => {
         {services.map((service, index) => (
           <ServicesComponent
             key={index}
+            link={service.link}
             icon={service.icon}
             title={service.title}
             desc={service.desc}
