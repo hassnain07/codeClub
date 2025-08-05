@@ -6,40 +6,41 @@ import TeamCard from "../components/ourteam/TeamCard";
 const teamMembers = [
   {
     name: "Hasnain",
-    role: "Full Stack Developer",
+    role: "MERN Stack Developer",
     image: profile_pic,
-    bio: "Expert in React, Node.js and MongoDB.",
-    linkedin: "https://www.linkedin.com/in/mazhar-ahmad78",
+    bio: "Building robust full-stack apps using React, Node.js, Express, and MongoDB.",
+    linkedin: "https://www.linkedin.com/in/hasnain-profile",
   },
   {
     name: "Mazhar Ahmad",
-    role: "UI/UX Designer",
+    role: "MERN Stack Developer",
     image: profile_pic,
-    bio: "Crafting intuitive and beautiful user experiences.",
-    linkedin: "https://www.linkedin.com/in/sana-ahmed",
+    bio: "Creating clean, scalable web apps with MongoDB, Express, React, and Node.js.",
+    linkedin: "https://www.linkedin.com/in/mazhar-ahmad78",
   },
   {
     name: "Ihtesham",
     role: "AI Engineer",
     image: profile_pic,
-    bio: "Passionate about ML and intelligent automation.",
+    bio: "Designing intelligent systems with machine learning, data, and automation tools.",
     linkedin: "https://www.linkedin.com/in/zain-khan",
   },
   {
     name: "Abdullah",
     role: "Mobile Developer",
     image: profile_pic,
-    bio: "Flutter and React Native specialist.",
+    bio: "Crafting fast, cross-platform apps using Flutter, React Native, and Firebase.",
     linkedin: "https://www.linkedin.com/in/hira-sheikh",
   },
   {
     name: "Shaheer",
     role: "DevOps Engineer",
     image: profile_pic,
-    bio: "Deploying secure and scalable systems.",
+    bio: "Automating deployments and scaling secure infrastructure for modern teams.",
     linkedin: "https://www.linkedin.com/in/omar-siddiqui",
   },
 ];
+
 
 export default function TeamSection() {
   return (
