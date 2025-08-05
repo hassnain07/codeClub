@@ -1,3 +1,5 @@
+// Navbar.jsx
+
 import React, { useEffect, useRef, useState } from "react";
 import {
   FaCode,
@@ -10,12 +12,10 @@ import {
   FaCogs,
   FaRocket,
   FaUsers,
-  FaUserTie,
-  FaBuilding,
   FaBriefcase,
+  FaBuilding,
 } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
-import { IoMdMail } from "react-icons/io";
 import { MdArrowDropDown } from "react-icons/md";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
@@ -91,32 +91,63 @@ const menuData = {
 };
 
 const getPath = (item) => {
-  switch (item) {
-    case "Web Development":
+  //   switch (item) {
+  //     case "Web Development":
+  //       return "/service/web-development";
+  //     case "App Development":
+  //       return "/service/mobile-apps";
+  //     case "Artificial Intelligence":
+  //       return "/service/ai-ml";
+  //     case "CyberSecurity":
+  //       return "/service/cybersecurity";
+  //     case "/serviceUI/UX Design":
+  //       return "/service/ui-ux";
+  //     case "IOT":
+  //       return "/service/iot";
+  //     case "Our Methodology":
+  //       return "/methodology";
+  //     case "Development Approach":
+  //       return "/development";
+  //     case "Idea to launch":
+  //       return "/launch";
+  //     case "About us":
+  //       return "/about";
+  //     case "Experts":
+  //       return "/experts";
+  //     case "Careers":
+  //       return "/careers";
+  //     case "Case Studies":
+  //       return "/caseStudies";
+  //     default:
+  //       return "#";
+  //   }
+
+  switch (item.toLowerCase()) {
+    case "web development":
       return "/service/web-development";
-    case "App Development":
+    case "app development":
       return "/service/mobile-apps";
-    case "Artificial Intelligence":
-      return "/service/ai-ml";
-    case "CyberSecurity":
+    case "artificial intelligence":
+      return "/service/ai";
+    case "cybersecurity":
       return "/service/cybersecurity";
-    case "/serviceUI/UX Design":
+    case "ui/ux design":
       return "/service/ui-ux";
-    case "IOT":
+    case "iot":
       return "/service/iot";
-    case "Our Methodology":
+    case "our methodology":
       return "/methodology";
-    case "Development Approach":
+    case "development approach":
       return "/development";
-    case "Idea to launch":
+    case "idea to launch":
       return "/launch";
-    case "About us":
+    case "about us":
       return "/about";
-    case "Experts":
+    case "experts":
       return "/experts";
-    case "Careers":
+    case "careers":
       return "/careers";
-    case "Case Studies":
+    case "case studies":
       return "/caseStudies";
     default:
       return "#";
@@ -129,8 +160,6 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
-  const [hasOpenMenu, setHasOpenMenu] = useState(false);
-
   const timeoutRef = useRef(null);
   const prevScrollY = useRef(0);
   const navigate = useNavigate();
@@ -142,7 +171,6 @@ const Navbar = () => {
   }, [mobileOpen]);
 
   useEffect(() => {
-    prevScrollY.current = window.scrollY;
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       setShowHeader(
@@ -183,11 +211,10 @@ const Navbar = () => {
   const toggleMobileMenu = (label) => {
     const isSame = activeMenu === label;
     setActiveMenu(isSame ? null : label);
-    setHasOpenMenu(!isSame);
   };
 
   const bgClass =
-    isHome && !(isHovered || isScrolled || !showHeader)
+    isHome && !(activeMenu || isHovered || isScrolled || !showHeader)
       ? "bg-transparent text-white"
       : "bg-white text-black";
 
@@ -198,12 +225,11 @@ const Navbar = () => {
 
   return (
     <header
-      className={`w-full fixed top-0 z-40 px-4 sm:px-6 py-4 transition-all duration-300 ${bgClass} ${
+      className={`w-full fixed top-0 z-40 px-4 sm:px-6 py-4 transition-all duration-300 ${
         showHeader ? "translate-y-0" : "-translate-y-full"
-      }`}
+      } ${bgClass}`}
     >
       <div className="max-w-[1300px] mx-auto flex items-center justify-between h-16 sm:h-[70px]">
-        {/* LEFT */}
         <div className="flex items-center gap-2">
           <span
             onMouseEnter={handleMouseEnter}
@@ -215,7 +241,6 @@ const Navbar = () => {
           </span>
         </div>
 
-        {/* MID */}
         <nav className="hidden md:block z-50 relative">
           <ul className="flex items-center gap-8 text-base font-medium">
             {Object.entries(menuData).map(([label, submenu]) => (
@@ -223,7 +248,7 @@ const Navbar = () => {
                 key={label}
                 className="relative"
                 onMouseEnter={() => handleMenuEnter(label)}
-                onMouseLeave={() => handleMenuLeave}
+                onMouseLeave={handleMenuLeave}
               >
                 {label === "Case Studies" ? (
                   <Link
@@ -272,7 +297,6 @@ const Navbar = () => {
           </ul>
         </nav>
 
-        {/* RIGHT */}
         <div className="flex items-center gap-3">
           <Link
             to="/contact"
@@ -284,12 +308,6 @@ const Navbar = () => {
           </Link>
 
           <button
-            className={`${buttonClass} text-2xl px-2 py-2 rounded-md md:hidden hidden`}
-          >
-            <IoMdMail />
-          </button>
-
-          <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden text-3xl ml-2 focus:outline-none"
           >
@@ -298,17 +316,11 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* MOBILE MENU */}
       {mobileOpen && (
         <div className="md:hidden bg-white text-black px-4 pt-2 pb-4">
           <ul className="flex flex-col gap-3">
             {Object.entries(menuData).map(([label, submenu]) => (
-              <li
-                key={label}
-                onMouseEnter={() => handleMenuEnter(label)}
-                onMouseLeave={handleMenuLeave}
-                className="border-b pb-2"
-              >
+              <li key={label} className="border-b pb-2">
                 <div
                   className="flex items-center justify-between cursor-pointer text-base font-semibold"
                   onClick={() => toggleMobileMenu(label)}
@@ -333,11 +345,10 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-
           <div className="mt-4">
             <Link
               to="/contact"
-              className="w-full bg-blue-600 hover:bg-blue-800 text-white font-semibold rounded-md cursor-pointer px-8 py-2"
+              className="w-full bg-blue-600 hover:bg-blue-800 text-white font-semibold rounded-md cursor-pointer px-8 py-2 block text-center"
               onClick={() => setMobileOpen(false)}
             >
               Send Request

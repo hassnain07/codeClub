@@ -187,7 +187,7 @@ export const serviceMap = {
     ],
   },
 
-  "ai-ml": {
+  ai: {
     title: "AI & ML Solutions",
     description:
       "Leverage cutting-edge artificial intelligence to build predictive, intelligent, and adaptive software systems that evolve with your data.",
@@ -319,7 +319,7 @@ export const serviceMap = {
     ],
   },
 
-  ui_ux: {
+  "ui-ux": {
     title: "UI/UX Design",
     description:
       "Create human-centered, intuitive, and beautiful digital experiences that drive engagement and retention through strategic design.",

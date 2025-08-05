@@ -5,6 +5,7 @@ import FeatureCard from "../components/expertiseCard/FeatureCard";
 import TechComp from "../components/techComp/TechComp";
 import IndComp from "../components/industryComp/IndComp";
 import { serviceMap } from "./ServiceData"; // configuration file with your service data
+import UnlockComponent from "../components/UnlockComponent";
 
 const Service = () => {
   // Get the slug from the route URL (e.g. "mobile-apps" or "web-development")
@@ -14,7 +15,7 @@ const Service = () => {
   // If the service doesn't exist, you can either render a Not Found component or a message.
   if (!currentService) {
     return (
-      <div className="text-center text-red-500 mt-10">Service not found.</div>
+      <div className="text-center text-red-500 mt-20">Service not found.</div>
     );
   }
 
@@ -142,6 +143,8 @@ const Service = () => {
           </div>
         </div>
       )}
+
+      <UnlockComponent></UnlockComponent>
     </div>
   );
 };
