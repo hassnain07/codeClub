@@ -43,26 +43,29 @@ export default function CareerPage() {
 
     return (
         <>
+
+            {/* hero */}
+            <section className="w-full h-[70vh] relative overflow-hidden shadow-xl">
+                <img
+                    src={hero}
+                    alt="Join Team"
+                    className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/70 backdrop-blur-sm flex flex-col justify-center items-center px-4 text-center text-white">
+                    <h1 className="text-4xl md:text-6xl font-bold mb-4">
+                        Join Our <span className="text-yellow-400">Team</span>
+                    </h1>
+                    <p className="text-lg md:text-xl max-w-3xl leading-relaxed text-white/90">
+                        Transform your vision into high-performance software built by people who care.
+                    </p>
+                </div>
+            </section>
             <div className="bg-white text-gray-900 min-h-screen pt-32 pb-20 px-4 md:px-24">
 
-                {/* Hero */}
-                <section className="mb-28">
-                    <div className="relative w-full h-[60vh] rounded-xl overflow-hidden shadow-xl">
-                        <img
-                            src={hero}
-                            alt="Join Team"
-                            className="w-full h-full object-cover"
-                        />
-                        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm flex flex-col justify-center items-center text-white px-4 text-center">
-                            <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                                Join Our <span className="text-blue-500">Team</span>
-                            </h1>
-                            <p className="text-lg md:text-xl max-w-2xl">
-                                Help us build scalable, impactful software that matters.
-                            </p>
-                        </div>
-                    </div>
-                </section>
+
+
+
+
 
                 {/* Open Positions */}
                 <section className="mb-28">
