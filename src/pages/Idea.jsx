@@ -59,11 +59,11 @@ const IdeaToLaunch = () => (
         </section>
 
         {/* Footer */}
-        <footer className="text-center mt-16 px-4">
+        <section className="text-center mt-16 px-4">
             <p className="text-gray-500 italic max-w-3xl mx-auto text-sm md:text-base">
                 Based on frameworks like Agile, RAD, DevOps, and DevSecOps—this model blends key stages, feedback loops, automation, and quality-first thinking for reliable delivery.
             </p>
-        </footer>
+        </section>
     </div>
 );
 
