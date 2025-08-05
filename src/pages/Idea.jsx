@@ -29,37 +29,38 @@ const stages = [
 ];
 
 const IdeaToLaunch = () => (
-    <div className="bg-gradient-to-b from-[#0f172a] to-[#1b2d54] min-h-screen mt-24 text-white py-20 px-6 md:px-24">
+    <div className="bg-white text-gray-900 py-24 px-6 md:px-20 lg:px-32">
         {/* Header */}
-        <header className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-yellow-400 to-blue-600">
-                Idea to Launch
+        <header className="text-center mb-20">
+            <h1 className="text-4xl mt-24 sm:text-5xl md:text-6xl font-bold text-gray-900">
+                Idea to <span className="text-blue-600">Launch</span>
             </h1>
-            <p className="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <div className="w-28 h-1 bg-gradient-to-r from-blue-500 via-yellow-400 to-black rounded-full mx-auto mt-4"></div>
+            <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
                 A proven roadmap from brainstorming to deployment—built on clarity, feedback loops, and modern workflows.
             </p>
         </header>
 
         {/* Workflow Steps */}
-        <section className="max-w-4xl mx-auto space-y-10 mb-20">
+        <section className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {stages.map((stage, i) => (
                 <motion.div
                     key={i}
-                    className="bg-[#1e293b] p-8 rounded-xl shadow-lg hover:shadow-blue-500/30 transition-shadow"
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.15, duration: 0.6 }}
+                    className="bg-gray-100 border border-gray-300 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.1, duration: 0.6 }}
                     viewport={{ once: true }}
                 >
-                    <h3 className="text-2xl font-semibold text-yellow-400 mb-2">{stage.title}</h3>
-                    <p className="text-gray-300">{stage.desc}</p>
+                    <h3 className="text-xl font-semibold text-blue-600 mb-2">{stage.title}</h3>
+                    <p className="text-gray-700">{stage.desc}</p>
                 </motion.div>
             ))}
         </section>
 
-        {/* Closing Note */}
-        <footer className="text-center mt-12 px-4">
-            <p className="text-gray-400 italic">
+        {/* Footer */}
+        <footer className="text-center mt-16 px-4">
+            <p className="text-gray-500 italic max-w-3xl mx-auto text-sm md:text-base">
                 Based on frameworks like Agile, RAD, DevOps, and DevSecOps—this model blends key stages, feedback loops, automation, and quality-first thinking for reliable delivery.
             </p>
         </footer>

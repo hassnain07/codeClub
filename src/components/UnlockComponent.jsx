@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 
 const UnlockComponent = () => {
   return (
-    <div className="bg-gray-50 text-gray-700 text-center p-20 lg:px-40 sm:px-10 ">
-      <h2 className="lg:text-5xl sm:text-4xl font-bold lg:leading-15 md:leading-15 sm:leading-12 mb-10">
+    <div className="bg-gray-700 text-center py-20 lg:px-40 sm:px-10">
+      <h2 className="lg:text-5xl sm:text-4xl font-bold lg:leading-tight sm:leading-snug mb-10 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-yellow-400 to-white">
         Unlock the potential of your business with our expert services.
       </h2>
+
       <Link
         to="/contact"
-        className="hover:bg-gray-900 hover:text-white text-gray-900 border-1 border-gray-900 transition-all duration-150 text-xl py-3 px-10 rounded-full"
+        className="inline-block text-white border-2 border-blue-500 hover:bg-gradient-to-r from-blue-600 to-yellow-400 hover:text-white font-semibold text-lg px-10 py-3 rounded-full transition-all duration-300"
       >
         Contact Us
       </Link>

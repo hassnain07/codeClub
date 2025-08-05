@@ -1,21 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import teamImage from "../assets/hero.jpg";
+import teamImage from "../assets/aboutUs.jpg";
 import UnlockComponent from "../components/UnlockComponent";
-
-const getGradientColor = (index) => {
-  const blue = "#3b82f6"; // Tailwind blue-400
-  const yellow = "rgb(250, 204, 21)";
-  const black = "#1f1f1f";
-
-  const patterns = [
-    [blue, black],
-    [black, yellow],
-    [blue, black],
-  ];
-
-  return patterns[index % patterns.length];
-};
 
 const stats = [
   { label: "Projects Delivered", value: "120+" },
@@ -23,41 +9,24 @@ const stats = [
   { label: "Team Members", value: "20+" },
 ];
 
-const testimonials = [
-  {
-    quote:
-      "Working with CodeClub was the best decision for our startup. The product exceeded expectations.",
-    name: "Sarah Malik",
-    role: "Founder, Fintechly",
-  },
-  {
-    quote:
-      "Their team is fast, creative, and deeply understands business logic. Highly recommended.",
-    name: "Omar Khan",
-    role: "CTO, Retailio",
-  },
-  {
-    quote:
-      "Their frontend skills and UX thinking completely transformed our dashboard experience.",
-    name: "Ayesha Siddiqui",
-    role: "Product Manager, Medtrack",
-  },
-];
-
 export default function AboutUsSection() {
   return (
-    <div className="bg-[#1b2d54] mt-24 text-white font-body">
+    <>
+    <div className="bg-white text-gray-900 font-body pt-32 pb-20 px-6 md:px-24">
       {/* About Us */}
-      <section className="py-20 px-6">
+      <section className="mb-24">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="md:w-1/2 space-y-6">
-            <h2 className="text-4xl font-bold">About Us</h2>
-            <p className="text-lg text-gray-300 leading-relaxed">
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-900">
+              About <span className="text-blue-600">Us</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 via-yellow-400 to-black rounded-full mb-4"></div>
+            <p className="text-lg text-gray-600 leading-relaxed">
               At CodeClub, we build elegant, scalable solutions that power
               modern businesses. From startups to enterprises, our products are
               used and loved across industries.
             </p>
-            <p className="text-gray-400">
+            <p className="text-gray-500">
               With a strong foundation in engineering and a user-first design
               philosophy, we’ve helped launch 100+ digital products that
               actually make an impact.
@@ -71,100 +40,58 @@ export default function AboutUsSection() {
             <img
               src={teamImage}
               alt="Our Team"
-              className="w-full h-auto object-cover rounded-xl"
+              className="w-full h-auto object-cover rounded-xl max-h-[400px]"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-black/30 to-blue-700/20 group-hover:from-blue-700/30 transition duration-300 rounded-xl" />
+            <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-blue-600/10 group-hover:from-blue-700/30 transition duration-300 rounded-xl" />
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="bg-[#111827] py-20 px-6 text-white">
-        <div className="max-w-5xl mx-auto text-center space-y-16">
-          {/* Mission */}
-          <div>
-            <h3 className="text-3xl font-bold mb-4 text-yellow-400">
-              Our Mission
-            </h3>
-            <p className="text-gray-400 text-lg leading-relaxed">
-              To create digital solutions that are fast, reliable, and genuinely
-              useful — built with care, for real users. We aim to empower
-              businesses by crafting technology that solves real problems and
-              delivers meaningful impact.
-            </p>
-          </div>
-        </div>
+      {/* Mission */}
+      <section className="text-center mb-24">
+        <h3 className="text-4xl md:text-5xl font-bold text-yellow-500 mb-6">
+          Our Mission
+        </h3>
+        <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+          To create digital solutions that are fast, reliable, and genuinely
+          useful — built with care, for real users. We aim to empower
+          businesses by crafting technology that solves real problems and
+          delivers meaningful impact.
+        </p>
       </section>
 
-      {/* Milestones / Stats */}
-      <section className="py-20 px-6 bg-[#1b2d54] text-white">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-extrabold mb-6 text-yellow-400 tracking-tight">
-            Our Milestones
-          </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-12">
-            A quick snapshot of what we've achieved so far.
-          </p>
+      {/* Milestones */}
+      <section className="max-w-6xl mb-10 mx-auto text-center">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-blue-600 mb-6">
+          Our Milestones
+        </h2>
+        <div className="w-20 h-1 bg-gradient-to-r from-blue-500 via-yellow-400 to-black rounded-full mx-auto mb-12"></div>
+        <p className="text-gray-500 text-lg max-w-2xl mx-auto mb-12">
+          A quick snapshot of what we've achieved so far.
+        </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-            {stats.map((stat, i) => (
-              <div
-                key={i}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:shadow-xl hover:border-yellow-400 transition duration-300"
-              >
-                <div className="text-4xl font-bold text-blue-400">
-                  {stat.value}
-                </div>
-                <div className="text-md mt-3 text-gray-300">{stat.label}</div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+          {stats.map((stat, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
+              viewport={{ once: true }}
+              className="bg-gray-100 border border-gray-300 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="text-4xl font-bold text-blue-500">
+                {stat.value}
               </div>
-            ))}
-          </div>
+              <div className="text-md mt-3 text-gray-600">{stat.label}</div>
+            </motion.div>
+          ))}
         </div>
       </section>
 
-      {/* Testimonials */}
-
-      {/* <section className="bg-[#0f172a] py-20 px-6">
-                <div className="max-w-6xl mx-auto">
-                    <h3 className="text-3xl font-semibold text-center mb-14">
-                        What Our Clients Say
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {testimonials.map((t, index) => {
-                            const [startColor, endColor] = getGradientColor(index);
-
-                            return (
-                                <motion.div
-                                    key={index}
-                                    initial={{
-                                        background: `linear-gradient(to right, ${startColor}, ${endColor})`,
-                                    }}
-                                    animate={{
-                                        background: `linear-gradient(to right, ${startColor}, ${endColor})`,
-                                    }}
-                                    whileHover={{
-                                        background: `linear-gradient(to right, ${endColor}, ${startColor})`,
-                                    }}
-                                    transition={{ duration: 0.4 }}
-                                    className="rounded-xl overflow-hidden shadow-xl text-white"
-                                >
-                                    <div className="bg-black/70 backdrop-blur-lg p-6 h-full flex flex-col justify-between">
-                                        <div>
-                                            <p className="text-sm italic text-white/90 mb-4">“{t.quote}”</p>
-                                        </div>
-                                        <div className="mt-4">
-                                            <div className="text-yellow-300 font-semibold">{t.name}</div>
-                                            <div className="text-sm text-white/60">{t.role}</div>
-                                        </div>
-                                    </div>
-                                </motion.div>
-                            );
-                        })}
-                    </div>
-                </div>
-            </section> */}
-
-      <UnlockComponent></UnlockComponent>
+    
     </div>
+      <UnlockComponent />
+      </>
   );
 }
