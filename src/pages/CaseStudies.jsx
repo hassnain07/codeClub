@@ -5,26 +5,26 @@ import UnlockComponent from "../components/UnlockComponent";
 
 const CaseStudies = () => {
   return (
-    <div className="mt-24 bg-gradient-to-b from-[#0f172a] to-[#1b2d54] text-white">
-      {/* Optional: Enable this if you want the banner */}
+    <div className="mt-24 bg-white text-gray-900">
+
+      {/* Optional Banner */}
       {/* <PageBanner title="Our Projects" subtitle="One look is worth a thousand words." /> */}
 
       <section className="max-w-7xl mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-            <span className="inline-block bg-gradient-to-r from-blue-400 via-yellow-400 to-blue-600 text-transparent bg-clip-text">
-              ✨ Featured Work
-            </span>
-          </h2>
-          <p className="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Real solutions for real problems. Here's what we've built with
-            purpose and precision.
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-3">
+            Featured <span className="text-blue-600">Projects</span>
+          </h1>
+          <div className="w-28 h-1 bg-gradient-to-r from-blue-500 via-yellow-400 to-black rounded-full mx-auto my-6" />
+          <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Real solutions for real problems. Here's what we've built with clarity and intent.
           </p>
         </div>
 
         <OurProjects />
       </section>
-      <UnlockComponent></UnlockComponent>
+
+      <UnlockComponent />
     </div>
   );
 };
