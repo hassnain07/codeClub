@@ -1,131 +1,130 @@
 import React from "react";
 import { motion } from "framer-motion";
 import teamImage from "../assets/hero.jpg";
-
-
+import UnlockComponent from "../components/UnlockComponent";
 
 const getGradientColor = (index) => {
-    const blue = "#3b82f6"; // Tailwind blue-400
-    const yellow = "rgb(250, 204, 21)";
-    const black = "#1f1f1f";
+  const blue = "#3b82f6"; // Tailwind blue-400
+  const yellow = "rgb(250, 204, 21)";
+  const black = "#1f1f1f";
 
-    const patterns = [
-        [blue, black],
-        [black, yellow],
-        [blue, black],
-    ];
+  const patterns = [
+    [blue, black],
+    [black, yellow],
+    [blue, black],
+  ];
 
-    return patterns[index % patterns.length];
+  return patterns[index % patterns.length];
 };
 
 const stats = [
-    { label: "Projects Delivered", value: "120+" },
-    { label: "Clients Worldwide", value: "35+" },
-    { label: "Team Members", value: "20+" },
+  { label: "Projects Delivered", value: "120+" },
+  { label: "Clients Worldwide", value: "35+" },
+  { label: "Team Members", value: "20+" },
 ];
 
 const testimonials = [
-    {
-        quote:
-            "Working with CodeClub was the best decision for our startup. The product exceeded expectations.",
-        name: "Sarah Malik",
-        role: "Founder, Fintechly",
-    },
-    {
-        quote:
-            "Their team is fast, creative, and deeply understands business logic. Highly recommended.",
-        name: "Omar Khan",
-        role: "CTO, Retailio",
-    },
-    {
-        quote:
-            "Their frontend skills and UX thinking completely transformed our dashboard experience.",
-        name: "Ayesha Siddiqui",
-        role: "Product Manager, Medtrack",
-    },
+  {
+    quote:
+      "Working with CodeClub was the best decision for our startup. The product exceeded expectations.",
+    name: "Sarah Malik",
+    role: "Founder, Fintechly",
+  },
+  {
+    quote:
+      "Their team is fast, creative, and deeply understands business logic. Highly recommended.",
+    name: "Omar Khan",
+    role: "CTO, Retailio",
+  },
+  {
+    quote:
+      "Their frontend skills and UX thinking completely transformed our dashboard experience.",
+    name: "Ayesha Siddiqui",
+    role: "Product Manager, Medtrack",
+  },
 ];
 
 export default function AboutUsSection() {
-    return (
-        <div className="bg-[#1b2d54] mt-24 text-white font-body">
+  return (
+    <div className="bg-[#1b2d54] mt-24 text-white font-body">
+      {/* About Us */}
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+          <div className="md:w-1/2 space-y-6">
+            <h2 className="text-4xl font-bold">About Us</h2>
+            <p className="text-lg text-gray-300 leading-relaxed">
+              At CodeClub, we build elegant, scalable solutions that power
+              modern businesses. From startups to enterprises, our products are
+              used and loved across industries.
+            </p>
+            <p className="text-gray-400">
+              With a strong foundation in engineering and a user-first design
+              philosophy, we’ve helped launch 100+ digital products that
+              actually make an impact.
+            </p>
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md transition duration-300">
+              Learn More
+            </button>
+          </div>
 
-            {/* About Us */}
-            <section className="py-20 px-6">
-                <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
-                    <div className="md:w-1/2 space-y-6">
-                        <h2 className="text-4xl font-bold">About Us</h2>
-                        <p className="text-lg text-gray-300 leading-relaxed">
-                            At CodeClub, we build elegant, scalable solutions that power modern businesses.
-                            From startups to enterprises, our products are used and loved across industries.
-                        </p>
-                        <p className="text-gray-400">
-                            With a strong foundation in engineering and a user-first design philosophy,
-                            we’ve helped launch 100+ digital products that actually make an impact.
-                        </p>
-                        <button
-                            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md transition duration-300"
-                        >
-                            Learn More
-                        </button>
-                    </div>
+          <div className="md:w-1/2 relative rounded-xl overflow-hidden group">
+            <img
+              src={teamImage}
+              alt="Our Team"
+              className="w-full h-auto object-cover rounded-xl"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-black/30 to-blue-700/20 group-hover:from-blue-700/30 transition duration-300 rounded-xl" />
+          </div>
+        </div>
+      </section>
 
-                    <div className="md:w-1/2 relative rounded-xl overflow-hidden group">
-                        <img
-                            src={teamImage}
-                            alt="Our Team"
-                            className="w-full h-auto object-cover rounded-xl"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-br from-black/30 to-blue-700/20 group-hover:from-blue-700/30 transition duration-300 rounded-xl" />
-                    </div>
+      {/* Mission & Vision */}
+      <section className="bg-[#111827] py-20 px-6 text-white">
+        <div className="max-w-5xl mx-auto text-center space-y-16">
+          {/* Mission */}
+          <div>
+            <h3 className="text-3xl font-bold mb-4 text-yellow-400">
+              Our Mission
+            </h3>
+            <p className="text-gray-400 text-lg leading-relaxed">
+              To create digital solutions that are fast, reliable, and genuinely
+              useful — built with care, for real users. We aim to empower
+              businesses by crafting technology that solves real problems and
+              delivers meaningful impact.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Milestones / Stats */}
+      <section className="py-20 px-6 bg-[#1b2d54] text-white">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl sm:text-5xl font-extrabold mb-6 text-yellow-400 tracking-tight">
+            Our Milestones
+          </h2>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-12">
+            A quick snapshot of what we've achieved so far.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+            {stats.map((stat, i) => (
+              <div
+                key={i}
+                className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:shadow-xl hover:border-yellow-400 transition duration-300"
+              >
+                <div className="text-4xl font-bold text-blue-400">
+                  {stat.value}
                 </div>
-            </section>
+                <div className="text-md mt-3 text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* Mission & Vision */}
-            <section className="bg-[#111827] py-20 px-6 text-white">
-                <div className="max-w-5xl mx-auto text-center space-y-16">
-                    {/* Mission */}
-                    <div>
-                        <h3 className="text-3xl font-bold mb-4 text-yellow-400">Our Mission</h3>
-                        <p className="text-gray-400 text-lg leading-relaxed">
-                            To create digital solutions that are fast, reliable, and genuinely useful —
-                            built with care, for real users. We aim to empower businesses by crafting
-                            technology that solves real problems and delivers meaningful impact.
-                        </p>
-                    </div>
+      {/* Testimonials */}
 
-
-                </div>
-            </section>
-
-
-            {/* Milestones / Stats */}
-            <section className="py-20 px-6 bg-[#1b2d54] text-white">
-                <div className="max-w-6xl mx-auto text-center">
-                    <h2 className="text-4xl sm:text-5xl font-extrabold mb-6 text-yellow-400 tracking-tight">
-                        Our Milestones
-                    </h2>
-                    <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-12">
-                        A quick snapshot of what we've achieved so far.
-                    </p>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-                        {stats.map((stat, i) => (
-                            <div
-                                key={i}
-                                className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:shadow-xl hover:border-yellow-400 transition duration-300"
-                            >
-                                <div className="text-4xl font-bold text-blue-400">{stat.value}</div>
-                                <div className="text-md mt-3 text-gray-300">{stat.label}</div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-
-            {/* Testimonials */}
-
-            {/* <section className="bg-[#0f172a] py-20 px-6">
+      {/* <section className="bg-[#0f172a] py-20 px-6">
                 <div className="max-w-6xl mx-auto">
                     <h3 className="text-3xl font-semibold text-center mb-14">
                         What Our Clients Say
@@ -165,7 +164,7 @@ export default function AboutUsSection() {
                 </div>
             </section> */}
 
-        </div>
-    );
+      <UnlockComponent></UnlockComponent>
+    </div>
+  );
 }
-

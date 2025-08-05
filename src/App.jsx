@@ -11,15 +11,12 @@ import Navbar from "./components/header/Navbar";
 import CaseStudies from "./pages/CaseStudies";
 import Contact from "./pages/Contact";
 
-
-
 import Service from "./pages/Service";
 
 import AboutUsSection from "./pages/AboutUsSection";
 import OurMethodology from "./pages/OurMethodology";
 import DevelopmentApproach from "./pages/Development";
 import IdeaToLaunch from "./pages/Idea";
-
 
 function App() {
   const lastScroll = useRef(0);
@@ -63,18 +60,13 @@ function App() {
             <Route path="/vision" element={<OurVision />} />
             <Route path="/careers" element={<CareerPage />} />
             <Route path="/caseStudies" element={<CaseStudies />} />
-            <Route path="/experts" element={<OurTeam />} />
-            <Route path="/contact" element={<Contact />} />
-
-
-            <Route path="/mobile-apps" element={<Service />} />
-
-            <Route path="/about" element={<AboutUsSection />} />
             <Route path="/methodology" element={<OurMethodology />} />
             <Route path="/development" element={<DevelopmentApproach />} />
             <Route path="/launch" element={<IdeaToLaunch />} />
-
-
+            <Route path="/experts" element={<OurTeam />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<AboutUsSection />} />
+            <Route path="/service/:slug" element={<Service />} />
           </Routes>
         </main>
         <FooterMain />

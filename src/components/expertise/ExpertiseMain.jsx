@@ -3,6 +3,11 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ExpertiseComponent from "./ExperiseComponent";
 import AI from "../../assets/AI_image.webp";
+import web from "../../assets/webExpertise.webp";
+import app from "../../assets/appExpertise.webp";
+import uiux from "../../assets/uiuxExpertise.avif";
+import cyber from "../../assets/cyberExpertise.jpg";
+import iot from "../../assets/iotExpertise.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,6 +20,20 @@ const expertAreasAI = [
   "Predictive analytics",
   "AI automation",
   "Computer vision",
+];
+const expertAreasWeb = [
+  "Web Applications",
+  "CRMs",
+  "ERPs",
+  "CMS",
+  "Learning Management Systems",
+  "Responsive web Designs",
+];
+const expertAreasApp = [
+  "Fintech Apps",
+  "Cross Platform Apps",
+  "Native Apps",
+  "Enterprise Mobile Solutions",
 ];
 
 const ExpertiseMain = () => {
@@ -74,12 +93,68 @@ const ExpertiseMain = () => {
         }`}
       >
         <ExpertiseComponent
-          img={AI}
-          name={"Artificial Intelligence"}
+          img={web}
+          name={"Web Development"}
           desc={
-            "Our AI services empower businesses to overcome challenges and create revolutionary user experiences through advanced digital solutions."
+            "Our Web Development services empower businesses to overcome challenges and create revolutionary user experiences through advanced digital solutions."
           }
-          expertAreas={expertAreasAI}
+          expertAreas={expertAreasWeb}
+        />
+      </div>
+      <div
+        className={`w-full flex lg:flex-row md:flex-row sm:flex-col lg:h-screen md:h-screen sm:h-full overflow-hidden border-t border-white ${
+          isLargeScreen ? "panel" : ""
+        }`}
+      >
+        <ExpertiseComponent
+          img={app}
+          name={"App Development"}
+          desc={
+            "Our App Development services empower businesses to overcome challenges and create revolutionary user experiences through advanced digital solutions."
+          }
+          expertAreas={expertAreasApp}
+        />
+      </div>
+      <div
+        className={`w-full flex lg:flex-row md:flex-row sm:flex-col lg:h-screen md:h-screen sm:h-full overflow-hidden border-t border-white ${
+          isLargeScreen ? "panel" : ""
+        }`}
+      >
+        <ExpertiseComponent
+          img={cyber}
+          name={"CyberSecurity"}
+          desc={
+            "Our App Development services empower businesses to overcome challenges and create revolutionary user experiences through advanced digital solutions."
+          }
+          expertAreas={expertAreasApp}
+        />
+      </div>
+      <div
+        className={`w-full flex lg:flex-row md:flex-row sm:flex-col lg:h-screen md:h-screen sm:h-full overflow-hidden border-t border-white ${
+          isLargeScreen ? "panel" : ""
+        }`}
+      >
+        <ExpertiseComponent
+          img={uiux}
+          name={"UI/UX Design"}
+          desc={
+            "Our App Development services empower businesses to overcome challenges and create revolutionary user experiences through advanced digital solutions."
+          }
+          expertAreas={expertAreasApp}
+        />
+      </div>
+      <div
+        className={`w-full flex lg:flex-row md:flex-row sm:flex-col lg:h-screen md:h-screen sm:h-full overflow-hidden border-t border-white ${
+          isLargeScreen ? "panel" : ""
+        }`}
+      >
+        <ExpertiseComponent
+          img={iot}
+          name={"IOT"}
+          desc={
+            "Our App Development services empower businesses to overcome challenges and create revolutionary user experiences through advanced digital solutions."
+          }
+          expertAreas={expertAreasApp}
         />
       </div>
     </div>
