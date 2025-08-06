@@ -2,7 +2,7 @@ import React from "react";
 import profile_pic from "../assets/profile_pic.png";
 import UnlockComponent from "../components/UnlockComponent";
 import TeamCard from "../components/ourteam/TeamCard";
-
+import ZubairPic from "../assets/zubairPic.jpeg";
 const teamMembers = [
   {
     name: "Hasnain",
@@ -41,7 +41,6 @@ const teamMembers = [
   },
 ];
 
-
 export default function TeamSection() {
   return (
     <>
@@ -63,13 +62,12 @@ export default function TeamSection() {
           <div className="flex flex-wrap md:flex-nowrap items-stretch gap-6 w-full max-w-6xl mt-12 mx-auto">
             {[
               {
-                title: "Afaan",
-                description:
-                  "Bridging the gap between human intent and machine understanding through expert prompt design.",
+                title: "Abdullah",
+                description: "CEO CodeClub | Managing Clients.",
                 img: "https://images.unsplash.com/photo-1543269865-0a740d43b90c?q=80&w=800&h=400&auto=format&fit=crop",
               },
               {
-                title: "Abdullah",
+                title: "Affaan",
                 description:
                   "Designing systems that scale and delight. Loves clean code and efficient UIs.",
                 img: "https://images.unsplash.com/photo-1714976326351-0ecf0244f0fc?q=80&w=800&h=400&auto=format&fit=crop",
@@ -77,8 +75,8 @@ export default function TeamSection() {
               {
                 title: "Zubair",
                 description:
-                  "Obsessed with performance and pushing boundaries of frontend speed and design.",
-                img: "https://images.unsplash.com/photo-1736220690062-79e12ca75262?q=80&w=800&h=400&auto=format&fit=crop",
+                  "Manager CodeClub | Managing Teams and daily operations.",
+                img: ZubairPic,
               },
             ].map((item, idx) => (
               <div
@@ -90,7 +88,7 @@ export default function TeamSection() {
                   src={item.img}
                   alt={item.title}
                 />
-                <div className="absolute inset-0 flex flex-col justify-end p-8 text-white bg-blue-900/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-xl">
+                <div className="absolute inset-0 flex flex-col justify-end p-8 text-white bg-transparent  opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-xl">
                   <h2 className="text-2xl font-semibold">{item.title}</h2>
                   <p className="text-sm mt-2">{item.description}</p>
                 </div>

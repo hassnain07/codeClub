@@ -76,11 +76,11 @@ const menuData = {
       description: "Our people and values.",
       icon: <FaBuilding />,
     },
-    {
-      label: "Experts",
-      description: "Our problem-solvers and tech minds.",
-      icon: <FaUsers />,
-    },
+    // {
+    //   label: "Experts",
+    //   description: "Our problem-solvers and tech minds.",
+    //   icon: <FaUsers />,
+    // },
     {
       label: "Careers",
       description: "Our job opportunities, benefits, and company culture.",
@@ -112,8 +112,8 @@ const getPath = (item) => {
       return "/launch";
     case "about us":
       return "/about";
-    case "experts":
-      return "/experts";
+    // case "experts":
+    //   return "/experts";
     case "careers":
       return "/careers";
     case "case studies":
