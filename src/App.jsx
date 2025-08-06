@@ -17,6 +17,7 @@ import AboutUsSection from "./pages/AboutUsSection";
 import OurMethodology from "./pages/OurMethodology";
 import DevelopmentApproach from "./pages/Development";
 import IdeaToLaunch from "./pages/Idea";
+import ScrollToTop from "./components/scrollToTop";
 
 function App() {
   const lastScroll = useRef(0);
@@ -52,6 +53,7 @@ function App() {
   return (
     <Router>
       <div className="flex flex-col ">
+        <ScrollToTop></ScrollToTop>
         <Navbar />
         <main className="flex-1 font-body">
           <Routes>

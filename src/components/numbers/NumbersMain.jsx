@@ -3,16 +3,16 @@ import Spacer from "./Spacer";
 
 const numbersData = [
   {
-    title: "WE WORK SINCE",
-    value: "2003",
+    title: "Completed Projects",
+    value: "10+",
   },
   {
-    title: "LOCATIONS WORLDWIDE",
-    value: "9",
+    title: "EXPERTS",
+    value: "10+",
   },
   {
-    title: "LONG-TERM CLIENTS",
-    value: "52%",
+    title: "CLIENTS SATISFACTION",
+    value: "100%",
     highlight: true,
   },
   {

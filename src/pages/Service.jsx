@@ -51,7 +51,7 @@ const Service = () => {
       <div className="bg-blue-100 p-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 w-full h-full px-10 py-10">
           <StatsMain
-            number="20+"
+            number="12+"
             label="DELIVERED PROJECTS"
             title="Successfully Delivered Projects"
             description="We've helped numerous startups and established businesses to launch their products or revise existing solutions."
@@ -63,7 +63,7 @@ const Service = () => {
             description="Our commitment to excellence is proven by the satisfaction of our diverse client base."
           />
           <StatsMain
-            number="20+"
+            number="10+"
             label="EXPERTS"
             title="Industry Experts"
             description="Our team consists of skilled professionals with years of experience in the industry."
@@ -122,12 +122,12 @@ const Service = () => {
 
       {/* Industries Section */}
       {currentService.industries && currentService.industries.length > 0 && (
-        <div className="w-full h-full p-20">
-          <h1 className="text-5xl font-bold text-gray-800 leading-tight uppercase">
+        <div className="w-full h-full lg:p-20 md:p-20 sm:p-10">
+          <h1 className="lg:text-5xl md:text-5xl sm:text-4xl font-bold text-gray-800 leading-tight uppercase">
             Our Expertise Extends Across <br />
             <span className="text-blue-600">Industries</span>
           </h1>
-          <p className="w-2/3 mt-5 text-gray-800 text-xl tracking-wider">
+          <p className="lg:w-2/3 md:w-2/3 sm:w-full mt-5 text-gray-800 text-xl tracking-wider">
             We have extensive experience across a wide range of industries. No
             matter your niche, partnering with us ensures high-quality,
             innovative solutions.

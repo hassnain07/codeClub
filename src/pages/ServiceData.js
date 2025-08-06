@@ -81,7 +81,7 @@ export const serviceMap = {
         SiElixir, // Elixir
         SiNestjs, // NestJS
       ],
-      langs: [SiJavascript, SiTypescript, FaPython],
+      languages: [SiJavascript, SiTypescript, FaPython],
       mobDev: [TbBrandReactNative, SiSwift, TbBrandKotlin],
       database: [SiPostgresql, SiMysql, SiMongodb, RiFirebaseFill],
       devops: [TbBrandFirebase, SiDocker, SiKubernetes],
@@ -154,7 +154,7 @@ export const serviceMap = {
         SiElixir, // Elixir
         SiNestjs, // NestJS
       ],
-      langs: [SiJavascript, SiTypescript, FaPython],
+      languages: [SiJavascript, SiTypescript, FaPython],
       webDev: [TbBrandNextjs, TbBrandHtml5, TbBrandCss3],
       database: [SiPostgresql, SiMysql, SiMongodb, RiFirebaseFill],
       devops: [TbBrandFirebase, SiDocker, SiKubernetes],
@@ -220,7 +220,7 @@ export const serviceMap = {
     ],
     techStack: {
       frameworks: [SiTensorflow, SiPytorch, SiScikitlearn],
-      langs: [FaPython, SiR, SiJavascript],
+      languages: [FaPython, SiR, SiJavascript],
       ai: [TbBrandNextjs, SiFastapi, SiFlask],
       database: [SiPostgresql, SiMongodb, SiApachecassandra],
       devops: [SiDocker, SiKubernetes],
@@ -286,7 +286,7 @@ export const serviceMap = {
     ],
     techStack: {
       frameworks: [SiNginx, SiApache, TbBrandNextjs],
-      langs: [SiPython, FaJava, SiCplusplus, SiRust],
+      languages: [SiPython, FaJava, SiCplusplus, SiRust],
       cybersecurity: [FaLinux],
       database: [SiElastic],
       devops: [SiDocker, SiKubernetes],
@@ -414,7 +414,7 @@ export const serviceMap = {
     ],
     techStack: {
       frameworks: [SiArduino, SiRaspberrypi, SiGooglecloud],
-      langs: [SiCplusplus, SiPython, FaJava],
+      languages: [SiCplusplus, SiPython, FaJava],
       database: [SiInfluxdb, SiMongodb],
       devops: [SiDocker, SiKubernetes],
     },

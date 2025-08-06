@@ -3,7 +3,7 @@ import React from "react";
 const GuidanceMid = () => {
   return (
     <div>
-      <h2 className="text-5xl font-bold text-gray-900 leading-tight">
+      <h2 className="sm:text-xl font-bold text-gray-900 leading-tight">
         Focused on what matters,
         <br />
         <span>

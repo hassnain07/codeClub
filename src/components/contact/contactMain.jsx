@@ -9,6 +9,8 @@ const ContactMain = () => {
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState("");
   const [company, setCompany] = useState("");
+  const [loading, setLoading] = useState(false);
+
   const handleName = (e) => {
     setName(e.target.value);
   };
@@ -22,23 +24,28 @@ const ContactMain = () => {
     setNumber(e.target.value);
   };
   const handleCompany = (e) => {
-    setNumber(e.target.value);
+    setCompany(e.target.value);
   };
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
     emailjs
-      .sendForm("service_21bqogc", "template_t9ij70h", form.current, {
+      .sendForm("service_21bqogc", "template_olef28t", form.current, {
         publicKey: "1H0sSJeDtiiGBFbaW",
       })
       .then(
         () => {
-          setEmail("");
+          setLoading(false);
           setName("");
+          setEmail("");
           setMessage("");
-          setSuccess("Message Sent Succesfully");
+          setNumber("");
+          setCompany("");
+          setSuccess("Message Sent Successfully");
         },
         (error) => {
+          setLoading(false);
           console.log("FAILED...", error.text);
         }
       );
@@ -76,12 +83,18 @@ const ContactMain = () => {
           Our team would love to hear from you.
         </p>
 
-        <form className="space-y-6" ref={form}>
+        <form
+          className="space-y-6"
+          ref={form}
+          name="contact-form"
+          onSubmit={sendEmail}
+        >
           <div>
             <label className="block text-sm mb-1">Your challenge/goal*</label>
             <input
               type="text"
               value={message}
+              name="message"
               onChange={handleMessage}
               className="w-full bg-transparent border-b border-gray-500 focus:outline-none focus:border-blue-500"
             />
@@ -93,6 +106,7 @@ const ContactMain = () => {
               <input
                 type="text"
                 value={name}
+                name="user_name"
                 onChange={handleName}
                 className="w-full bg-transparent border-b border-gray-500 focus:outline-none focus:border-blue-500"
               />
@@ -101,6 +115,7 @@ const ContactMain = () => {
               <label className="block text-sm mb-1">Corporate email*</label>
               <input
                 type="email"
+                name="user_email"
                 value={email}
                 onChange={handleEmail}
                 className="w-full bg-transparent border-b border-gray-500 focus:outline-none focus:border-blue-500"
@@ -110,6 +125,7 @@ const ContactMain = () => {
               <label className="block text-sm mb-1">Phone number</label>
               <input
                 type="text"
+                name="user_phone"
                 value={number}
                 onChange={handleNumber}
                 className="w-full bg-transparent border-b border-gray-500 focus:outline-none focus:border-blue-500"
@@ -119,6 +135,7 @@ const ContactMain = () => {
               <label className="block text-sm mb-1">Company</label>
               <input
                 type="text"
+                name="user_company"
                 value={company}
                 onChange={handleCompany}
                 className="w-full bg-transparent border-b border-gray-500 focus:outline-none focus:border-blue-500"
@@ -128,10 +145,17 @@ const ContactMain = () => {
 
           <button
             type="submit"
+            disabled={loading}
             className="mt-6 bg-blue-600 hover:bg-blue-700 transition-colors text-white py-3 px-6 rounded"
           >
-            Send message
+            {loading ? "Sending..." : "Send message"}
           </button>
+
+          {success && (
+            <div className="mt-4 text-green-400 text-sm font-medium">
+              ✅ {success}
+            </div>
+          )}
 
           <p className="text-xs text-gray-400 mt-6 leading-relaxed">
             Sending the information provided in this form you agree to the

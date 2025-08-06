@@ -64,7 +64,7 @@ const GuidanceTop = () => {
     <div
       ref={sectionRef}
       id="guidance-section"
-      className="w-full h-[100vh] relative flex flex-col items-center justify-center text-center py-24 px-6 overflow-hidden bg-white"
+      className="w-full h-[100vh] relative flex flex-col items-center justify-center text-center lg:py-24 md:py-24 sm:py-10 px-6 overflow-hidden bg-white"
     >
       {/* Blue radial blur background */}
       <div className="absolute inset-0 flex items-end justify-center pointer-events-none z-0">
@@ -75,7 +75,7 @@ const GuidanceTop = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl">
+      <div className="relative z-10 max-w-4xl p-5">
         <p
           className="uppercase text-sm font-bold tracking-wider text-[#445067] mb-10 transition-colors duration-300"
           ref={addToTextRefs}
@@ -84,11 +84,11 @@ const GuidanceTop = () => {
         </p>
 
         <h2
-          className="text-7xl font-bold text-[#121212] leading-tight -mt-5 transition-colors duration-300"
+          className="lg:text-7xl md:text-7xl sm:text-4xl font-bold text-[#121212] leading-tight -mt-5 transition-colors duration-300"
           ref={addToTextRefs}
         >
           Focused on what matters,
-          <br />
+          {/* <br className="sm:hidden lg:block md:block" /> */}
           <span>
             driven by what’s next
             <span className="text-blue-600 rounded-full">.</span>
@@ -97,7 +97,7 @@ const GuidanceTop = () => {
 
         <div className="flex justify-center text-center">
           <p
-            className="mt-8 text-[#1b1b1b] text-lg leading-relaxed w-150 transition-colors duration-300"
+            className="mt-8 text-[#1b1b1b] text-lg leading-relaxed lg:w-150 md:w-150 sm:w-full transition-colors duration-300"
             ref={addToTextRefs}
           >
             We contribute to the transformation of the world through impactful

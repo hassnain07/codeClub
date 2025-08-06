@@ -46,7 +46,6 @@ export default function TeamSection() {
     <>
       <section className="bg-white text-gray-800">
         <div className="max-w-7xl mx-auto px-4 py-24">
-
           {/* Section Title */}
           <div className="text-center mt-20 mb-20">
             <h1 className="text-5xl md:text-6xl font-bold text-blue-500">
@@ -54,7 +53,8 @@ export default function TeamSection() {
             </h1>
             <div className="w-28 h-1 bg-gradient-to-r from-blue-600 via-yellow-400 to-blue-900 rounded-full mx-auto mt-4 mb-6"></div>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Meet the engineers, designers, and problem-solvers driving our ideas from concept to code.
+              Meet the engineers, designers, and problem-solvers driving our
+              ideas from concept to code.
             </p>
           </div>
 
@@ -100,12 +100,14 @@ export default function TeamSection() {
           {/* Team Cards */}
           <div className="mt-28 max-w-7xl mx-auto text-center px-4">
             <h2 className="text-5xl md:text-6xl font-bold text-blue-500">
-              Meet The Team <span className="text-black">Driving Innovation</span>
+              Meet The Team{" "}
+              <span className="text-black">Driving Innovation</span>
             </h2>
 
             <div className="w-28 h-1 bg-gradient-to-r from-blue-600 via-yellow-400 to-blue-900 rounded-full mx-auto mt-4 mb-6"></div>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-16">
-              These are the people turning big ideas into real-world products—designers, engineers, and builders.
+              These are the people turning big ideas into real-world
+              products—designers, engineers, and builders.
             </p>
 
             <div className="flex flex-wrap justify-center gap-10">
@@ -114,7 +116,6 @@ export default function TeamSection() {
               ))}
             </div>
           </div>
-
         </div>
       </section>
 
@@ -122,7 +123,3 @@ export default function TeamSection() {
     </>
   );
 }
-
-
-
-
