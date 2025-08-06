@@ -48,7 +48,7 @@ const Service = () => {
       </section>
 
       {/* Stats Section (example: static or you may also want to update dynamically) */}
-      <div className="bg-blue-100 p-10">
+      <div className="bg-blue-100 lg:p-10 md:p-10 sm:p-1">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 w-full h-full px-10 py-10">
           <StatsMain
             number="12+"
@@ -72,8 +72,8 @@ const Service = () => {
       </div>
 
       {/* Features Section */}
-      <div className="p-20">
-        <h1 className="text-5xl font-bold text-gray-800 leading-tight uppercase">
+      <div className="lg:p-20 md:p-20 sm:p-5 ">
+        <h1 className="lg:text-5xl md:text-5xl sm:text-3xl font-bold text-gray-800 leading-tight uppercase sm:text-center">
           {currentService.title} Expertise
         </h1>
         {/* Map over dynamic features array */}
@@ -89,9 +89,11 @@ const Service = () => {
       </div>
 
       {/* Tech Stack Section */}
-      <div className="flex flex-col gap-10 w-full h-full bg-indigo-900 text-white p-20">
-        <h1 className="uppercase font-bold text-5xl">Our Tech Stack</h1>
-        <div className="flex flex-wrap justify-start rounded-full text-sm gap-2">
+      <div className="flex flex-col gap-10 w-full h-full bg-indigo-900 text-white lg:p-20 md:p-20 sm:p-10 sm:pt-20">
+        <h1 className="uppercase font-bold lg:text-5xl md:text-5xl sm:text-4xl">
+          Our Tech Stack
+        </h1>
+        <div className="flex flex-wrap lg:justify-start md:justify-start sm:justify-center rounded-full text-sm gap-2">
           {tabOptions.map(({ id, label }) => (
             <div className="flex items-center" key={id}>
               <input

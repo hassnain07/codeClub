@@ -241,7 +241,6 @@ const FooterMain = () => {
           <ul className="mt-3 flex flex-col gap-2 text-sm">
             {[
               { name: "About Us", path: "/about" },
-              { name: "Team", path: "/team" },
               { name: "Our Methodology", path: "/methodology" },
               { name: "Case Studies", path: "/case-studies" },
               { name: "Contact Us", path: "/contact" },

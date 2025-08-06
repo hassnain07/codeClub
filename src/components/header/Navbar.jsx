@@ -297,30 +297,41 @@ const Navbar = () => {
           <ul className="flex flex-col gap-4">
             {Object.entries(menuData).map(([label, submenu]) => (
               <li key={label} className="border-b border-gray-200 pb-3">
-                <div
-                  className="flex items-center justify-between cursor-pointer text-base font-semibold text-gray-800 hover:text-blue-600 transition-colors"
-                  onClick={() => toggleMobileMenu(label)}
-                >
-                  {label}
-                  {label !== "Case Studies" && (
-                    <MdArrowDropDown className="text-xl" />
-                  )}
-                </div>
+                {label === "Case Studies" ? (
+                  // Direct link for Case Studies (no dropdown)
+                  <Link
+                    to={getPath(label)}
+                    onClick={() => setMobileOpen(false)}
+                    className="flex items-center justify-between text-base font-semibold text-gray-800 hover:text-blue-600 transition-colors"
+                  >
+                    {label}
+                  </Link>
+                ) : (
+                  <>
+                    <div
+                      className="flex items-center justify-between cursor-pointer text-base font-semibold text-gray-800 hover:text-blue-600 transition-colors"
+                      onClick={() => toggleMobileMenu(label)}
+                    >
+                      {label}
+                      <MdArrowDropDown className="text-xl" />
+                    </div>
 
-                {activeMenu === label && label !== "Case Studies" && (
-                  <ul className="mt-3 pl-4 flex flex-col gap-2">
-                    {submenu.map((item, idx) => (
-                      <li key={idx}>
-                        <Link
-                          to={getPath(item.label)}
-                          onClick={() => setMobileOpen(false)}
-                          className="block text-sm text-gray-600 hover:text-blue-600 transition-colors"
-                        >
-                          {item.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                    {activeMenu === label && (
+                      <ul className="mt-3 pl-4 flex flex-col gap-2">
+                        {submenu.map((item, idx) => (
+                          <li key={idx}>
+                            <Link
+                              to={getPath(item.label)}
+                              onClick={() => setMobileOpen(false)}
+                              className="block text-sm text-gray-600 hover:text-blue-600 transition-colors"
+                            >
+                              {item.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
                 )}
               </li>
             ))}
