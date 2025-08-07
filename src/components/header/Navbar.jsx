@@ -18,6 +18,7 @@ import {
 import { HiMenu, HiX } from "react-icons/hi";
 import { MdArrowDropDown } from "react-icons/md";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import logo from "../../assets/logo.jpeg";
 
 const menuData = {
   "Our Expertise": [
@@ -206,13 +207,18 @@ const Navbar = () => {
       } ${bgClass}`}
     >
       <div className="max-w-[1300px] mx-auto flex items-center justify-between h-16 sm:h-[70px]">
-        <div className="flex items-center gap-2">
-          <span
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            className="text-xl sm:text-2xl md:text-3xl font-bold cursor-pointer"
-            onClick={() => navigate("/")}
-          >
+        <div
+          className="flex items-center gap-3 cursor-pointer"
+          onClick={() => navigate("/")}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <img
+            src={logo}
+            alt="CodeClub Logo"
+            className="w-15 h-15 rounded-full object-cover"
+          />
+          <span className="text-xl lg:block sm:block sm:text-2xl md:hidden font-bold">
             CodeClub
           </span>
         </div>

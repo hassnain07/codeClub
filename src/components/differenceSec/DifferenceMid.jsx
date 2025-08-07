@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const text =
-  "We deliver effective digital solutions by uncovering deep root business needs through a blend of human insights and technology.";
+  "At CodeClub, we go beyond just building digital products — we uncover the core challenges of your business through a strategic blend of human-centered insights and innovative technology. Our team is dedicated to delivering tailored, scalable, and high-impact solutions that align with your vision, drive real value, and ensure long-term success.";
 
 const DifferenceMid = () => {
   const textRef = useRef(null);

@@ -8,7 +8,7 @@ const DifferenceMain = () => {
     <div className="bg-gradient-to-r from-[#001434] to-[#002156] h-full w-full d-flex flex-col px-25 sm:px-10 py-20">
       <DifferenceTop></DifferenceTop>
       <DifferenceMid></DifferenceMid>
-      <DifferenceBottom></DifferenceBottom>
+      {/* <DifferenceBottom></DifferenceBottom> */}
     </div>
   );
 };

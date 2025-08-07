@@ -36,7 +36,9 @@ const NumbersMain = () => {
               <p className="text-xs font-semibold uppercase tracking-wider">
                 {item.title}
               </p>
-              <h3 className="text-6xl font-bold">{item.value}</h3>
+              <h3 className="lg:text-6xl md:text-6xl sm:text-4xl font-bold">
+                {item.value}
+              </h3>
             </div>
           ))}
         </div>

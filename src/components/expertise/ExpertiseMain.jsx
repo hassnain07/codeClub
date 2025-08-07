@@ -36,6 +36,28 @@ const expertAreasApp = [
   "Enterprise Mobile Solutions",
 ];
 
+const expertAreasCybersecurity = [
+  "Network Security",
+  "Cloud Security",
+  "Application Security",
+  "Penetration Testing",
+  "Security Audits & Compliance",
+];
+const expertAreasUIDesign = [
+  "Wireframing & Prototyping",
+  "Responsive Web Design",
+  "Mobile App Design",
+  "User Journey Mapping",
+  "Design Systems & Style Guides",
+];
+const expertAreasIoT = [
+  "Smart Home Solutions",
+  "Industrial IoT (IIoT)",
+  "Wearable Tech",
+  "IoT Device Integration",
+  "Real-time Data Monitoring",
+];
+
 const ExpertiseMain = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 768); // Updated breakpoint to 768px
 
@@ -126,7 +148,7 @@ const ExpertiseMain = () => {
           desc={
             "Our App Development services empower businesses to overcome challenges and create revolutionary user experiences through advanced digital solutions."
           }
-          expertAreas={expertAreasApp}
+          expertAreas={expertAreasCybersecurity}
         />
       </div>
       <div
@@ -140,7 +162,7 @@ const ExpertiseMain = () => {
           desc={
             "Our App Development services empower businesses to overcome challenges and create revolutionary user experiences through advanced digital solutions."
           }
-          expertAreas={expertAreasApp}
+          expertAreas={expertAreasUIDesign}
         />
       </div>
       <div
@@ -154,7 +176,7 @@ const ExpertiseMain = () => {
           desc={
             "Our App Development services empower businesses to overcome challenges and create revolutionary user experiences through advanced digital solutions."
           }
-          expertAreas={expertAreasApp}
+          expertAreas={expertAreasIoT}
         />
       </div>
     </div>
