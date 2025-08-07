@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ExpertiseComponent from "./ExperiseComponent";
-import AI from "../../assets/AI_image.webp";
-import web from "../../assets/webExpertise.webp";
+import AI from "../../assets/aiExp.jpeg";
+import web from "../../assets/webExp.avif";
 import app from "../../assets/appExpertise.webp";
-import uiux from "../../assets/uiuxExpertise.avif";
+import uiux from "../../assets/uiExp.jpeg";
 import cyber from "../../assets/cyberExpertise.jpg";
-import iot from "../../assets/iotExpertise.jpg";
+import iot from "../../assets/iotExp.jpeg";
 
 gsap.registerPlugin(ScrollTrigger);
 

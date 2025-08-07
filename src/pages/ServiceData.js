@@ -39,6 +39,7 @@ import {
   SiRaspberrypi,
   SiGooglecloud,
   SiInfluxdb,
+  SiDiagramsdotnet,
 } from "react-icons/si";
 
 import { SiDotnet, SiElixir, SiNestjs } from "react-icons/si";
@@ -51,6 +52,7 @@ import aiImg from "../assets/aiService.jpg";
 import uiImg from "../assets/uiuxService.jpg";
 import iotImg from "../assets/iotService.jpg";
 import { RiFirebaseFill } from "react-icons/ri";
+import { FaNode } from "react-icons/fa6";
 
 export const serviceMap = {
   "mobile-apps": {
@@ -74,17 +76,34 @@ export const serviceMap = {
     ],
     techStack: {
       frameworks: [
-        SiDotnet, // .NET
-        FaNodeJs, // Node.js
-        FaAngular, // Angular
-        TbBrandReact, // React
-        SiElixir, // Elixir
-        SiNestjs, // NestJS
+        { name: ".NET", icon: SiDotnet },
+        { name: "Node.js", icon: FaNodeJs },
+        { name: "Angular", icon: FaAngular },
+        { name: "React", icon: TbBrandReact },
+        { name: "Elixir", icon: SiElixir },
+        { name: "NestJS", icon: SiNestjs },
       ],
-      languages: [SiJavascript, SiTypescript, FaPython],
-      mobDev: [TbBrandReactNative, SiSwift, TbBrandKotlin],
-      database: [SiPostgresql, SiMysql, SiMongodb, RiFirebaseFill],
-      devops: [TbBrandFirebase, SiDocker, SiKubernetes],
+      languages: [
+        { name: "JavaScript", icon: SiJavascript },
+        { name: "TypeScript", icon: SiTypescript },
+        { name: "Python", icon: FaPython },
+      ],
+      mobDev: [
+        { name: "React Native", icon: TbBrandReactNative },
+        { name: "Swift", icon: SiSwift },
+        { name: "Kotlin", icon: TbBrandKotlin },
+      ],
+      database: [
+        { name: "PostgreSQL", icon: SiPostgresql },
+        { name: "MySQL", icon: SiMysql },
+        { name: "MongoDB", icon: SiMongodb },
+        { name: "Firebase", icon: RiFirebaseFill },
+      ],
+      devops: [
+        { name: "Firebase", icon: TbBrandFirebase },
+        { name: "Docker", icon: SiDocker },
+        { name: "Kubernetes", icon: SiKubernetes },
+      ],
     },
     industries: [
       {
@@ -147,17 +166,34 @@ export const serviceMap = {
     ],
     techStack: {
       frameworks: [
-        SiDotnet, // .NET
-        FaNodeJs, // Node.js
-        FaAngular, // Angular
-        TbBrandReact, // React
-        SiElixir, // Elixir
-        SiNestjs, // NestJS
+        { icon: SiDiagramsdotnet, name: ".NET" },
+        { icon: FaNode, name: "Node.js" },
+        { icon: FaAngular, name: "Angular" },
+        { icon: TbBrandReact, name: "React" },
+        { icon: SiElixir, name: "Elixir" },
+        { icon: SiNestjs, name: "NestJS" },
       ],
-      languages: [SiJavascript, SiTypescript, FaPython],
-      webDev: [TbBrandNextjs, TbBrandHtml5, TbBrandCss3],
-      database: [SiPostgresql, SiMysql, SiMongodb, RiFirebaseFill],
-      devops: [TbBrandFirebase, SiDocker, SiKubernetes],
+      languages: [
+        { icon: SiJavascript, name: "JavaScript" },
+        { icon: SiTypescript, name: "TypeScript" },
+        { icon: FaPython, name: "Python" },
+      ],
+      webDev: [
+        { icon: TbBrandNextjs, name: "Next.js" },
+        { icon: TbBrandHtml5, name: "HTML5" },
+        { icon: TbBrandCss3, name: "CSS3" },
+      ],
+      database: [
+        { icon: SiPostgresql, name: "PostgreSQL" },
+        { icon: SiMysql, name: "MySQL" },
+        { icon: SiMongodb, name: "MongoDB" },
+        { icon: RiFirebaseFill, name: "Firebase" },
+      ],
+      devops: [
+        { icon: TbBrandFirebase, name: "Firebase" },
+        { icon: SiDocker, name: "Docker" },
+        { icon: SiKubernetes, name: "Kubernetes" },
+      ],
     },
     industries: [
       {
@@ -219,11 +255,30 @@ export const serviceMap = {
       },
     ],
     techStack: {
-      frameworks: [SiTensorflow, SiPytorch, SiScikitlearn],
-      languages: [FaPython, SiR, SiJavascript],
-      ai: [TbBrandNextjs, SiFastapi, SiFlask],
-      database: [SiPostgresql, SiMongodb, SiApachecassandra],
-      devops: [SiDocker, SiKubernetes],
+      frameworks: [
+        { icon: SiTensorflow, name: "TensorFlow" },
+        { icon: SiPytorch, name: "PyTorch" },
+        { icon: SiScikitlearn, name: "Scikit-learn" },
+      ],
+      languages: [
+        { icon: FaPython, name: "Python" },
+        { icon: SiR, name: "R" },
+        { icon: SiJavascript, name: "JavaScript" },
+      ],
+      ai: [
+        { icon: TbBrandNextjs, name: "Next.js" },
+        { icon: SiFastapi, name: "FastAPI" },
+        { icon: SiFlask, name: "Flask" },
+      ],
+      database: [
+        { icon: SiPostgresql, name: "PostgreSQL" },
+        { icon: SiMongodb, name: "MongoDB" },
+        { icon: SiApachecassandra, name: "Cassandra" },
+      ],
+      devops: [
+        { icon: SiDocker, name: "Docker" },
+        { icon: SiKubernetes, name: "Kubernetes" },
+      ],
     },
     industries: [
       {
@@ -285,11 +340,23 @@ export const serviceMap = {
       },
     ],
     techStack: {
-      frameworks: [SiNginx, SiApache, TbBrandNextjs],
-      languages: [SiPython, FaJava, SiCplusplus, SiRust],
-      cybersecurity: [FaLinux],
-      database: [SiElastic],
-      devops: [SiDocker, SiKubernetes],
+      frameworks: [
+        { icon: SiNginx, name: "Nginx" },
+        { icon: SiApache, name: "Apache" },
+        { icon: TbBrandNextjs, name: "Next.js" },
+      ],
+      languages: [
+        { icon: SiPython, name: "Python" },
+        { icon: FaJava, name: "Java" },
+        { icon: SiCplusplus, name: "C++" },
+        { icon: SiRust, name: "Rust" },
+      ],
+      cybersecurity: [{ icon: FaLinux, name: "Linux" }],
+      database: [{ icon: SiElastic, name: "Elasticsearch" }],
+      devops: [
+        { icon: SiDocker, name: "Docker" },
+        { icon: SiKubernetes, name: "Kubernetes" },
+      ],
     },
     industries: [
       {
@@ -351,8 +418,16 @@ export const serviceMap = {
       },
     ],
     techStack: {
-      frameworks: [SiFigma, SiSketch, SiAdobe, SiInvision],
-      devops: [SiMiro, SiJira],
+      frameworks: [
+        { icon: SiFigma, label: "Figma" },
+        { icon: SiSketch, label: "Sketch" },
+        { icon: SiAdobe, label: "Adobe XD" },
+        { icon: SiInvision, label: "InVision" },
+      ],
+      devops: [
+        { icon: SiMiro, label: "Miro" },
+        { icon: SiJira, label: "Jira" },
+      ],
     },
     industries: [
       {
@@ -413,10 +488,24 @@ export const serviceMap = {
       },
     ],
     techStack: {
-      frameworks: [SiArduino, SiRaspberrypi, SiGooglecloud],
-      languages: [SiCplusplus, SiPython, FaJava],
-      database: [SiInfluxdb, SiMongodb],
-      devops: [SiDocker, SiKubernetes],
+      frameworks: [
+        { icon: SiArduino, name: "Arduino" },
+        { icon: SiRaspberrypi, name: "Raspberry Pi" },
+        { icon: SiGooglecloud, name: "Google Cloud" },
+      ],
+      languages: [
+        { icon: SiCplusplus, name: "C++" },
+        { icon: SiPython, name: "Python" },
+        { icon: FaJava, name: "Java" },
+      ],
+      database: [
+        { icon: SiInfluxdb, name: "InfluxDB" },
+        { icon: SiMongodb, name: "MongoDB" },
+      ],
+      devops: [
+        { icon: SiDocker, name: "Docker" },
+        { icon: SiKubernetes, name: "Kubernetes" },
+      ],
     },
     industries: [
       {

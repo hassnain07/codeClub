@@ -116,9 +116,11 @@ const Service = () => {
 
         <div className="flex flex-wrap gap-6 mt-10">
           {currentService.techStack[selected] &&
-            currentService.techStack[selected].map((IconComponent, index) => (
-              <TechComp key={index} Icon={IconComponent} />
-            ))}
+            currentService.techStack[selected].map(
+              ({ icon: Icon, name }, index) => (
+                <TechComp key={index} Icon={Icon} name={name} />
+              )
+            )}
         </div>
       </div>
 

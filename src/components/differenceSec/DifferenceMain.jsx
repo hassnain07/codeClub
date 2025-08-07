@@ -5,7 +5,7 @@ import DifferenceBottom from "./DifferenceBottom";
 
 const DifferenceMain = () => {
   return (
-    <div className="bg-gradient-to-r from-[#001434] to-[#002156] h-full w-full d-flex flex-col px-25 sm:px-10 py-20">
+    <div className="bg-[#000122]  h-full w-full d-flex flex-col px-25 sm:px-10 py-20">
       <DifferenceTop></DifferenceTop>
       <DifferenceMid></DifferenceMid>
       {/* <DifferenceBottom></DifferenceBottom> */}

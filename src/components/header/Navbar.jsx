@@ -18,7 +18,7 @@ import {
 import { HiMenu, HiX } from "react-icons/hi";
 import { MdArrowDropDown } from "react-icons/md";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import logo from "../../assets/logo.jpeg";
+import logo from "../../assets/logo.png";
 
 const menuData = {
   "Our Expertise": [
@@ -87,6 +87,11 @@ const menuData = {
       description: "Our job opportunities, benefits, and company culture.",
       icon: <FaBriefcase />,
     },
+    {
+      label: "News",
+      description: "Our latest Updates.",
+      icon: <FaBriefcase />,
+    },
   ],
   "Case Studies": [],
 };
@@ -119,6 +124,8 @@ const getPath = (item) => {
       return "/careers";
     case "case studies":
       return "/caseStudies";
+    case "news":
+      return "/news";
     default:
       return "#";
   }
@@ -208,7 +215,7 @@ const Navbar = () => {
     >
       <div className="max-w-[1300px] mx-auto flex items-center justify-between h-16 sm:h-[70px]">
         <div
-          className="flex items-center gap-3 cursor-pointer"
+          className="flex items-center gap-2 cursor-pointer"
           onClick={() => navigate("/")}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -216,7 +223,7 @@ const Navbar = () => {
           <img
             src={logo}
             alt="CodeClub Logo"
-            className="w-15 h-15 rounded-full object-cover"
+            className="w-22 h-22 rounded-full object-cover"
           />
           <span className="text-xl lg:block sm:block sm:text-2xl md:hidden font-bold">
             CodeClub

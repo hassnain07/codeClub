@@ -262,14 +262,26 @@ const FooterMain = () => {
             <div className="flex items-center gap-3">
               <FiMail className="text-blue-600 text-lg" />
               <div>
-                <p className="text-sm text-gray-800">codeClub@gmail.com</p>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=codeclubb1@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-800 hover:underline"
+                >
+                  codeclubb1@gmail.com
+                </a>
               </div>
             </div>
 
             <div className="flex items-center gap-3">
               <FiPhone className="text-blue-600 text-lg" />
               <div>
-                <p className="text-sm text-gray-800">+92 300 1234567</p>
+                <a
+                  href="tel:+923140078748"
+                  className="text-sm text-gray-800 hover:underline"
+                >
+                  +92 314 0078748
+                </a>
               </div>
             </div>
 
@@ -278,7 +290,7 @@ const FooterMain = () => {
               <div>
                 <p className="text-sm text-gray-800">
                   Liberty Mall Opp: Airport runway, University Rd, Tehkal
-                  Peshawar,25000, Pakistan
+                  Peshawar, 25000, Pakistan
                 </p>
               </div>
             </div>

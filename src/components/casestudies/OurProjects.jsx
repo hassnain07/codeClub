@@ -28,11 +28,12 @@ const projects = [
     image: web_project1,
   },
   {
-    title: "Inventory Management System for a Multi location Retail Chain",
+    title: "SavSplit",
     description:
-      "Tracks real-time stock, reduces overstocking, and streamlines supply operations. Includes barcode integration, role-based access, and reporting.",
-    image: web_project2,
+      "Dual-mode app for personal and business use. Personal: split bills, track expenses. Business: manage inventory, record sales—like QuickBooks & Splitwise in one.",
+    image: app_project,
   },
+
   {
     title: "Custom LMS for an Education Platform",
     description:
@@ -58,10 +59,10 @@ const projects = [
     image: web_project6,
   },
   {
-    title: "SavSplit",
+    title: "Inventory Management System for a Multi location Retail Chain",
     description:
-      "Dual-mode app for personal and business use. Personal: split bills, track expenses. Business: manage inventory, record sales—like QuickBooks & Splitwise in one.",
-    image: app_project,
+      "Tracks real-time stock, reduces overstocking, and streamlines supply operations. Includes barcode integration, role-based access, and reporting.",
+    image: web_project2,
   },
   {
     title: "Halatick — Restaurant Ordering & Management App",

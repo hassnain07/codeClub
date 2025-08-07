@@ -2,7 +2,7 @@ import React from "react";
 
 const ExpertiseLeft = ({ img }) => {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center sm:w-full lg:w-1/2 ">
       <img
         src={img}
         alt="AI Phone UI"

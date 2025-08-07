@@ -97,6 +97,7 @@ const ContactMain = () => {
               name="message"
               onChange={handleMessage}
               className="w-full bg-transparent border-b border-gray-500 focus:outline-none focus:border-blue-500"
+              required
             />
           </div>
 
@@ -109,6 +110,7 @@ const ContactMain = () => {
                 name="user_name"
                 onChange={handleName}
                 className="w-full bg-transparent border-b border-gray-500 focus:outline-none focus:border-blue-500"
+                required
               />
             </div>
             <div>
@@ -119,6 +121,7 @@ const ContactMain = () => {
                 value={email}
                 onChange={handleEmail}
                 className="w-full bg-transparent border-b border-gray-500 focus:outline-none focus:border-blue-500"
+                required
               />
             </div>
             <div>
@@ -129,6 +132,7 @@ const ContactMain = () => {
                 value={number}
                 onChange={handleNumber}
                 className="w-full bg-transparent border-b border-gray-500 focus:outline-none focus:border-blue-500"
+                required
               />
             </div>
             <div>
@@ -139,6 +143,7 @@ const ContactMain = () => {
                 value={company}
                 onChange={handleCompany}
                 className="w-full bg-transparent border-b border-gray-500 focus:outline-none focus:border-blue-500"
+                required
               />
             </div>
           </div>
