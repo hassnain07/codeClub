@@ -1,124 +1,105 @@
 import React from "react";
-import profile_pic from "../assets/profile_pic.png";
-import UnlockComponent from "../components/UnlockComponent";
-import TeamCard from "../components/ourteam/TeamCard";
-import ZubairPic from "../assets/zubairPic.jpeg";
-const teamMembers = [
-  {
-    name: "Hasnain",
-    role: "MERN Stack Developer",
-    image: profile_pic,
-    bio: "Building robust full-stack apps using React, Node.js, Express, and MongoDB.",
-    linkedin: "https://www.linkedin.com/in/hasnain-profile",
+import { motion } from "framer-motion";
+import { FaLinkedin } from "react-icons/fa";
+import ContactMain from "../components/contact/contactMain.jsx";
+
+const team = {
+  ceo: {
+    name: "Abdullah Qureshi",
+    role: "Chief Executive Officer",
+    linkedin: "https://linkedin.com/in/abdullah",
+    bio: "Leading CodeClub with a vision for innovation and growth.",
   },
-  {
-    name: "Mazhar Ahmad",
-    role: "MERN Stack Developer",
-    image: profile_pic,
-    bio: "Creating clean, scalable web apps with MongoDB, Express, React, and Node.js.",
-    linkedin: "https://www.linkedin.com/in/mazhar-ahmad78",
-  },
-  {
-    name: "Ihtesham",
-    role: "AI Engineer",
-    image: profile_pic,
-    bio: "Designing intelligent systems with machine learning, data, and automation tools.",
-    linkedin: "https://www.linkedin.com/in/zain-khan",
-  },
-  {
-    name: "Abdullah",
-    role: "Mobile Developer",
-    image: profile_pic,
-    bio: "Crafting fast, cross-platform apps using Flutter, React Native, and Firebase.",
-    linkedin: "https://www.linkedin.com/in/hira-sheikh",
-  },
-  {
-    name: "Shaheer",
-    role: "DevOps Engineer",
-    image: profile_pic,
-    bio: "Automating deployments and scaling secure infrastructure for modern teams.",
-    linkedin: "https://www.linkedin.com/in/omar-siddiqui",
-  },
-];
+  executives: [
+    {
+      name: "Affan",
+      role: "Chief Technology Officer",
+      linkedin: "https://linkedin.com/in/affan",
+      bio: "Architecting scalable systems and ensuring top-notch code quality.",
+    },
+    {
+      name: "Zubair",
+      role: "Manager",
+      linkedin: "https://linkedin.com/in/zubair",
+      bio: "Overseeing teams and streamlining daily operations.",
+    },
+    {
+      name: "Uzair",
+      role: "Chief Operating Officer",
+      linkedin: "https://linkedin.com/in/uzair",
+      bio: "Driving operational excellence and process optimization.",
+    },
+  ],
+};
 
 export default function TeamSection() {
   return (
     <>
-      <section className="bg-white text-gray-800">
-        <div className="max-w-7xl mx-auto px-4 py-24">
-          {/* Section Title */}
-          <div className="text-center mt-20 mb-20">
-            <h1 className="text-5xl md:text-6xl font-bold text-blue-500">
-              The Brains Behind <span className="text-black">The Build</span>
-            </h1>
-            <div className="w-28 h-1 bg-gradient-to-r from-blue-600 via-yellow-400 to-blue-900 rounded-full mx-auto mt-4 mb-6"></div>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Meet the engineers, designers, and problem-solvers driving our
-              ideas from concept to code.
-            </p>
-          </div>
+      <section className="bg-white mt-24 py-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          {/* Title */}
+          <h2 className="text-5xl md:text-6xl font-bold text-gray-900">
+            Meet <span className="text-blue-600">Our Leadership</span>
+          </h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="text-gray-600 max-w-2xl mx-auto mb-16"
+          >
+            The minds shaping CodeClub's vision, strategy, and success.
+          </motion.p>
 
-          {/* Hero Cards */}
-          <div className="flex flex-wrap md:flex-nowrap items-stretch gap-6 w-full max-w-6xl mt-12 mx-auto">
-            {[
-              {
-                title: "Abdullah",
-                description: "CEO CodeClub | Managing Clients.",
-                img: "https://images.unsplash.com/photo-1543269865-0a740d43b90c?q=80&w=800&h=400&auto=format&fit=crop",
-              },
-              {
-                title: "Affaan",
-                description:
-                  "Designing systems that scale and delight. Loves clean code and efficient UIs.",
-                img: "https://images.unsplash.com/photo-1714976326351-0ecf0244f0fc?q=80&w=800&h=400&auto=format&fit=crop",
-              },
-              {
-                title: "Zubair",
-                description:
-                  "Manager CodeClub | Managing Teams and daily operations.",
-                img: ZubairPic,
-              },
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className="relative group flex-grow transition-all w-full md:w-56 h-[380px] duration-500 hover:w-full"
+          {/* CEO */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col items-center mb-20"
+          >
+            <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-200 shadow-lg rounded-2xl p-8 w-96 transition-all hover:scale-105 hover:shadow-blue-300">
+              <h2 className="text-2xl font-bold text-gray-800">{team.ceo.name}</h2>
+              <p className="text-blue-700 font-medium">{team.ceo.role}</p>
+              <p className="text-gray-600 mt-4 text-sm">{team.ceo.bio}</p>
+              <a
+                href={team.ceo.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 text-blue-600 hover:text-blue-800"
               >
-                <img
-                  className="h-full w-full object-cover object-center rounded-xl"
-                  src={item.img}
-                  alt={item.title}
-                />
-                <div className="absolute inset-0 flex flex-col justify-end p-8 text-white bg-transparent  opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-xl">
-                  <h2 className="text-2xl font-semibold">{item.title}</h2>
-                  <p className="text-sm mt-2">{item.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Team Cards */}
-          <div className="mt-28 max-w-7xl mx-auto text-center px-4">
-            <h2 className="text-5xl md:text-6xl font-bold text-blue-500">
-              Meet The Team{" "}
-              <span className="text-black">Driving Innovation</span>
-            </h2>
-
-            <div className="w-28 h-1 bg-gradient-to-r from-blue-600 via-yellow-400 to-blue-900 rounded-full mx-auto mt-4 mb-6"></div>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-16">
-              These are the people turning big ideas into real-world
-              products—designers, engineers, and builders.
-            </p>
-
-            <div className="flex flex-wrap justify-center gap-10">
-              {teamMembers.map((member, index) => (
-                <TeamCard key={index} member={member} index={index} />
-              ))}
+                <FaLinkedin size={22} />
+              </a>
             </div>
+          </motion.div>
+
+          {/* Executives */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+            {team.executives.map((member, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 * idx }}
+                className="bg-gradient-to-br from-yellow-50 to-white border border-yellow-200 shadow-md rounded-2xl p-8 transition-all hover:scale-105 hover:shadow-yellow-300 text-center"
+              >
+                <h3 className="text-xl font-semibold text-gray-800">{member.name}</h3>
+                <p className="text-yellow-700 font-medium">{member.role}</p>
+                <p className="text-gray-600 mt-3 text-sm">{member.bio}</p>
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 text-yellow-700 hover:text-yellow-900"
+                >
+                  <FaLinkedin size={20} />
+                </a>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      <UnlockComponent />
+      <ContactMain />
     </>
   );
 }

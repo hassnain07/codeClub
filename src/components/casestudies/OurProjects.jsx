@@ -15,6 +15,14 @@ import app_project3 from "../../assets/app_project3.png";
 import cyber_project1 from "../../assets/cyber_project1.png";
 
 const projects = [
+
+
+  {
+    title: "SavSplit",
+    description:
+      "Dual-mode app for personal and business use. Personal: split bills, track expenses. Business: manage inventory, record sales—like QuickBooks & Splitwise in one.",
+    image: app_project,
+  },
   {
     title: "SEIZURE SENSE",
     description:
@@ -27,12 +35,7 @@ const projects = [
       "A powerful AI SaaS platform offering image generation, blog suggestions, background removal, resume review, and disease diagnostics—streamlining work through smart automation.",
     image: web_project1,
   },
-  {
-    title: "SavSplit",
-    description:
-      "Dual-mode app for personal and business use. Personal: split bills, track expenses. Business: manage inventory, record sales—like QuickBooks & Splitwise in one.",
-    image: app_project,
-  },
+
 
   {
     title: "Custom LMS for an Education Platform",
@@ -70,12 +73,12 @@ const projects = [
       "Order dine-in, takeaway, or delivery. Includes digital menus, live order tracking, and table reservations.",
     image: app_project2,
   },
-  {
-    title: "Khyber Pakhtunkhwa — Tourism Discovery App",
-    description:
-      "Guides, maps, offline support, and trip planning to explore KP’s historical, cultural, and natural treasures.",
-    image: app_project3,
-  },
+  // {
+  //   title: "Khyber Pakhtunkhwa — Tourism Discovery App",
+  //   description:
+  //     "Guides, maps, offline support, and trip planning to explore KP’s historical, cultural, and natural treasures.",
+  //   image: app_project3,
+  // },
   //   {
   //     title: "Smart Dual Finance",
   //     description:
@@ -119,9 +122,8 @@ const OurProjects = () => {
             className="overflow-hidden shadow-2xl text-white"
           >
             <div
-              className={`max-w-7xl mx-auto flex flex-col md:flex-row ${
-                isReversed ? "md:flex-row-reverse" : ""
-              } items-center px-6 py-16 gap-8`}
+              className={`max-w-7xl mx-auto flex flex-col md:flex-row ${isReversed ? "md:flex-row-reverse" : ""
+                } items-center px-6 py-16 gap-8`}
             >
               {/* Text */}
               <div className="md:w-1/2 space-y-4">

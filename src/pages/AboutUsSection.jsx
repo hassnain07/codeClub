@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import teamImage from "../assets/aboutUs.jpg";
+import teamImage from "../assets/aboutus2.jpg";
 import UnlockComponent from "../components/UnlockComponent";
 
 const stats = [
@@ -90,7 +90,7 @@ export default function AboutUsSection() {
         </section>
 
         {/* Meet Our Team */}
-        <section className="max-w-6xl mx-auto text-center mt-20">
+        {/* <section className="max-w-6xl mx-auto text-center mt-20">
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
             Meet Our <span className="text-blue-600">Team</span>
           </h2>
@@ -120,7 +120,7 @@ export default function AboutUsSection() {
               </motion.div>
             ))}
           </div>
-        </section>
+        </section> */}
       </div>
       <UnlockComponent />
     </>

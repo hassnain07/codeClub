@@ -77,11 +77,18 @@ const menuData = {
       description: "Our people and values.",
       icon: <FaBuilding />,
     },
-    // {
-    //   label: "Experts",
-    //   description: "Our problem-solvers and tech minds.",
-    //   icon: <FaUsers />,
-    // },
+    {
+      label: "Code Club Team",
+      description: "Our problem-solvers and tech minds.",
+      icon: <FaUsers />,
+    },
+
+    {
+      label: "Advisory Board",
+      description: "Our trusted advisors and industry experts.",
+      icon: <FaUsers />,
+    },
+
     {
       label: "Careers",
       description: "Our job opportunities, benefits, and company culture.",
@@ -118,8 +125,8 @@ const getPath = (item) => {
       return "/launch";
     case "about us":
       return "/about";
-    // case "experts":
-    //   return "/experts";
+    case "code club team":
+      return "/code-club-team";
     case "careers":
       return "/careers";
     case "case studies":
@@ -209,9 +216,8 @@ const Navbar = () => {
 
   return (
     <header
-      className={`w-full fixed top-0 z-40 px-4 sm:px-6 py-4 transition-all duration-300 ${
-        showHeader ? "translate-y-0" : "-translate-y-full"
-      } ${bgClass}`}
+      className={`w-full fixed top-0 z-40 px-4 sm:px-6 py-4 transition-all duration-300 ${showHeader ? "translate-y-0" : "-translate-y-full"
+        } ${bgClass}`}
     >
       <div className="max-w-[1300px] mx-auto flex items-center justify-between h-16 sm:h-[70px]">
         <div

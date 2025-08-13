@@ -43,29 +43,7 @@ const Service = () => {
         </p>
       </section>
 
-      {/* Stats Section */}
-      <div className="bg-blue-100 p-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 w-full h-full px-10 py-10">
-          <StatsMain
-            number="12+"
-            label="DELIVERED PROJECTS"
-            title="Successfully Delivered Projects"
-            description="We've helped numerous startups and established businesses to launch their products or revise existing solutions."
-          />
-          <StatsMain
-            number="100%"
-            label="CLIENT SATISFACTION"
-            title="Happy Clients"
-            description="Our commitment to excellence is proven by the satisfaction of our diverse client base."
-          />
-          <StatsMain
-            number="10+"
-            label="EXPERTS"
-            title="Industry Experts"
-            description="Our team consists of skilled professionals with years of experience in the industry."
-          />
-        </div>
-      </div>
+
 
       {/* Features Section */}
       <div className="p-20">
@@ -156,6 +134,30 @@ const Service = () => {
           </div>
         </div>
       )}
+
+      {/* Stats Section */}
+      <div className="bg-blue-100 p-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 w-full h-full px-10 py-10">
+          <StatsMain
+            number="12+"
+            label="DELIVERED PROJECTS"
+            title="Successfully Delivered Projects"
+            description="We've helped numerous startups and established businesses to launch their products or revise existing solutions."
+          />
+          <StatsMain
+            number="100%"
+            label="CLIENT SATISFACTION"
+            title="Happy Clients"
+            description="Our commitment to excellence is proven by the satisfaction of our diverse client base."
+          />
+          <StatsMain
+            number="10+"
+            label="EXPERTS"
+            title="Industry Experts"
+            description="Our team consists of skilled professionals with years of experience in the industry."
+          />
+        </div>
+      </div>
 
       <UnlockComponent />
     </div>
