@@ -62,11 +62,19 @@ const Service = () => {
       </div>
 
       {/* Tech Stack Section */}
+<<<<<<< HEAD
       <div className="flex flex-col gap-10 w-full h-full bg-indigo-900 text-white p-20">
         <h1 className="uppercase font-bold text-5xl">Our Tech Stack</h1>
         <div className="flex flex-wrap justify-start rounded-full text-sm gap-2">
+=======
+      <div className="flex flex-col gap-10 w-full h-full bg-indigo-900 text-white lg:p-20 md:p-20 sm:p-10 sm:pt-20">
+        <h1 className="uppercase font-bold lg:text-5xl md:text-5xl sm:text-4xl sm:text-center lg:text-start">
+          Our Tech Stack
+        </h1>
+        <div className="flex flex-wrap lg:justify-start md:justify-start sm:justify-center sm:items-center rounded-full text-sm gap-2">
+>>>>>>> 0cceb364cc13c6d5e5e2d557924574496f6911dd
           {tabOptions.map(({ id, label }) => (
-            <div className="flex items-center" key={id}>
+            <div className="flex  items-center" key={id}>
               <input
                 type="radio"
                 name="options"
@@ -85,8 +93,19 @@ const Service = () => {
           ))}
         </div>
 
+<<<<<<< HEAD
         {/* Render all tech items for the selected category */}
         <TechComp frameworks={currentService.techStack[selected]} />
+=======
+        <div className="flex flex-wrap gap-6 mt-10 sm:justify-center lg:justify-start md:justify-start ">
+          {currentService.techStack[selected] &&
+            currentService.techStack[selected].map(
+              ({ icon: Icon, name }, index) => (
+                <TechComp key={index} Icon={Icon} name={name} />
+              )
+            )}
+        </div>
+>>>>>>> 0cceb364cc13c6d5e5e2d557924574496f6911dd
       </div>
 
       {/* Industries Section */}

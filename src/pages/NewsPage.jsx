@@ -5,7 +5,7 @@ const newsData = [
   {
     title: "CodeClub Inaugration Ceremony",
     summary:
-      "Artificial Intelligence continues to revolutionize the way organizations protect their digital assets. Businesses are increasingly adopting machine learning algorithms to detect and prevent cyber threats in real-time. The integration of AI into security systems not only enhances threat detection but also reduces response times significantly. Experts believe this trend will continue to evolve, making cybersecurity more predictive and adaptive than ever before.",
+      "Students of IM Sciences Peshawar have launched Code Club, a self-help software house to promote technology, modern trends, and income opportunities.Founded by Abdullah Hasnain Qureshi, it aims to bridge the gap between theory and practical skills.The inauguration was graced by Amjad Aziz Malik and Muhammad Habib Qureshi, who praised the students’ dedication.Around 30 students have joined in the first phase to work on real-world projects.Code Club will serve as a launchpad for talent, innovation, and professional growth.",
     image: news1,
     date: "July 21, 2025",
   },

@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-
 @theme {
   --font-body: "Inter", sans-serif;
   --animate-fade-in-down: fadeInDown 0.2s ease-out;
@@ -25,8 +24,6 @@
       transform: translateY(0);
     }
   }
-
-  
 
   @keyframes fade-in-up {
     0% {
@@ -60,5 +57,3 @@
     }
   }
 }
-
-
