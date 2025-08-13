@@ -90,12 +90,12 @@ const Service = () => {
 
       {/* Tech Stack Section */}
       <div className="flex flex-col gap-10 w-full h-full bg-indigo-900 text-white lg:p-20 md:p-20 sm:p-10 sm:pt-20">
-        <h1 className="uppercase font-bold lg:text-5xl md:text-5xl sm:text-4xl">
+        <h1 className="uppercase font-bold lg:text-5xl md:text-5xl sm:text-4xl sm:text-center lg:text-start">
           Our Tech Stack
         </h1>
-        <div className="flex flex-wrap lg:justify-start md:justify-start sm:justify-center rounded-full text-sm gap-2">
+        <div className="flex flex-wrap lg:justify-start md:justify-start sm:justify-center sm:items-center rounded-full text-sm gap-2">
           {tabOptions.map(({ id, label }) => (
-            <div className="flex items-center" key={id}>
+            <div className="flex  items-center" key={id}>
               <input
                 type="radio"
                 name="options"
@@ -114,7 +114,7 @@ const Service = () => {
           ))}
         </div>
 
-        <div className="flex flex-wrap gap-6 mt-10">
+        <div className="flex flex-wrap gap-6 mt-10 sm:justify-center lg:justify-start md:justify-start ">
           {currentService.techStack[selected] &&
             currentService.techStack[selected].map(
               ({ icon: Icon, name }, index) => (

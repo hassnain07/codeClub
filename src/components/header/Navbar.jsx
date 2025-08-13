@@ -209,7 +209,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`w-full fixed top-0 z-40 px-4 sm:px-6 py-4 transition-all duration-300 ${
+      className={`w-full fixed top-0 z-40 lg:px-20 sm:px-6 py-4 transition-all duration-300 ${
         showHeader ? "translate-y-0" : "-translate-y-full"
       } ${bgClass}`}
     >

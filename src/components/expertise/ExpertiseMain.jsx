@@ -7,7 +7,7 @@ import web from "../../assets/webExp.avif";
 import app from "../../assets/appExpertise.webp";
 import uiux from "../../assets/uiExp.jpeg";
 import cyber from "../../assets/cyberExpertise.jpg";
-import iot from "../../assets/iotExp.jpeg";
+import iot from "../../assets/iotExp.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -94,9 +94,9 @@ const ExpertiseMain = () => {
   }, [isLargeScreen]);
 
   return (
-    <div className="">
+    <div className="w-[100%] bg-[#f4f8ff]">
       <div
-        className={`w-full flex lg:flex-row md:flex-row sm:flex-col lg:h-screen md:h-screen sm:h-full overflow-hidden border-t border-white ${
+        className={`w-[100%] flex lg:flex-row md:flex-row sm:flex-col lg:h-screen md:h-screen sm:h-full overflow-hidden border-t border-white ${
           isLargeScreen ? "panel" : ""
         }`}
       >
@@ -146,7 +146,7 @@ const ExpertiseMain = () => {
           img={cyber}
           name={"CyberSecurity"}
           desc={
-            "Our App Development services empower businesses to overcome challenges and create revolutionary user experiences through advanced digital solutions."
+            "Our Cybersecurity solutions protect your digital assets with advanced threat detection, risk assessment, and proactive defense strategies. We help businesses stay secure, compliant, and resilient against evolving cyber threats."
           }
           expertAreas={expertAreasCybersecurity}
         />
@@ -160,7 +160,7 @@ const ExpertiseMain = () => {
           img={uiux}
           name={"UI/UX Design"}
           desc={
-            "Our App Development services empower businesses to overcome challenges and create revolutionary user experiences through advanced digital solutions."
+            "Our UI/UX Design services focus on creating intuitive, engaging, and user-centered experiences. We craft seamless interfaces that not only look great but also enhance usability and drive customer satisfaction."
           }
           expertAreas={expertAreasUIDesign}
         />
@@ -172,9 +172,9 @@ const ExpertiseMain = () => {
       >
         <ExpertiseComponent
           img={iot}
-          name={"IOT"}
+          name={"IoT"}
           desc={
-            "Our App Development services empower businesses to overcome challenges and create revolutionary user experiences through advanced digital solutions."
+            "Our IoT solutions connect devices, systems, and data to enable smarter operations and real-time decision-making. We help businesses harness the power of connected technology to increase efficiency, automation, and innovation."
           }
           expertAreas={expertAreasIoT}
         />

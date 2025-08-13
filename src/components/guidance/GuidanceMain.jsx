@@ -12,7 +12,7 @@ const GuidanceTop = () => {
     const ctx = gsap.context(() => {
       if (!circleRef.current || !sectionRef.current) return;
 
-      gsap.set(circleRef.current, { scale: 20 });
+      gsap.set(circleRef.current, { scale: 70 });
 
       gsap.to(circleRef.current, {
         scale: 1,
@@ -39,7 +39,7 @@ const GuidanceTop = () => {
 
             if (direction === -1) {
               // Scrolling up — change to white
-              gsap.to(el, { color: "#ffffff", duration: 0.3 });
+              gsap.to(el, { color: "#ffffff", duration: 0.2 });
             } else {
               // Scrolling down — change back to original color
               const originalColor = el.dataset.originalColor;

@@ -6,7 +6,7 @@ const ExpertiseLeft = ({ img }) => {
       <img
         src={img}
         alt="AI Phone UI"
-        className="max-w-full h-auto object-cover"
+        className="max-w-full h-auto object-cover xl:w-full"
       />
     </div>
   );
