@@ -6,6 +6,9 @@ import TechComp from "../components/techComp/TechComp";
 import IndComp from "../components/industryComp/IndComp";
 import { serviceMap } from "./ServiceData";
 import UnlockComponent from "../components/UnlockComponent";
+import { motion } from "framer-motion";
+import { FaLinkedin } from "react-icons/fa";
+
 
 const Service = () => {
   const { slug } = useParams();
@@ -120,26 +123,39 @@ const Service = () => {
       )}
 
       {/* Team Members Section */}
-      {currentService.team && currentService.team.length > 0 && (
-        <div className="bg-gray-100 py-16 px-6 lg:px-20">
-          <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center">
-            Meet the Team
-          </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {currentService.team.map((member, idx) => (
-              <div
-                key={idx}
-                className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition"
-              >
-                <h2 className="text-lg font-semibold text-gray-800">
-                  {member.name}
-                </h2>
-                <p className="text-gray-500">{member.role}</p>
-              </div>
-            ))}
-          </div>
+      <div className="bg-gray-100 py-16 px-6 lg:px-20">
+        <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center">
+          Meet the Team
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
+          {currentService.team.map((member, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 * idx }}
+              className="bg-gradient-to-br from-yellow-50 to-white border border-yellow-200 shadow-md rounded-2xl p-8 transition-all hover:scale-105 hover:shadow-yellow-300 text-center"
+            >
+              <h2 className="text-xl font-semibold text-gray-800">{member.name}</h2>
+              <p className="text-yellow-700 font-medium">{member.role}</p>
+              {member.bio && (
+                <p className="text-gray-600 mt-3 text-sm">{member.bio}</p>
+              )}
+              {member.linkedin && (
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 text-yellow-700 hover:text-yellow-900"
+                >
+                  <FaLinkedin size={20} />
+                </a>
+              )}
+            </motion.div>
+          ))}
         </div>
-      )}
+      </div>
+
 
       {/* Stats Section */}
       <div className="bg-blue-100 p-10">

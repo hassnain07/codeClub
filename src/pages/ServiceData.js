@@ -231,10 +231,10 @@ export const serviceMap = {
     ],
 
     team: [
-      { name: "Hasnain Hafeez", role: "Team Lead" },
-      { name: "Mazhar Ahmad", role: "Senior Web Developer" },
-      { name: "Zaigham", role: "Junior Web Developer" },
-      { name: "Amin", role: "Intern" }
+      { name: "Hasnain Hafeez", role: "Team Lead", LinkedIn: "https://www.linkedin.com/in/hasnain-hafeez/" },
+      { name: "Mazhar Ahmad", role: "Senior Web Developer", LinkedIn: "https://www.linkedin.com/in/mazhar-ahmad/" },
+      { name: "Zaigham", role: "Junior Web Developer", LinkedIn: "https://www.linkedin.com/in/zaigham/" },
+      { name: "Amin", role: "Intern", LinkedIn: "https://www.linkedin.com/in/amin/" }
     ]
   },
 
