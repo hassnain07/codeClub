@@ -1,5 +1,5 @@
 import React from "react";
-import vid from "../../assets/main-video.mp4";
+import vid from "../../assets/main-old-video.mp4";
 import bgImg from "../../assets/bgimg2.jpg";
 
 import "animate.css";
