@@ -4,24 +4,20 @@ import StatsMain from "../components/statsCard/statsMain";
 import FeatureCard from "../components/expertiseCard/FeatureCard";
 import TechComp from "../components/techComp/TechComp";
 import IndComp from "../components/industryComp/IndComp";
-import { serviceMap } from "./ServiceData"; // configuration file with your service data
+import { serviceMap } from "./ServiceData";
 import UnlockComponent from "../components/UnlockComponent";
 
 const Service = () => {
-  // Get the slug from the route URL (e.g. "mobile-apps" or "web-development")
   const { slug } = useParams();
   const currentService = serviceMap[slug];
 
-  // If the service doesn't exist, you can either render a Not Found component or a message.
   if (!currentService) {
     return (
       <div className="text-center text-red-500 mt-20">Service not found.</div>
     );
   }
 
-  // Tech stack tabs: reuse the keys from the current service's techStack
   const tabOptions = Object.keys(currentService.techStack).map((key) => {
-    // For label formatting you can replace camelCase with proper spacing if needed.
     const label = key
       .replace(/([A-Z])/g, " $1")
       .replace(/^./, (str) => str.toUpperCase());
@@ -47,8 +43,8 @@ const Service = () => {
         </p>
       </section>
 
-      {/* Stats Section (example: static or you may also want to update dynamically) */}
-      <div className="bg-blue-100 lg:p-10 md:p-10 sm:p-1">
+      {/* Stats Section */}
+      <div className="bg-blue-100 p-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 w-full h-full px-10 py-10">
           <StatsMain
             number="12+"
@@ -72,11 +68,10 @@ const Service = () => {
       </div>
 
       {/* Features Section */}
-      <div className="lg:p-20 md:p-20 sm:p-5 ">
-        <h1 className="lg:text-5xl md:text-5xl sm:text-3xl font-bold text-gray-800 leading-tight uppercase sm:text-center">
+      <div className="p-20">
+        <h1 className="text-5xl font-bold text-gray-800 leading-tight uppercase">
           {currentService.title} Expertise
         </h1>
-        {/* Map over dynamic features array */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
           {currentService.features.map((feature, idx) => (
             <FeatureCard
@@ -89,11 +84,9 @@ const Service = () => {
       </div>
 
       {/* Tech Stack Section */}
-      <div className="flex flex-col gap-10 w-full h-full bg-indigo-900 text-white lg:p-20 md:p-20 sm:p-10 sm:pt-20">
-        <h1 className="uppercase font-bold lg:text-5xl md:text-5xl sm:text-4xl">
-          Our Tech Stack
-        </h1>
-        <div className="flex flex-wrap lg:justify-start md:justify-start sm:justify-center rounded-full text-sm gap-2">
+      <div className="flex flex-col gap-10 w-full h-full bg-indigo-900 text-white p-20">
+        <h1 className="uppercase font-bold text-5xl">Our Tech Stack</h1>
+        <div className="flex flex-wrap justify-start rounded-full text-sm gap-2">
           {tabOptions.map(({ id, label }) => (
             <div className="flex items-center" key={id}>
               <input
@@ -114,14 +107,8 @@ const Service = () => {
           ))}
         </div>
 
-        <div className="flex flex-wrap gap-6 mt-10">
-          {currentService.techStack[selected] &&
-            currentService.techStack[selected].map(
-              ({ icon: Icon, name }, index) => (
-                <TechComp key={index} Icon={Icon} name={name} />
-              )
-            )}
-        </div>
+        {/* Render all tech items for the selected category */}
+        <TechComp frameworks={currentService.techStack[selected]} />
       </div>
 
       {/* Industries Section */}
@@ -148,7 +135,29 @@ const Service = () => {
         </div>
       )}
 
-      <UnlockComponent></UnlockComponent>
+      {/* Team Members Section */}
+      {currentService.team && currentService.team.length > 0 && (
+        <div className="bg-gray-100 py-16 px-6 lg:px-20">
+          <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center">
+            Meet the Team
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {currentService.team.map((member, idx) => (
+              <div
+                key={idx}
+                className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition"
+              >
+                <h2 className="text-lg font-semibold text-gray-800">
+                  {member.name}
+                </h2>
+                <p className="text-gray-500">{member.role}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <UnlockComponent />
     </div>
   );
 };

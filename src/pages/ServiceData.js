@@ -131,6 +131,14 @@ export const serviceMap = {
         ],
       },
     ],
+
+    team: [
+      { name: "Amad ur Rehman", role: "Team Lead" },
+      { name: "Abdullah", role: "Senior App Developer" },
+      { name: "Affan", role: "Junior App Developer" },
+      { name: "Zubair", role: "Intern" },
+      { name: "Salam", role: "Trainee" }
+    ]
   },
 
   "web-development": {
@@ -221,6 +229,13 @@ export const serviceMap = {
         ],
       },
     ],
+
+    team: [
+      { name: "Hasnain Hafeez", role: "Team Lead" },
+      { name: "Mazhar Ahmad", role: "Senior Web Developer" },
+      { name: "Zaigham", role: "Junior Web Developer" },
+      { name: "Amin", role: "Intern" }
+    ]
   },
 
   ai: {
@@ -306,6 +321,15 @@ export const serviceMap = {
         ],
       },
     ],
+
+    team: [
+      { name: "Ihtisham", role: "Team Lead" },
+      { name: "Hashir Ali Shah", role: "Senior AI Engineer" },
+      { name: "Umer", role: "Senior AI Engineer" },
+      { name: "Ahmad", role: "Junior AI Engineer" },
+      { name: "Hasnain", role: "Trainee" },
+      { name: "Riyan", role: "Trainee" }
+    ]
   },
 
   cybersecurity: {
@@ -383,6 +407,11 @@ export const serviceMap = {
           "Customer data protection",
         ],
       },
+    ],
+    team: [
+      { name: "Shaheer", role: "Team Lead" },
+      { name: "Haziq", role: "Intern" },
+
     ],
   },
 
