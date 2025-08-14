@@ -22,10 +22,10 @@ Welcome to the official website of **CodeClub** — a student-led tech community
 
 - **React.js** – Component-based architecture for fast, scalable UI
 - **Tailwind CSS** – Utility-first styling for clean, responsive layouts
-- **Framer Motion** – Smooth animations and section transitions
+- **Framer Motion and gsap** – Smooth animations and section transitions
 - **React Router** – SPA routing between pages
 - **Lucide + React Icons** – Iconography
-- **Vercel** – Deployment
+- **Hostinger** – Deployment
 
 ---
 
@@ -46,6 +46,7 @@ Welcome to the official website of **CodeClub** — a student-led tech community
 
 Meet our passionate contributors behind the project — developers, designers, and coordinators, all working together to build and grow CodeClub.
 
+
 ---
 
 ## 💼 Careers
@@ -63,7 +64,7 @@ Our approach is rooted in collaboration, creativity, and consistent growth. We d
 ## 📸 Showcase
 
 > _[Insert screenshots or preview links here if needed]_  
-> _Example: [Live Demo](https://your-codeclub-site.vercel.app)_
+> _Example: [Live Demo](https://www.codeclub.tech)_
 
 ---
 
