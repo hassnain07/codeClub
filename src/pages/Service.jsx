@@ -16,7 +16,7 @@ const Service = () => {
 
   if (!currentService) {
     return (
-      <div className="text-center text-red-500 mt-20">Service not found.</div>
+      <div className="text-center text-red-500 mt-21">Service not found.</div>
     );
   }
 
