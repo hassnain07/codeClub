@@ -63,8 +63,8 @@ Our approach is rooted in collaboration, creativity, and consistent growth. We d
 
 ## 📸 Showcase
 
-> _[Insert screenshots or preview links here if needed]_  
-> _Example: [Live Demo](https://www.codeclub.tech)_
+
+> VISIT HERE [Live Demo](https://www.codeclub.tech)_
 
 ---
 
