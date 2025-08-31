@@ -14,13 +14,13 @@ const team = {
     {
       name: "Muhammad Affan",
       role: "Chief Technology Officer",
-      linkedin: "https://linkedin.com/in/affan",
+      linkedin: "https://www.linkedin.com/in/muhammad-affan-77bb91200/",
       bio: "Architecting scalable systems and ensuring top-notch code quality.",
     },
     {
       name: "Mian Zubair Ali Shah",
       role: "Manager",
-      linkedin: "https://linkedin.com/in/zubair",
+      linkedin: "https://www.linkedin.com/in/mian-shah-3190a030a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app ",
       bio: "Overseeing teams and streamlining daily operations.",
     },
     {
