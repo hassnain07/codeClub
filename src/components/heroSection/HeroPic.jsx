@@ -7,6 +7,7 @@ import "./HeroSection.css";
 import { Link, Navigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
+
 const HeroPic = () => {
   const handleMouseEnter = () => {
     clearTimeout(timeoutRef.current);
@@ -29,6 +30,20 @@ const HeroPic = () => {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       />
+      {/* CODE CLUB Badge */}
+      <div className="absolute top-55 left-30 z-20 flex flex-col items-start">
+        <div className="flex items-center gap-3 px-6 py-3 bg-gray-700/15 rounded-lg shadow-lg backdrop-blur-sm">
+          <img
+            src={logo}
+            alt="Code Club Logo"
+            className="w-14 h-14 object-contain"
+          />
+          <span className="text-white font-extrabold text-3xl">
+            Code Club
+          </span>
+        </div>
+      </div>
+
       <div className="relative z-10 flex flex-col justify-center lg:items-start md:items-start sm:items-center h-full lg:px-20 md:px-20 sm:px-2 text-white">
         {/* <div
           className="w-full flex items-center p-0 cursor-pointer"
