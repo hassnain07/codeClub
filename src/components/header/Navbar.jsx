@@ -209,8 +209,9 @@ const Navbar = () => {
 
   return (
     <header
-      className={`w-full fixed top-0 z-40 lg:px-20 sm:px-6 py-4 transition-all duration-300 ${showHeader ? "translate-y-0" : "-translate-y-full"
-        } ${bgClass}`}
+      className={`w-full fixed top-0 z-40 lg:px-20 sm:px-6 py-4 transition-all duration-300 ${
+        showHeader ? "translate-y-0" : "-translate-y-full"
+      } ${bgClass}`}
     >
       <div className="max-w-[1300px] mx-auto flex items-center justify-between h-16 sm:h-[70px]">
         <div

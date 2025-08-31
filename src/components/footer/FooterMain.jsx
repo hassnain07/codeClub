@@ -210,7 +210,7 @@ const FooterMain = () => {
               </svg>
             </a> */}
             {/* LinkedIn */}
-            <a href="https://www.linkedin.com/in/code-club-58b922375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+            <a href="https://www.linkedin.com/company/code-clubb/">
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48c0 1.1.88 1.98 1.98 1.98h.02c1.1 0 1.98-.88 1.98-1.98C6.98 4.38 6.1 3.5 4.98 3.5zM3 8.75h3.96V21H3V8.75zm6.25 0h3.8v1.68h.05c.53-.98 1.82-2.02 3.75-2.02 4.01 0 4.75 2.64 4.75 6.07V21H17v-5.63c0-1.34-.03-3.07-1.88-3.07-1.88 0-2.17 1.47-2.17 2.98V21H9.25V8.75z" />
               </svg>

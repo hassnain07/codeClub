@@ -137,8 +137,8 @@ export const serviceMap = {
       { name: "Abdullah", role: "Senior App Developer" },
       { name: "Affan", role: "Junior App Developer" },
       { name: "Zubair", role: "Intern" },
-      { name: "Salam", role: "Trainee" }
-    ]
+      { name: "Salam", role: "Trainee" },
+    ],
   },
 
   "web-development": {
@@ -231,11 +231,27 @@ export const serviceMap = {
     ],
 
     team: [
-      { name: "Hasnain Hafeez", role: "Team Lead", LinkedIn: "https://www.linkedin.com/in/hasnain-hafeez/" },
-      { name: "Mazhar Ahmad", role: "Senior Web Developer", LinkedIn: "https://www.linkedin.com/in/mazhar-ahmad/" },
-      { name: "Zaigham", role: "Junior Web Developer", LinkedIn: "https://www.linkedin.com/in/zaigham/" },
-      { name: "Amin", role: "Intern", LinkedIn: "https://www.linkedin.com/in/amin/" }
-    ]
+      {
+        name: "Hasnain Hafeez",
+        role: "Team Lead",
+        LinkedIn: "https://www.linkedin.com/in/hasnain-hafeez/",
+      },
+      {
+        name: "Mazhar Ahmad",
+        role: "Senior Web Developer",
+        LinkedIn: "https://www.linkedin.com/in/mazhar-ahmad/",
+      },
+      {
+        name: "Zaigham",
+        role: "Junior Web Developer",
+        LinkedIn: "https://www.linkedin.com/in/zaigham/",
+      },
+      {
+        name: "Amin",
+        role: "Intern",
+        LinkedIn: "https://www.linkedin.com/in/amin/",
+      },
+    ],
   },
 
   ai: {
@@ -327,9 +343,9 @@ export const serviceMap = {
       { name: "Hashir Ali Shah", role: "Senior AI Engineer" },
       { name: "Umer", role: "Senior AI Engineer" },
       { name: "Ahmad", role: "Junior AI Engineer" },
-      { name: "Hasnain", role: "Trainee" },
-      { name: "Riyan", role: "Trainee" }
-    ]
+      { name: "Hasnain Aziz", role: "Trainee" },
+      { name: "Riyan", role: "Trainee" },
+    ],
   },
 
   cybersecurity: {
@@ -411,7 +427,6 @@ export const serviceMap = {
     team: [
       { name: "Shaheer", role: "Team Lead" },
       { name: "Haziq", role: "Intern" },
-
     ],
   },
 
@@ -484,6 +499,7 @@ export const serviceMap = {
         ],
       },
     ],
+    team: [],
   },
   iot: {
     title: "IoT Development",
@@ -562,5 +578,6 @@ export const serviceMap = {
         ],
       },
     ],
+    team: [],
   },
 };
