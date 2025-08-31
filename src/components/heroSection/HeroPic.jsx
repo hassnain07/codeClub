@@ -31,8 +31,8 @@ const HeroPic = () => {
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       />
       {/* CODE CLUB Badge */}
-      <div className="absolute top-55 left-30 z-20 flex flex-col items-start">
-        <div className="flex items-center gap-3 px-6 py-3 bg-gray-700/15 rounded-lg shadow-lg backdrop-blur-sm">
+      <div className="absolute top-55 left-30 z-20 hidden lg:flex flex-col items-start">
+        <div className="flex items-center gap-3 px-6 py-3 bg-gray-800/15 rounded-lg shadow-lg backdrop-blur-sm">
           <img
             src={logo}
             alt="Code Club Logo"
@@ -43,6 +43,7 @@ const HeroPic = () => {
           </span>
         </div>
       </div>
+
 
       <div className="relative z-10 flex flex-col justify-center lg:items-start md:items-start sm:items-center h-full lg:px-20 md:px-20 sm:px-2 text-white">
         {/* <div
