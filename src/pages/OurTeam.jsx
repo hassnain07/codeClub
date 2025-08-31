@@ -7,26 +7,26 @@ const team = {
   ceo: {
     name: "Abdullah Qureshi",
     role: "Chief Executive Officer",
-    linkedin: "https://linkedin.com/in/abdullah",
+    linkedin: "https://www.linkedin.com/in/abdullah-qureshi-61813631a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
     bio: "Leading CodeClub with a vision for innovation and growth.",
   },
   executives: [
     {
-      name: "Affan",
+      name: "Muhammad Affan",
       role: "Chief Technology Officer",
       linkedin: "https://linkedin.com/in/affan",
       bio: "Architecting scalable systems and ensuring top-notch code quality.",
     },
     {
-      name: "Zubair",
+      name: "Mian Zubair Ali Shah",
       role: "Manager",
       linkedin: "https://linkedin.com/in/zubair",
       bio: "Overseeing teams and streamlining daily operations.",
     },
     {
-      name: "Uzair",
+      name: "Uzair Ijaz",
       role: "Chief Operating Officer",
-      linkedin: "https://linkedin.com/in/uzair",
+      linkedin: "https://www.linkedin.com/in/muhammad-affan-77bb91200?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
       bio: "Driving operational excellence and process optimization.",
     },
   ],
