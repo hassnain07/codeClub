@@ -43,11 +43,11 @@ const menuData = {
       description: "Vulnerability Assessment, Pentesting, Security",
       icon: <FaShieldAlt />,
     },
-    {
-      label: "UI/UX Design",
-      description: "Figma, Wireframe, Complete Web and App designs",
-      icon: <FaPencilRuler />,
-    },
+    // {
+    //   label: "UI/UX Design",
+    //   description: "Figma, Wireframe, Complete Web and App designs",
+    //   icon: <FaPencilRuler />,
+    // },
     {
       label: "IOT",
       description: "Our Experts also work on IOT technologies",
@@ -62,7 +62,7 @@ const menuData = {
     },
     {
       label: "Development Approach",
-      description: "React Native, Swift, Kotlin, Express",
+      description: "We follow a structured process focused on planning, collaboration, and continuous improvement.",
       icon: <FaCogs />,
     },
     {

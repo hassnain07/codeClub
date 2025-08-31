@@ -68,6 +68,7 @@ function App() {
             <Route path="/launch" element={<IdeaToLaunch />} />
             <Route path="/code-club-team" element={<OurTeam />} />
             <Route path="/contact" element={<Contact />} />
+
             <Route path="/about" element={<AboutUsSection />} />
             <Route path="/service/:slug" element={<Service />} />
             <Route path="/news" element={<NewsPage />} />

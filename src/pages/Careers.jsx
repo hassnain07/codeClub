@@ -4,12 +4,8 @@ import hero from "../assets/hero.jpg";
 import UnlockComponent from "../components/UnlockComponent";
 
 const jobs = [
-  { title: "Full Stack Developer", dept: "Engineering", location: "Remote" },
-  { title: "UI/UX Designer", dept: "Design", location: "Karachi" },
-  { title: "DevOps Engineer", dept: "DevOps", location: "Lahore" },
-  { title: "QA Engineer", dept: "Engineering", location: "Remote" },
-  { title: "Project Manager", dept: "Management", location: "Islamabad" },
-  { title: "Backend Engineer", dept: "Engineering", location: "Remote" },
+  { title: "Web Scraper", dept: "Engineering", location: "Remote" },
+  { title: "SEO Expert", dept: "Marketing", location: "Remote" },
 ];
 
 export default function CareerPage() {
@@ -20,7 +16,8 @@ export default function CareerPage() {
     email: "",
     phone: "",
   });
-  const [isHiring, setIsHiring] = useState(false);
+  const [isHiring, setIsHiring] = useState(true); // ✅ only show when hiring
+
   const handleApplyClick = (job) => {
     setSelectedJob(job);
     setShowModal(true);
@@ -60,6 +57,7 @@ export default function CareerPage() {
           </p>
         </div>
       </section>
+
       <div className="bg-white text-gray-900 min-h-screen pt-32 pb-20 px-4 md:px-24">
         {/* Open Positions */}
         <section className="mb-28">
@@ -71,43 +69,43 @@ export default function CareerPage() {
               We value initiative, ownership, and collaborative problem-solving.
             </p>
           </div>
+
           {isHiring ? (
-            <div className="grid md:grid-cols-3 gap-10">
+            <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto">
               {jobs.map((job, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
-                  className="rounded-xl bg-white/10 backdrop-blur-md border border-gray-200 shadow-md transition hover:shadow-lg"
+                  className="w-full sm:w-[300px] md:w-[340px] p-6 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-shadow flex flex-col justify-between"
                 >
-                  <div className="p-6 h-full flex flex-col bg-gray-200 rounded-sm justify-between text-gray-900">
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2">
-                        {job.title}
-                      </h3>
-                      <p className="text-sm text-gray-600">
-                        {job.dept} · {job.location}
-                      </p>
-                    </div>
-                    <button
-                      className="mt-6 cursor-pointer text-blue-600 font-medium hover:underline"
-                      onClick={() => handleApplyClick(job)}
-                    >
-                      Apply Now
-                    </button>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      {job.title}
+                    </h3>
+                    <p className="text-sm text-gray-500 mt-1">
+                      {job.dept} · {job.location}
+                    </p>
                   </div>
+                  <button
+                    className="mt-6 w-fit text-white bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-lg font-medium transition-colors"
+                    onClick={() => handleApplyClick(job)}
+                  >
+                    Apply Now
+                  </button>
                 </motion.div>
               ))}
             </div>
           ) : (
-            <div className="w-full text-center ">
+            <div className="w-full text-center">
               <h2 className="text-2xl text-gray-700">
                 We are not currently hiring
               </h2>
             </div>
           )}
         </section>
+
 
         {/* Core Values */}
         <section className="mb-28">
@@ -125,12 +123,15 @@ export default function CareerPage() {
               { title: "Innovation", desc: "Pushing the tech frontier daily" },
               { title: "Integrity", desc: "Transparent, honest, client-first" },
               { title: "Growth", desc: "Upskill and empower teams" },
+              { title: "Data-Driven Decisions", desc: "Turning raw data into actionable insights" },
+              { title: "Search Visibility", desc: "Helping brands get discovered online" },
+              { title: "Collaboration", desc: "Working together for better outcomes" },
             ].map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.2, duration: 0.6 }}
+                transition={{ delay: i * 0.15, duration: 0.6 }}
                 className="p-6 bg-gray-100 border border-gray-200 rounded-xl text-center"
               >
                 <div className="text-4xl mb-2 text-blue-500">✓</div>
