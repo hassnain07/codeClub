@@ -1,14 +1,24 @@
 import React, { useState } from "react";
 import news1 from "../assets/news1.jpeg";
+import news2 from "../assets/news2.jpg";
 
 const newsData = [
+
   {
-    title: "CodeClub Inaugration Ceremony",
+    title: "CodeClub Founders Represent at Pakistan One",
     summary:
-      "Students of IM Sciences Peshawar have launched Code Club, a self-help software house to promote technology, modern trends, and income opportunities.Founded by Abdullah Hasnain Qureshi, it aims to bridge the gap between theory and practical skills.The inauguration was graced by Amjad Aziz Malik and Muhammad Habib Qureshi, who praised the students’ dedication.Around 30 students have joined in the first phase to work on real-world projects.Code Club will serve as a launchpad for talent, innovation, and professional growth.",
+      "Mr. Abdullah Qureshi and Mr. Muhammad Affan, students of BCS 7th Semester and founding team members of Code Club, proudly represented their startup at the Pakistan One event organized by the Ministry of Planning, Development and Special Initiatives. Their participation highlighted the spirit of youth-led innovation and the potential of Code Club to contribute to Pakistan’s tech future.",
+    image: news2,
+    date: "August 25, 2025",
+  },
+  {
+    title: "CodeClub Inauguration Ceremony",
+    summary:
+      "Students of IM Sciences Peshawar have launched Code Club, a self-help software house to promote technology, modern trends, and income opportunities. Founded by Abdullah Hasnain Qureshi, it aims to bridge the gap between theory and practical skills. The inauguration was graced by Amjad Aziz Malik and Muhammad Habib Qureshi, who praised the students’ dedication. Around 30 students have joined in the first phase to work on real-world projects. Code Club will serve as a launchpad for talent, innovation, and professional growth.",
     image: news1,
     date: "July 21, 2025",
   },
+
 ];
 
 const NewsPage = () => {
