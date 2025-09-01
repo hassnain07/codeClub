@@ -4,8 +4,8 @@ import hero from "../assets/hero.jpg";
 import UnlockComponent from "../components/UnlockComponent";
 
 const jobs = [
-  { title: "Web Scraper", dept: "Engineering", location: "Remote" },
-  { title: "SEO Expert", dept: "Marketing", location: "Remote" },
+  { title: "Web Scraper", dept: "Engineering", location: "Onsite" },
+  { title: "SEO Expert", dept: "Marketing", location: "Onsite" },
 ];
 
 export default function CareerPage() {
@@ -16,7 +16,7 @@ export default function CareerPage() {
     email: "",
     phone: "",
   });
-  const [isHiring, setIsHiring] = useState(true); // ✅ only show when hiring
+  const [isHiring, setIsHiring] = useState(true);
 
   const handleApplyClick = (job) => {
     setSelectedJob(job);
