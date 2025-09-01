@@ -147,7 +147,7 @@ const Navbar = () => {
     // Close any open dropdown when the route changes
     setActiveMenu(null);
     setIsHovered(false);
-    setMobileOpen(false); // optional: also close mobile menu
+    setMobileOpen(false);
   }, [location.pathname]);
 
   useEffect(() => {

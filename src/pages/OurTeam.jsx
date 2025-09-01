@@ -24,7 +24,7 @@ const team = {
       bio: "Overseeing teams and streamlining daily operations.",
     },
     {
-      name: "Uzair Ijaz",
+      name: "Uzair Aijaz",
       role: "Chief Operating Officer",
       linkedin: "https://www.linkedin.com/in/uzair-aijaz-54178b347?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app  ",
       bio: "Driving operational excellence and process optimization.",
