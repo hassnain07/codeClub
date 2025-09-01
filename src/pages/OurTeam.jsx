@@ -26,7 +26,7 @@ const team = {
     {
       name: "Uzair Ijaz",
       role: "Chief Operating Officer",
-      linkedin: "https://www.linkedin.com/in/muhammad-affan-77bb91200?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
+      linkedin: "https://www.linkedin.com/in/uzair-aijaz-54178b347?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app  ",
       bio: "Driving operational excellence and process optimization.",
     },
   ],
