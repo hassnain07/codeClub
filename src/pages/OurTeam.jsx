@@ -7,7 +7,8 @@ const team = {
   ceo: {
     name: "Abdullah Qureshi",
     role: "Chief Executive Officer",
-    linkedin: "https://www.linkedin.com/in/abdullah-qureshi-61813631a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
+    linkedin:
+      "https://www.linkedin.com/in/abdullah-qureshi-61813631a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
     bio: "Leading CodeClub with a vision for innovation and growth.",
   },
   executives: [
@@ -17,16 +18,17 @@ const team = {
       linkedin: "https://www.linkedin.com/in/muhammad-affan-77bb91200/",
       bio: "Architecting scalable systems and ensuring top-notch code quality.",
     },
-    {
-      name: "Mian Zubair Ali Shah",
-      role: "Manager",
-      linkedin: "https://www.linkedin.com/in/mian-shah-3190a030a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app ",
-      bio: "Overseeing teams and streamlining daily operations.",
-    },
+    // {
+    //   name: "",
+    //   role: "Manager",
+    //   linkedin: "https://www.linkedin.com/in/mian-shah-3190a030a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app ",
+    //   bio: "Overseeing teams and streamlining daily operations.",
+    // },
     {
       name: "Uzair Aijaz",
-      role: "Chief Operating Officer",
-      linkedin: "https://www.linkedin.com/in/uzair-aijaz-54178b347?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app  ",
+      role: "Manager",
+      linkedin:
+        "https://www.linkedin.com/in/uzair-aijaz-54178b347?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app  ",
       bio: "Driving operational excellence and process optimization.",
     },
   ],
@@ -58,7 +60,9 @@ export default function TeamSection() {
             className="flex flex-col items-center mb-20"
           >
             <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-200 shadow-lg rounded-2xl p-8 w-96 transition-all hover:scale-105 hover:shadow-blue-300">
-              <h2 className="text-2xl font-bold text-gray-800">{team.ceo.name}</h2>
+              <h2 className="text-2xl font-bold text-gray-800">
+                {team.ceo.name}
+              </h2>
               <p className="text-blue-700 font-medium">{team.ceo.role}</p>
               <p className="text-gray-600 mt-4 text-sm">{team.ceo.bio}</p>
               <a
@@ -73,16 +77,19 @@ export default function TeamSection() {
           </motion.div>
 
           {/* Executives */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+          {/* Executives */}
+          <div className="flex flex-wrap justify-center gap-12 max-w-5xl mx-auto">
             {team.executives.map((member, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 * idx }}
-                className="bg-gradient-to-br from-yellow-50 to-white border border-yellow-200 shadow-md rounded-2xl p-8 transition-all hover:scale-105 hover:shadow-yellow-300 text-center"
+                className="bg-gradient-to-br from-yellow-50 to-white border border-yellow-200 shadow-md rounded-2xl p-8 w-80 transition-all hover:scale-105 hover:shadow-yellow-300 text-center"
               >
-                <h3 className="text-xl font-semibold text-gray-800">{member.name}</h3>
+                <h3 className="text-xl font-semibold text-gray-800">
+                  {member.name}
+                </h3>
                 <p className="text-yellow-700 font-medium">{member.role}</p>
                 <p className="text-gray-600 mt-3 text-sm">{member.bio}</p>
                 <a

@@ -7,7 +7,6 @@ import "./HeroSection.css";
 import { Link, Navigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
-
 const HeroPic = () => {
   const handleMouseEnter = () => {
     clearTimeout(timeoutRef.current);
@@ -38,13 +37,9 @@ const HeroPic = () => {
             alt="Code Club Logo"
             className="w-18 h-18 object-contain"
           />
-          <span className="text-white font-extrabold text-4xl">
-            Code Club
-          </span>
+          <span className="text-white font-extrabold text-4xl">Code Club</span>
         </div>
       </div>
-
-
 
       <div className="relative z-10 flex flex-col justify-center lg:items-start md:items-start sm:items-center h-full lg:px-20 md:px-20 sm:px-2 text-white">
         {/* <div

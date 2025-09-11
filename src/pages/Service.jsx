@@ -9,7 +9,6 @@ import UnlockComponent from "../components/UnlockComponent";
 import { motion } from "framer-motion";
 import { FaLinkedin } from "react-icons/fa";
 
-
 const Service = () => {
   const { slug } = useParams();
   const currentService = serviceMap[slug];
@@ -67,7 +66,9 @@ const Service = () => {
         <h1 className="uppercase font-bold lg:text-5xl md:text-5xl sm:text-4xl sm:text-center lg:text-start">
           Our Tech Stack
         </h1>
-        <div className="flex flex-wrap lg:justify-start md:justify-start sm:justify-center sm:items-center rounded-full text-sm gap-2">
+
+        {/* Tabs */}
+        <div className="flex flex-wrap lg:justify-start md:justify-start sm:justify-center sm:items-center text-sm gap-2">
           {tabOptions.map(({ id, label }) => (
             <div className="flex items-center" key={id}>
               <input
@@ -80,7 +81,7 @@ const Service = () => {
               />
               <label
                 htmlFor={id}
-                className="cursor-pointer rounded-full py-2 px-6 text-lg transition-colors duration-200 peer-checked:bg-indigo-600 peer-checked:text-white"
+                className="cursor-pointer rounded-full py-2 px-6 text-lg transition-colors duration-200 peer-checked:bg-indigo-600 peer-checked:text-white bg-indigo-800 text-gray-300"
               >
                 {label}
               </label>
@@ -88,13 +89,12 @@ const Service = () => {
           ))}
         </div>
 
+        {/* Tech Cards */}
         <div className="flex flex-wrap gap-6 mt-10 sm:justify-center lg:justify-start md:justify-start">
           {currentService.techStack[selected] &&
-            currentService.techStack[selected].map(
-              ({ icon: Icon, name }, index) => (
-                <TechComp key={index} Icon={Icon} name={name} />
-              )
-            )}
+            currentService.techStack[selected].map(({ icon, name }, index) => (
+              <TechComp key={index} icon={icon} name={name} />
+            ))}
         </div>
       </div>
 
@@ -136,7 +136,9 @@ const Service = () => {
               transition={{ delay: 0.2 * idx }}
               className="bg-gradient-to-br from-yellow-50 to-white border border-yellow-200 shadow-md rounded-2xl p-8 transition-all hover:scale-105 hover:shadow-yellow-300 text-center"
             >
-              <h2 className="text-xl font-semibold text-gray-800">{member.name}</h2>
+              <h2 className="text-xl font-semibold text-gray-800">
+                {member.name}
+              </h2>
               <p className="text-yellow-700 font-medium">{member.role}</p>
               {member.bio && (
                 <p className="text-gray-600 mt-3 text-sm">{member.bio}</p>
@@ -155,7 +157,6 @@ const Service = () => {
           ))}
         </div>
       </div>
-
 
       {/* Stats Section */}
       <div className="bg-blue-100 p-10">
