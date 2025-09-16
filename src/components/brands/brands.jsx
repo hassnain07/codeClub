@@ -5,14 +5,16 @@ import brand3 from "../../assets/brand3.png";
 import brand4 from "../../assets/brand4.jpeg";
 import brand5 from "../../assets/brand5.jpeg";
 import brand6 from "../../assets/brand6.png";
+import brand7 from "../../assets/brand7.jpg";
 
 const brands = [
-  { name: "Memar", image: brand1 },
+  { name: "Memaar", image: brand1 },
+  { name: "Shamroz group of companies", image: brand5 },
+  { name: "Zamong Khyber", image: brand4 },
+  { name: "H-MAK", image: brand6 },
+  { name: "64 Heights", image: brand7 },
   { name: "Zamong kor", image: brand2 },
   { name: "Rehmat Tax", image: brand3 },
-  { name: "Zamong Khyber", image: brand4 },
-  { name: "Shamroz group of companies", image: brand5 },
-  { name: "H-MAK", image: brand6 }, // <-- white logo
 ];
 
 const Brands = () => {
@@ -42,16 +44,14 @@ const Brands = () => {
             >
               {/* Logo wrapper with conditional background */}
               <div
-                className={`h-20 sm:h-24 w-full flex justify-center items-center rounded-lg ${
-                  isWhiteLogo ? "bg-gray-900 p-3" : "bg-transparent"
-                }`}
+                className={`h-20 sm:h-24 w-full flex justify-center items-center rounded-lg ${isWhiteLogo ? "bg-gray-900 p-3" : "bg-transparent"
+                  }`}
               >
                 <img
                   src={brand.image}
                   alt={`${brand.name} Logo`}
-                  className={`max-h-full max-w-full object-contain transition duration-300 ${
-                    isWhiteLogo ? "opacity-100" : "opacity-90 hover:opacity-100"
-                  }`}
+                  className={`max-h-full max-w-full object-contain transition duration-300 ${isWhiteLogo ? "opacity-100" : "opacity-90 hover:opacity-100"
+                    }`}
                 />
               </div>
               <p className="mt-4 sm:mt-5 text-sm sm:text-base md:text-lg font-bold text-gray-900 text-center tracking-wide">
