@@ -6,16 +6,19 @@ import brand4 from "../../assets/brand4.jpeg";
 import brand5 from "../../assets/brand5.jpeg";
 import brand6 from "../../assets/brand6.png";
 import brand7 from "../../assets/brand7.jpg";
+import brand8 from "../../assets/brand8.png";
 
 const brands = [
   { name: "Memaar", image: brand1 },
   { name: "Shamroz group of companies", image: brand5 },
-  { name: "Zamong Khyber", image: brand4 },
+  { name: "Paragon overseas education", image: brand8 },
   { name: "H-MAK", image: brand6 },
   { name: "64 Heights", image: brand7 },
   { name: "Zamong kor", image: brand2 },
   { name: "Rehmat Tax", image: brand3 },
+  { name: "Zamong Khyber", image: brand4 },
 ];
+
 
 const Brands = () => {
   return (
