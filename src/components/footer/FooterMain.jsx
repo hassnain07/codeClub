@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FiMail, FiPhone } from "react-icons/fi";
-import { FaMagnifyingGlassLocation } from "react-icons/fa6";
-// import nextImage from "next/image";
+import { FaWhatsapp, FaMagnifyingGlassLocation } from "react-icons/fa6";
 import secp from "../../assets/secp.jfif";
+
 const FooterMain = () => {
   return (
     <footer className="bg-white text-gray-500/80 pt-8 px-6 md:px-16 lg:px-24 xl:px-32 border-t border-gray-200">
@@ -15,6 +15,7 @@ const FooterMain = () => {
             We build modern, scalable, and intelligent solutions that drive real value.
           </p>
 
+          {/* Social Links */}
           <div className="flex items-center gap-3 mt-4 text-gray-700">
             {/* Instagram */}
             <a
@@ -22,7 +23,11 @@ const FooterMain = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <svg className="w-6 h-6 hover:text-pink-500 transition" fill="currentColor" viewBox="0 0 24 24">
+              <svg
+                className="w-6 h-6 hover:text-pink-500 transition"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
                 <path d="M7.75 2A5.75 5.75 0 002 7.75v8.5A5.75 5.75 0 007.75 22h8.5A5.75 5.75 0 0022 16.25v-8.5A5.75 5.75 0 0016.25 2h-8.5zM4.5 7.75A3.25 3.25 0 017.75 4.5h8.5a3.25 3.25 0 013.25 3.25v8.5a3.25 3.25 0 01-3.25 3.25h-8.5a3.25 3.25 0 01-3.25-3.25v-8.5zm9.5 1a4 4 0 11-4 4 4 4 0 014-4zm0 1.5a2.5 2.5 0 102.5 2.5 2.5 2.5 0 00-2.5-2.5zm3.5-.75a.75.75 0 11.75-.75.75.75 0 01-.75.75z" />
               </svg>
             </a>
@@ -33,7 +38,11 @@ const FooterMain = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <svg className="w-6 h-6 hover:text-blue-600 transition" fill="currentColor" viewBox="0 0 24 24">
+              <svg
+                className="w-6 h-6 hover:text-blue-600 transition"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
                 <path d="M13.5 9H15V6.5h-1.5c-1.933 0-3.5 1.567-3.5 3.5v1.5H8v3h2.5V21h3v-7.5H16l.5-3h-3z" />
               </svg>
             </a>
@@ -44,21 +53,25 @@ const FooterMain = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <svg className="w-6 h-6 hover:text-blue-700 transition" fill="currentColor" viewBox="0 0 24 24">
+              <svg
+                className="w-6 h-6 hover:text-blue-700 transition"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
                 <path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48c0 1.1.88 1.98 1.98 1.98h.02c1.1 0 1.98-.88 1.98-1.98C6.98 4.38 6.1 3.5 4.98 3.5zM3 8.75h3.96V21H3V8.75zm6.25 0h3.8v1.68h.05c.53-.98 1.82-2.02 3.75-2.02 4.01 0 4.75 2.64 4.75 6.07V21H17v-5.63c0-1.34-.03-3.07-1.88-3.07-1.88 0-2.17 1.47-2.17 2.98V21H9.25V8.75z" />
               </svg>
             </a>
           </div>
 
-          {/* SECP Logo + Registration Number */}
+          {/* SECP Logo + Registration */}
           <div className="flex items-center gap-3 mt-5">
             <img src={secp} className="w-12 h-12" alt="SECP Logo" />
-            <p className="text-gray-700 text-sm font-medium">SECP Registration No: <span className="font-semibold">0306424</span></p>
+            <p className="text-gray-700 text-sm font-medium">
+              SECP Registration No:{" "}
+              <span className="font-semibold">0306424</span>
+            </p>
           </div>
         </div>
-
-
-
 
         {/* Expertise */}
         <div>
@@ -111,20 +124,14 @@ const FooterMain = () => {
             {/* Emails */}
             <div className="flex items-center gap-3">
               <FiMail className="text-blue-600 text-lg" />
-              <a
-                href="mailto:info@codeclub.tech"
-                className="hover:underline"
-              >
+              <a href="mailto:info@codeclub.tech" className="hover:underline">
                 info@codeclub.tech
               </a>
             </div>
 
             <div className="flex items-center gap-3">
               <FiMail className="text-blue-600 text-lg" />
-              <a
-                href="mailto:codeclubb1@gmail.com"
-                className="hover:underline"
-              >
+              <a href="mailto:codeclubb1@gmail.com" className="hover:underline">
                 codeclubb1@gmail.com
               </a>
             </div>
@@ -137,9 +144,15 @@ const FooterMain = () => {
               </a>
             </div>
 
+            {/* WhatsApp */}
             <div className="flex items-center gap-3">
-              <FiPhone className="text-blue-600 text-lg" />
-              <a href="tel:+923141334484" className="hover:underline">
+              <FaWhatsapp className="text-green-500 text-lg" />
+              <a
+                href="https://wa.me/923141334484"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
                 +92 314 1334484
               </a>
             </div>
