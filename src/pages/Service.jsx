@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import StatsMain from "../components/statsCard/statsMain";
 import FeatureCard from "../components/expertiseCard/FeatureCard";
@@ -19,14 +19,24 @@ const Service = () => {
     );
   }
 
-  const tabOptions = Object.keys(currentService.techStack).map((key) => {
-    const label = key
-      .replace(/([A-Z])/g, " $1")
-      .replace(/^./, (str) => str.toUpperCase());
-    return { id: key, label };
-  });
+  const [tabOptions, setTabOptions] = useState([]);
+  const [selected, setSelected] = useState("");
 
-  const [selected, setSelected] = useState(tabOptions[0].id);
+  useEffect(() => {
+    if (currentService && currentService.techStack) {
+      const keys = Object.keys(currentService.techStack);
+      if (keys.length > 0) {
+        setSelected(keys[0]); // always select the first key of the current service
+      } else {
+        setSelected(""); // reset if no techStack
+      }
+    }
+  }, [slug]);
+
+
+
+
+
 
   return (
     <div className="mt-15 py-10">
@@ -61,6 +71,7 @@ const Service = () => {
         </div>
       </div>
 
+
       {/* Tech Stack Section */}
       <div className="flex flex-col gap-10 w-full h-full bg-indigo-900 text-white lg:p-20 md:p-20 sm:p-10 sm:pt-20">
         <h1 className="uppercase font-bold lg:text-5xl md:text-5xl sm:text-4xl sm:text-center lg:text-start">
@@ -69,34 +80,40 @@ const Service = () => {
 
         {/* Tabs */}
         <div className="flex flex-wrap lg:justify-start md:justify-start sm:justify-center sm:items-center text-sm gap-2">
-          {tabOptions.map(({ id, label }) => (
-            <div className="flex items-center" key={id}>
-              <input
-                type="radio"
-                name="options"
-                id={id}
-                className="hidden peer"
-                checked={selected === id}
-                onChange={() => setSelected(id)}
-              />
-              <label
-                htmlFor={id}
-                className="cursor-pointer rounded-full py-2 px-6 text-lg transition-colors duration-200 peer-checked:bg-indigo-600 peer-checked:text-white bg-indigo-800 text-gray-300"
-              >
-                {label}
-              </label>
-            </div>
-          ))}
+          {Object.keys(currentService.techStack).map((key) => {
+            const label = key
+              .replace(/([A-Z])/g, " $1")
+              .replace(/^./, (str) => str.toUpperCase());
+
+            return (
+              <div className="flex items-center" key={key}>
+                <input
+                  type="radio"
+                  name="options"
+                  id={key}
+                  className="hidden peer"
+                  checked={selected === key}
+                  onChange={() => setSelected(key)}
+                />
+                <label
+                  htmlFor={key}
+                  className="cursor-pointer rounded-full py-2 px-6 text-lg transition-colors duration-200 peer-checked:bg-indigo-600 peer-checked:text-white bg-indigo-800 text-gray-300"
+                >
+                  {label}
+                </label>
+              </div>
+            );
+          })}
         </div>
 
         {/* Tech Cards */}
         <div className="flex flex-wrap gap-6 mt-10 sm:justify-center lg:justify-start md:justify-start">
-          {currentService.techStack[selected] &&
-            currentService.techStack[selected].map(({ icon, name }, index) => (
-              <TechComp key={index} icon={icon} name={name} />
-            ))}
+          {currentService.techStack[selected]?.map(({ icon, name }, index) => (
+            <TechComp key={index} icon={icon} name={name} />
+          ))}
         </div>
       </div>
+
 
       {/* Industries Section */}
       {currentService.industries && currentService.industries.length > 0 && (

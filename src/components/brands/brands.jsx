@@ -8,8 +8,10 @@ import brand6 from "../../assets/brand6.png";
 import brand7 from "../../assets/brand7.jpg";
 import brand8 from "../../assets/brand8.png";
 import brand9 from "../../assets/brand9.jpg";
+import brand10 from "../../assets/brand10.png";
 
 const brands = [
+  { name: "Peshawar Service Club", image: brand10 },
   { name: "Memaar", image: brand1 },
   { name: "Shamroz group of companies", image: brand5 },
   { name: "Paragon overseas education", image: brand8 },

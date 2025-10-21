@@ -3,8 +3,28 @@ import news1 from "../assets/news1.jpeg";
 import news2 from "../assets/news2.jpg";
 import news3 from "../assets/new3.jpeg";
 import news4 from "../assets/news4.jpeg";
+import news6 from "../assets/news6.jpeg";
+import news5 from "../assets/news5.jpeg";
+
 
 const newsData = [
+
+  {
+    title: "Code Club and Peshawar Services Club Partnership",
+    summary:
+      "Code Club and Peshawar Services Club have officially signed a partnership agreement aimed at strengthening collaboration between innovation and leadership. The agreement was formalized by Major Suhail Afzal, Secretary of Peshawar Services Club, along with Mr. Abdullah Qureshi, CEO of Code Club, and Mr. Muhammad Affan, CTO of Code Club. This partnership marks a significant step toward promoting technology-driven initiatives and fostering opportunities for young innovators in the region.",
+    image: news5,
+    date: "October 16, 2025",
+  },
+
+  {
+    title: "Innovation Session at Lincoln Corners Pakistan",
+    summary:
+      "Mr. Abdullah Qureshi and Mr. Muhammad Affan, students of BCS 7th Semester and founding team members of Code Club, proudly represented their startup at the Pakistan One event organized by the Ministry of Planning, Development and Special Initiatives. Their participation highlighted the spirit of youth-led innovation and the potential of Code Club to contribute to Pakistan’s tech future.",
+    image: news6,
+    date: "October 1, 2025",
+  },
+
   {
     title: "CodeClub Founders Represent at Pakistan One",
     summary:
@@ -59,8 +79,8 @@ const NewsPage = () => {
           const displayedText = isExpanded
             ? news.summary
             : news.summary.length > 120
-            ? news.summary.slice(0, 120) + "..."
-            : news.summary;
+              ? news.summary.slice(0, 120) + "..."
+              : news.summary;
 
           return (
             <div

@@ -7,6 +7,8 @@ import web_project3 from "../../assets/web_project3.png";
 import web_project4 from "../../assets/web_project4.png";
 import web_project5 from "../../assets/web_project5.png";
 import web_project6 from "../../assets/web_project6.png";
+import web_project7 from "../../assets/web-project7.png";
+import web_project8 from "../../assets/web-project8.png";
 
 import ai_project from "../../assets/ai_project.png";
 import app_project from "../../assets/app_project.png";
@@ -16,13 +18,25 @@ import cyber_project1 from "../../assets/cyber_project1.png";
 
 const projects = [
 
-
+  // {
+  //   title: "Peshawar Services Club",
+  //   description:
+  //     "Complete solution with product management, orders, insights, and a sleek admin panel—fast and scalable.",
+  //   image: web_project7,
+  // },
   {
     title: "SavSplit",
     description:
       "Dual-mode app for personal and business use. Personal: split bills, track expenses. Business: manage inventory, record sales—like QuickBooks & Splitwise in one.",
     image: app_project,
   },
+
+  // {
+  //   title: "Haasil - Multi vendor E-commerce Platform",
+  //   description:
+  //     "A comprehensive e-commerce platform supporting multiple vendors with features like product management, order tracking, and analytics.",
+  //   image: app_project,
+  // },
   {
     title: "SEIZURE SENSE",
     description:
@@ -55,6 +69,28 @@ const projects = [
       "Complete solution with product management, orders, insights, and a sleek admin panel—fast and scalable.",
     image: web_project5,
   },
+  // {
+  //   title: "Zmong Khyber Game Show",
+  //   description:
+  //     "Complete solution with product management, orders, insights, and a sleek admin panel—fast and scalable.",
+  //   image: web_project7,
+  // },
+
+  // {
+  //   title: "Zmong Khyber Game Show",
+  //   description:
+  //     "Complete solution with product management, orders, insights, and a sleek admin panel—fast and scalable.",
+  //   image: web_project8,
+  // },
+
+
+
+  // {
+  //   title: "Federal Youth Parliament",
+  //   description:
+  //     "Complete solution with product management, orders, insights, and a sleek admin panel—fast and scalable.",
+  //   image: web_project7,
+  // },
   {
     title: "VibeHive — Real-time Chat & Collaboration App",
     description:

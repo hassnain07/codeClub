@@ -6,7 +6,7 @@ import UnlockComponent from "../components/UnlockComponent";
 const stats = [
   { label: "Projects Delivered", value: "120+" },
   { label: "Clients Worldwide", value: "35+" },
-  { label: "Team Members", value: "20+" },
+  { label: "Team Members", value: "30+" },
 ];
 
 export default function AboutUsSection() {

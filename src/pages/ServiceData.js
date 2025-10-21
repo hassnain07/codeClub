@@ -69,6 +69,8 @@ import icon13 from "../assets/icon13.webp";
 import icon14 from "../assets/icon14.png";
 import icon15 from "../assets/icon15.png";
 
+
+
 export const serviceMap = {
   "mobile-apps": {
     title: "Mobile Apps Development",
@@ -91,29 +93,29 @@ export const serviceMap = {
     ],
     techStack: {
       frameworks: [
-        { name: "Angular", icon: icon7 },
-        { name: "React", icon: icon10 },
-        { name: "NestJS", icon: icon11 },
+        { name: "React Native", icon: icon10 },
+        { name: "Flutter", icon: icon7 }, // kept icon placeholders
+        { name: "Ionic / Capacitor", icon: icon11 },
       ],
       languages: [
-        { name: "JavaScript", icon: icon5 },
-        { name: "PHP", icon: icon2 },
-        { name: "Python", icon: icon3 },
+        { name: "JavaScript / TypeScript", icon: icon5 },
+        { name: "Swift (iOS)", icon: icon4 },
+        { name: "Kotlin (Android)", icon: icon1 },
       ],
       mobDev: [
         { name: "React Native", icon: icon10 },
-        { name: "Swift", icon: icon4 },
-        { name: "Kotlin", icon: icon1 },
+        { name: "Swift (native iOS)", icon: icon4 },
+        { name: "Kotlin (native Android)", icon: icon1 },
       ],
       database: [
-        { icon: icon15, name: "PostgreSQL" },
-        { icon: icon14, name: "MySQL" },
-        { icon: icon13, name: "MongoDB" },
-        { icon: icon12, name: "Firebase" },
+        { icon: icon12, name: "Firebase (Realtime / Firestore)" },
+        { icon: icon15, name: "PostgreSQL (server)" },
+        { icon: icon13, name: "MongoDB (sync / offline)" },
       ],
       devops: [
-        { icon: icon12, name: "Firebase" },
-        { icon: icon9, name: "Docker" },
+        { icon: icon9, name: "Docker (CI/CD containers)" },
+        { icon: icon12, name: "Firebase (hosting / auth / analytics)" },
+        { icon: icon14, name: "CI/CD (GitHub Actions / Fastlane)" },
       ],
     },
     industries: [
@@ -147,8 +149,6 @@ export const serviceMap = {
       { name: "Amad ur Rehman", role: "Team Lead" },
       { name: "Abdullah", role: "Senior App Developer" },
       { name: "Affan", role: "Junior App Developer" },
-      // { name: "Zubair", role: "Intern" },
-      { name: "Salam", role: "Trainee" },
     ],
   },
 
@@ -185,29 +185,30 @@ export const serviceMap = {
     ],
     techStack: {
       frameworks: [
+        { name: "React / Next.js", icon: icon10 },
         { name: "Angular", icon: icon7 },
-        { name: "React", icon: icon10 },
-        { name: "NestJS", icon: icon11 },
+        { name: "NestJS (backend)", icon: icon11 },
       ],
       languages: [
-        { name: "JavaScript", icon: icon5 },
-        { name: "PHP", icon: icon2 },
-        { name: "Python", icon: icon3 },
+        { name: "JavaScript / TypeScript", icon: icon5 },
+        { name: "Node.js (server-side)", icon: icon3 },
+        { name: "Python / PHP (where required)", icon: icon2 },
       ],
       webDev: [
-        { name: "JavaScript", icon: icon5 },
-        { name: "PHP", icon: icon2 },
-        { name: "Python", icon: icon3 },
+        { name: "React / Next.js (SSR & SSG)", icon: icon10 },
+        { name: "REST & GraphQL APIs", icon: icon11 },
+        { name: "Serverless (optional)", icon: icon12 },
       ],
       database: [
         { icon: icon15, name: "PostgreSQL" },
-        { icon: icon14, name: "MySQL" },
+        { icon: icon14, name: "MySQL / MariaDB" },
         { icon: icon13, name: "MongoDB" },
-        { icon: icon12, name: "Firebase" },
+        { icon: icon12, name: "Firebase (auth & realtime features)" },
       ],
       devops: [
-        { icon: icon12, name: "Firebase" },
-        { icon: icon9, name: "Docker" },
+        { icon: icon9, name: "Docker (containers)" },
+        { icon: icon12, name: "Firebase / Vercel (hosting)" },
+        { icon: icon15, name: "CI/CD (GitHub Actions, pipelines)" },
       ],
     },
     industries: [
@@ -254,14 +255,14 @@ export const serviceMap = {
         LinkedIn: "https://www.linkedin.com/in/zaigham/",
       },
       {
-        name: "Musa Bukhari",
-        role: "Junior Web Developer",
-        LinkedIn: "https://www.linkedin.com/in/amin/",
+        name: "Atif",
+        role: "Senior Web Developer",
+        LinkedIn: "https://www.linkedin.com/in/atif/",
       },
       {
-        name: "Amin",
-        role: "Intern",
-        LinkedIn: "https://www.linkedin.com/in/amin/",
+        name: "Musa Bukhari",
+        role: "Junior Web Developer",
+        LinkedIn: "https://www.linkedin.com/in/musa-bukhari/",
       },
     ],
   },
@@ -299,29 +300,30 @@ export const serviceMap = {
     ],
     techStack: {
       frameworks: [
-        { name: "Angular", icon: icon7 },
-        { name: "React", icon: icon10 },
-        { name: "NestJS", icon: icon11 },
+        { name: "TensorFlow / Keras", icon: icon11 },
+        { name: "PyTorch", icon: icon10 },
+        { name: "scikit-learn (classical ML)", icon: icon7 },
       ],
       languages: [
-        { name: "JavaScript", icon: icon5 },
-        { name: "PHP", icon: icon2 },
-        { name: "Python", icon: icon3 },
+        { name: "Python (primary)", icon: icon3 },
+        { name: "R (analytics)", icon: icon5 },
+        { name: "Java / C++ (production where needed)", icon: icon2 },
       ],
       ai: [
-        { name: "JavaScript", icon: icon5 },
-        { name: "PHP", icon: icon2 },
-        { name: "Python", icon: icon3 },
+        { name: "TensorFlow", icon: icon11 },
+        { name: "PyTorch", icon: icon10 },
+        { name: "scikit-learn", icon: icon7 },
       ],
       database: [
-        { icon: icon15, name: "PostgreSQL" },
+        { icon: icon15, name: "PostgreSQL (feature store)" },
         { icon: icon14, name: "MySQL" },
-        { icon: icon13, name: "MongoDB" },
-        { icon: icon12, name: "Firebase" },
+        { icon: icon13, name: "MongoDB (unstructured data)" },
+        { icon: icon12, name: "Firebase (lightweight RT needs)" },
       ],
       devops: [
-        { icon: icon12, name: "Firebase" },
-        { icon: icon9, name: "Docker" },
+        { icon: icon9, name: "Docker (model containers)" },
+        { icon: icon12, name: "MLflow / Firebase (tracking & hosting)" },
+        { icon: icon15, name: "CI/CD for models (pipelines)" },
       ],
     },
     industries: [
@@ -353,11 +355,7 @@ export const serviceMap = {
 
     team: [
       { name: "Ihtisham Ul Haq", role: "Team Lead" },
-      { name: "Hashir Ali Shah", role: "Senior AI Engineer" },
       { name: "Umer", role: "Senior AI Engineer" },
-      // { name: "Ahmad", role: "Junior AI Engineer" },
-      { name: "Hasnain Aziz", role: "Trainee" },
-      { name: "Riyan", role: "Trainee" },
     ],
   },
 
@@ -394,25 +392,27 @@ export const serviceMap = {
     ],
     techStack: {
       frameworks: [
-        { name: "Angular", icon: icon7 },
-        { name: "React", icon: icon10 },
-        { name: "NestJS", icon: icon11 },
+        { name: "Security automation & orchestration", icon: icon11 },
+        { name: "Threat intel platforms", icon: icon10 },
+        { name: "SIEM integrations", icon: icon7 },
       ],
       languages: [
-        { name: "JavaScript", icon: icon5 },
-        { name: "PHP", icon: icon2 },
-        { name: "Python", icon: icon3 },
+        { name: "Python (scripting & automation)", icon: icon3 },
+        { name: "Go / Rust (high-performance tooling)", icon: icon5 },
+        { name: "C / C++ (low-level analysis)", icon: icon2 },
       ],
-      cybersecurity: [{ name: "Python", icon: icon3 }],
+      cybersecurity: [
+        { name: "Penetration testing tools (Nmap, Burp)", icon: icon3 },
+        { name: "SIEM / EDR integrations", icon: icon11 },
+      ],
       database: [
-        { icon: icon15, name: "PostgreSQL" },
-        { icon: icon14, name: "MySQL" },
-        { icon: icon13, name: "MongoDB" },
-        { icon: icon12, name: "Firebase" },
+        { icon: icon15, name: "PostgreSQL (alerts & logs)" },
+        { icon: icon13, name: "MongoDB (events / telemetry)" },
+        { icon: icon12, name: "Firebase (notifications / quick prototypes)" },
       ],
       devops: [
-        { icon: icon12, name: "Firebase" },
-        { icon: icon9, name: "Docker" },
+        { icon: icon9, name: "Docker (isolated tooling)" },
+        { icon: icon12, name: "Cloud logging & monitoring (Firebase / GCP)" },
       ],
     },
     industries: [
@@ -480,13 +480,13 @@ export const serviceMap = {
     ],
     techStack: {
       frameworks: [
-        { name: "Angular", icon: icon7 },
-        { name: "React", icon: icon10 },
-        { name: "NestJS", icon: icon11 },
+        { name: "Design systems (Figma / Adobe XD)", icon: icon7 },
+        { name: "Prototyping & testing", icon: icon10 },
+        { name: "Component libraries", icon: icon11 },
       ],
       devops: [
-        { icon: icon12, name: "Firebase" },
-        { icon: icon9, name: "Docker" },
+        { icon: icon12, name: "Design handoff (Zeplin / Storybook)" },
+        { icon: icon9, name: "Versioning & asset storage (Git / Docker for demos)" },
       ],
     },
     industries: [
@@ -550,23 +550,25 @@ export const serviceMap = {
     ],
     techStack: {
       frameworks: [
-        { name: "Angular", icon: icon7 },
-        { name: "React", icon: icon10 },
-        { name: "NestJS", icon: icon11 },
+        { name: "Edge frameworks (EdgeX, custom Node services)", icon: icon11 },
+        { name: "MQTT / CoAP stacks", icon: icon10 },
+        { name: "Embedded firmware toolchains", icon: icon7 },
       ],
       languages: [
-        { icon: icon2, name: "Python" },
-        { icon: icon3, name: "Java" },
+        { icon: icon3, name: "Python (data & server side)" },
+        { icon: icon2, name: "C / C++ (firmware)" },
+        { icon: icon5, name: "JavaScript / Node.js (edge services)" },
       ],
       database: [
-        { icon: icon15, name: "PostgreSQL" },
-        { icon: icon14, name: "MySQL" },
-        { icon: icon13, name: "MongoDB" },
-        { icon: icon12, name: "Firebase" },
+        { icon: icon15, name: "PostgreSQL (long-term storage)" },
+        { icon: icon14, name: "MySQL (device metadata)" },
+        { icon: icon13, name: "MongoDB (telemetry)" },
+        { icon: icon12, name: "Firebase (prototypes / realtime dashboards)" },
       ],
       devops: [
-        { icon: icon12, name: "Firebase" },
-        { icon: icon9, name: "Docker" },
+        { icon: icon9, name: "Docker (edge & cloud containers)" },
+        { icon: icon12, name: "Cloud IoT Platform (Firebase / GCP)" },
+        { icon: icon15, name: "Time-series / monitoring (InfluxDB, Prometheus)" },
       ],
     },
     industries: [
@@ -598,3 +600,4 @@ export const serviceMap = {
     team: [],
   },
 };
+
