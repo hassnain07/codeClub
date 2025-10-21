@@ -4,7 +4,7 @@ import hero from "../assets/hero.jpg";
 import UnlockComponent from "../components/UnlockComponent";
 
 const jobs = [
-  { title: "Web Scraper", dept: "Engineering", location: "Onsite" },
+  // { title: "Web Scraper", dept: "Engineering", location: "Onsite" },
   { title: "SEO Expert", dept: "Marketing", location: "Onsite" },
 ];
 
@@ -71,25 +71,25 @@ export default function CareerPage() {
           </div>
 
           {isHiring ? (
-            <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto">
+            <div className="flex flex-wrap justify-center items-stretch text-center gap-6 sm:gap-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
               {jobs.map((job, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
-                  className="w-full sm:w-[300px] md:w-[340px] p-6 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-shadow flex flex-col justify-between"
+                  className="flex flex-col justify-between w-full sm:w-[280px] md:w-[320px] lg:w-[340px] p-5 sm:p-6 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300"
                 >
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900">
                       {job.title}
                     </h3>
-                    <p className="text-sm text-gray-500 mt-1">
+                    <p className="text-xs sm:text-sm text-gray-500 mt-1">
                       {job.dept} · {job.location}
                     </p>
                   </div>
                   <button
-                    className="mt-6 w-fit text-white bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-lg font-medium transition-colors"
+                    className="mt-6 w-full sm:w-auto mx-auto text-white bg-blue-600 hover:bg-blue-700 px-5 py-2.5 rounded-lg font-medium transition-colors"
                     onClick={() => handleApplyClick(job)}
                   >
                     Apply Now
@@ -98,12 +98,13 @@ export default function CareerPage() {
               ))}
             </div>
           ) : (
-            <div className="w-full text-center">
-              <h2 className="text-2xl text-gray-700">
+            <div className="w-full text-center px-4 sm:px-0">
+              <h2 className="text-lg sm:text-2xl text-gray-700">
                 We are not currently hiring
               </h2>
             </div>
           )}
+
         </section>
 
 
