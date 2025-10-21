@@ -8,19 +8,22 @@ import brand6 from "../../assets/brand6.png";
 import brand7 from "../../assets/brand7.jpg";
 import brand8 from "../../assets/brand8.png";
 import brand9 from "../../assets/brand9.jpg";
+import brand10 from "../../assets/brand10.jpg";
+import brand11 from "../../assets/brand11.jpeg";
 
 const brands = [
-  { name: "Memaar", image: brand1 },
-  { name: "Shamroz group of companies", image: brand5 },
-  { name: "Paragon overseas education", image: brand8 },
-  { name: "H-MAK", image: brand6 },
-  { name: "64 Heights", image: brand7 },
-  { name: "Zamong kor", image: brand2 },
-  { name: "Rehmat Tax", image: brand3 },
+  { name: "Peshawar Services Club", image: brand10 },
+  { name: "Haasil Pvt Ltd.", image: brand11 },
+  { name: "Memaar Pvt Ltd.", image: brand1 },
+  { name: "Shamroz group of companies Pvt Ltd.", image: brand5 },
+  { name: "Paragon overseas education Pvt Ltd.", image: brand8 },
+  { name: "H-MAK Pvt Ltd.", image: brand6 },
+  { name: "64 Heights Pvt Ltd.", image: brand7 },
+  { name: "Zamung kor", image: brand2 },
+  { name: "Rehmat Tax Pvt Ltd.", image: brand3 },
   { name: "Federal Youth Parliment", image: brand9 },
-  { name: "Zamong Khyber", image: brand4 },
+  { name: "Zamong Khyber Pvt Ltd.", image: brand4 },
 ];
-
 
 const Brands = () => {
   return (
@@ -49,14 +52,16 @@ const Brands = () => {
             >
               {/* Logo wrapper with conditional background */}
               <div
-                className={`h-20 sm:h-24 w-full flex justify-center items-center rounded-lg ${isWhiteLogo ? "bg-gray-900 p-3" : "bg-transparent"
-                  }`}
+                className={`h-20 sm:h-24 w-full flex justify-center items-center rounded-lg ${
+                  isWhiteLogo ? "bg-gray-900 p-3" : "bg-transparent"
+                }`}
               >
                 <img
                   src={brand.image}
                   alt={`${brand.name} Logo`}
-                  className={`max-h-full max-w-full object-contain transition duration-300 ${isWhiteLogo ? "opacity-100" : "opacity-90 hover:opacity-100"
-                    }`}
+                  className={`max-h-full max-w-full object-contain transition duration-300 ${
+                    isWhiteLogo ? "opacity-100" : "opacity-90 hover:opacity-100"
+                  }`}
                 />
               </div>
               <p className="mt-4 sm:mt-5 text-sm sm:text-base md:text-lg font-bold text-gray-900 text-center tracking-wide">
